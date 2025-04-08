@@ -19,3 +19,4 @@ function func3(){
 func3();
 
 
+// これもテストです、pullで反映します。
