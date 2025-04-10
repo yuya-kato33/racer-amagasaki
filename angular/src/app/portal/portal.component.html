@@ -1,10 +1,13 @@
 <h1>portal works!</h1> {{name}}
 
 <h2>portal works!</h2> 
+{{names[0]}}
 
 <h3>portal works!</h3>
+{{names[1]}}
 
 <h4>portal works!</h4>
+{{names[2]}}
 
 <select name="pets" id = "pet-select">
   <option value="">-- Please choose an option --</option>
@@ -28,6 +31,8 @@
  maxlength="8"
  size="10" />
 </div>
+
+<button (click) = "screenTransit()">遷移</button>
  
 <!-- 
  git add .
