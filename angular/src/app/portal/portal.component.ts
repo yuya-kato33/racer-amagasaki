@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
 
 @Component({
   selector: 'app-portal',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './portal.component.sass'
 })
 export class PortalComponent {
+ constructor() {}
 
+public name: any;
+
+ ngOnInit(): void {
+   this.name = "KATO";
+
+ }
 }
+
