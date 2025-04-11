@@ -1,10 +1,11 @@
 import { Component, NgModule } from '@angular/core'; 
 import { Router } from '@angular/router'; //追加
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-portal',
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './portal.component.html',
   styleUrl: './portal.component.sass'
 })
@@ -18,6 +19,7 @@ export class PortalComponent {
 
 public name: any;
 public names= new Array;
+public result ="";
 
  ngOnInit(): void {
    this.name = "KATO";
