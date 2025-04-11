@@ -33,6 +33,11 @@
 </div>
 
 <button (click) = "screenTransit()">遷移</button>
+
+<div *ngFor = "let tmp of names ;let i = index">
+{{tmp.name}}
+{{tmp.number}}
+</div>
  
 <!-- 
  git add .
