@@ -2,10 +2,12 @@ import { Component, NgModule } from '@angular/core';
 import { Router } from '@angular/router'; //追加
 import { CommonModule } from '@angular/common';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule,HttpClient} from '@angular/common/http';
+import { response } from 'express';
 
 @Component({
   selector: 'app-portal',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,HttpClientModule],
   templateUrl: './portal.component.html',
   styleUrl: './portal.component.sass'
 })
@@ -13,7 +15,8 @@ import { FormsModule } from "@angular/forms";
 export class PortalComponent {
  constructor(
 
-  private router:Router //追加
+  private router:Router ,
+  private httpClient: HttpClient 
 
  ) {}
 
@@ -33,6 +36,11 @@ public result ="";
    console.log (this.names[i].name); //0番の名前部分を抽出
   
    }
+
+   this.httpClient.post('http://192.168.1.27:8080/api/portal',{"data":"testtesttest"})
+   .subscribe(response => {
+    console.log(response);
+   });
  }
 
 //追加
