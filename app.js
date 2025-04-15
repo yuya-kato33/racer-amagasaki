@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 // }); 
 
 // サーバーの設定
-const app = express();
+const app = express(); //expressの初期化
 const server = http.Server(app);
 
 const port =8080; //port番号 6000は使えない　
@@ -24,7 +24,7 @@ app.use (bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
-app.use('/',express.static('./angular/dist/angular/browser')); 
+app.use('/',express.static('./angular/dist/angular/browser')); //出力をクライアントがアクセスできるようにする。
 
 // ここから下はアプリによって変化
 app.post('/api/portal', function(req,res){ //後ろの関数に1回だけなので関数名がないです。
