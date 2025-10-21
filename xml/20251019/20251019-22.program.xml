@@ -1,0 +1,3799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boatrace>
+  <table>
+    <record>
+      <hdate>20251019</hdate>
+      <jcd>22</jcd>
+      <nj>1</nj>
+      <nidate1>20251019</nidate1>
+      <nidate2>20251020</nidate2>
+      <nidate3>20251021</nidate3>
+      <nidate4>20251022</nidate4>
+      <nidate5>20251023</nidate5>
+      <nidate6>20251024</nidate6>
+      <nidate7></nidate7>
+      <nidate8></nidate8>
+      <nidate9></nidate9>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>01</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>11:03</stime>
+        <htime>11:06</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>1</teiban>
+          <toban group="48">4899</toban>
+          <name>占部　　一真</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>33</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.52</zsyo>
+          <z2ren>28.2</z2ren>
+          <z3ren>38.0</z3ren>
+          <jsyo>4.92</jsyo>
+          <j2ren>32.6</j2ren>
+          <j3ren>44.9</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>035</mno>
+          <m2ren>28.9</m2ren>
+          <bflg>0</bflg>
+          <bno>130</bno>
+          <b2ren>42.8</b2ren>
+          <haya race_id="22_20251019">09</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>2</teiban>
+          <toban group="51">5133</toban>
+          <name>堀越　　雄貴</name>
+          <syusin>東　京</syusin>
+          <syussinchi>神奈川</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>26</nenrei>
+          <taiju>52.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.83</zsyo>
+          <z2ren>26.6</z2ren>
+          <z3ren>47.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>020</mno>
+          <m2ren>26.4</m2ren>
+          <bflg>0</bflg>
+          <bno>165</bno>
+          <b2ren>35.6</b2ren>
+          <haya race_id="22_20251019">11</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>3</teiban>
+          <toban group="47">4715</toban>
+          <name>村上　　　遼</name>
+          <syusin>長　崎</syusin>
+          <syussinchi>長　崎</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>33</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>6.73</zsyo>
+          <z2ren>51.4</z2ren>
+          <z3ren>62.8</z3ren>
+          <jsyo>7.00</jsyo>
+          <j2ren>56.2</j2ren>
+          <j3ren>71.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>053</mno>
+          <m2ren>28.0</m2ren>
+          <bflg>0</bflg>
+          <bno>167</bno>
+          <b2ren>34.9</b2ren>
+          <haya race_id="22_20251019">08</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>4</teiban>
+          <toban group="52">5212</toban>
+          <name>西川　　拓利</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>27</nenrei>
+          <taiju>53.6</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>5.22</zsyo>
+          <z2ren>33.3</z2ren>
+          <z3ren>54.5</z3ren>
+          <jsyo>3.46</jsyo>
+          <j2ren>15.5</j2ren>
+          <j3ren>28.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>063</mno>
+          <m2ren>34.9</m2ren>
+          <bflg>0</bflg>
+          <bno>136</bno>
+          <b2ren>43.6</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>5</teiban>
+          <toban group="52">5294</toban>
+          <name>豊田　　祥生</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>23</nenrei>
+          <taiju>50.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>3.70</zsyo>
+          <z2ren>19.0</z2ren>
+          <z3ren>25.7</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>039</mno>
+          <m2ren>29.4</m2ren>
+          <bflg>0</bflg>
+          <bno>161</bno>
+          <b2ren>42.5</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>01</rno>
+          <teiban>6</teiban>
+          <toban group="54">5409</toban>
+          <name>宮本　　琉正</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>沖　縄</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>20</nenrei>
+          <taiju>55.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st></p_st>
+          <zsyo>1.43</zsyo>
+          <z2ren>0.0</z2ren>
+          <z3ren>1.5</z3ren>
+          <jsyo>1.44</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>034</mno>
+          <m2ren>30.3</m2ren>
+          <bflg>0</bflg>
+          <bno>162</bno>
+          <b2ren>23.6</b2ren>
+          <haya race_id="22_20251019">07</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>02</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>11:33</stime>
+        <htime>11:36</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>1</teiban>
+          <toban group="45">4567</toban>
+          <name>上村　慎太郎</name>
+          <syusin>山　口</syusin>
+          <syussinchi>山　口</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>37</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.23</p_st>
+          <zsyo>3.47</zsyo>
+          <z2ren>10.1</z2ren>
+          <z3ren>23.7</z3ren>
+          <jsyo>3.64</jsyo>
+          <j2ren>10.7</j2ren>
+          <j3ren>17.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>051</mno>
+          <m2ren>30.3</m2ren>
+          <bflg>0</bflg>
+          <bno>168</bno>
+          <b2ren>35.0</b2ren>
+          <haya race_id="22_20251019">09</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>2</teiban>
+          <toban group="51">5179</toban>
+          <name>藤本　　元輝</name>
+          <syusin>兵　庫</syusin>
+          <syussinchi>兵　庫</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>28</nenrei>
+          <taiju>53.3</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.61</zsyo>
+          <z2ren>29.3</z2ren>
+          <z3ren>41.3</z3ren>
+          <jsyo>2.80</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>20.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>047</mno>
+          <m2ren>32.6</m2ren>
+          <bflg>0</bflg>
+          <bno>171</bno>
+          <b2ren>39.3</b2ren>
+          <haya race_id="22_20251019">08</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>3</teiban>
+          <toban group="47">4727</toban>
+          <name>安部　　慎一</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>38</nenrei>
+          <taiju>54.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.86</zsyo>
+          <z2ren>27.7</z2ren>
+          <z3ren>42.2</z3ren>
+          <jsyo>4.74</jsyo>
+          <j2ren>31.8</j2ren>
+          <j3ren>42.4</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>025</mno>
+          <m2ren>31.5</m2ren>
+          <bflg>0</bflg>
+          <bno>174</bno>
+          <b2ren>22.3</b2ren>
+          <haya race_id="22_20251019">11</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>4</teiban>
+          <toban group="39">3908</toban>
+          <name>重成　　一人</name>
+          <syusin>香　川</syusin>
+          <syussinchi>香　川</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>47</nenrei>
+          <taiju>55.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.14</p_st>
+          <zsyo>6.89</zsyo>
+          <z2ren>46.6</z2ren>
+          <z3ren>63.9</z3ren>
+          <jsyo>7.86</jsyo>
+          <j2ren>51.7</j2ren>
+          <j3ren>86.2</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>056</mno>
+          <m2ren>41.6</m2ren>
+          <bflg>0</bflg>
+          <bno>133</bno>
+          <b2ren>34.9</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>5</teiban>
+          <toban group="52">5223</toban>
+          <name>森清　　友翔</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>24</nenrei>
+          <taiju>54.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.20</p_st>
+          <zsyo>4.30</zsyo>
+          <z2ren>21.2</z2ren>
+          <z3ren>34.3</z3ren>
+          <jsyo>3.40</jsyo>
+          <j2ren>11.3</j2ren>
+          <j3ren>18.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>071</mno>
+          <m2ren>30.0</m2ren>
+          <bflg>0</bflg>
+          <bno>101</bno>
+          <b2ren>32.5</b2ren>
+          <haya race_id="22_20251019">07</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>02</rno>
+          <teiban>6</teiban>
+          <toban group="50">5076</toban>
+          <name>石原　　　光</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>53.9</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>5.30</zsyo>
+          <z2ren>34.4</z2ren>
+          <z3ren>48.2</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>018</mno>
+          <m2ren>30.9</m2ren>
+          <bflg>0</bflg>
+          <bno>166</bno>
+          <b2ren>26.9</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>03</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>12:03</stime>
+        <htime>12:06</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>1</teiban>
+          <toban group="47">4723</toban>
+          <name>寺島　　吉彦</name>
+          <syusin>東　京</syusin>
+          <syussinchi>福　島</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>39</nenrei>
+          <taiju>50.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.65</zsyo>
+          <z2ren>26.0</z2ren>
+          <z3ren>43.4</z3ren>
+          <jsyo>5.50</jsyo>
+          <j2ren>30.0</j2ren>
+          <j3ren>60.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>045</mno>
+          <m2ren>37.3</m2ren>
+          <bflg>0</bflg>
+          <bno>153</bno>
+          <b2ren>28.8</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>2</teiban>
+          <toban group="51">5127</toban>
+          <name>沼田　　大都</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>広　島</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>4.66</zsyo>
+          <z2ren>19.8</z2ren>
+          <z3ren>46.8</z3ren>
+          <jsyo>3.90</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>30.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>012</mno>
+          <m2ren>29.4</m2ren>
+          <bflg>0</bflg>
+          <bno>154</bno>
+          <b2ren>34.2</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>3</teiban>
+          <toban group="46">4638</toban>
+          <name>小林　　遼太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>35</nenrei>
+          <taiju>53.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>4.83</zsyo>
+          <z2ren>28.4</z2ren>
+          <z3ren>43.1</z3ren>
+          <jsyo>4.51</jsyo>
+          <j2ren>25.3</j2ren>
+          <j3ren>43.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>072</mno>
+          <m2ren>29.5</m2ren>
+          <bflg>0</bflg>
+          <bno>173</bno>
+          <b2ren>36.0</b2ren>
+          <haya race_id="22_20251019">09</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>4</teiban>
+          <toban group="48">4864</toban>
+          <name>小川　日紀太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>宮　崎</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>36</nenrei>
+          <taiju>52.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.36</zsyo>
+          <z2ren>26.3</z2ren>
+          <z3ren>36.8</z3ren>
+          <jsyo>4.64</jsyo>
+          <j2ren>24.0</j2ren>
+          <j3ren>42.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>058</mno>
+          <m2ren>35.6</m2ren>
+          <bflg>0</bflg>
+          <bno>151</bno>
+          <b2ren>30.3</b2ren>
+          <haya race_id="22_20251019">08</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>5</teiban>
+          <toban group="40">4064</toban>
+          <name>原田　　篤志</name>
+          <syusin>山　口</syusin>
+          <syussinchi>山　口</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>45</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>7.27</zsyo>
+          <z2ren>58.5</z2ren>
+          <z3ren>79.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>073</mno>
+          <m2ren>30.5</m2ren>
+          <bflg>0</bflg>
+          <bno>138</bno>
+          <b2ren>31.6</b2ren>
+          <haya race_id="22_20251019">11</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>03</rno>
+          <teiban>6</teiban>
+          <toban group="53">5352</toban>
+          <name>西岡　　蒼志</name>
+          <syusin>香　川</syusin>
+          <syussinchi>香　川</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>21</nenrei>
+          <taiju>53.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.28</zsyo>
+          <z2ren>15.7</z2ren>
+          <z3ren>33.6</z3ren>
+          <jsyo>3.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>11.1</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>033</mno>
+          <m2ren>31.8</m2ren>
+          <bflg>0</bflg>
+          <bno>142</bno>
+          <b2ren>25.6</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>04</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>12:33</stime>
+        <htime>12:36</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>1</teiban>
+          <toban group="49">4952</toban>
+          <name>吉武　　真也</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>31</nenrei>
+          <taiju>52.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>4.28</zsyo>
+          <z2ren>20.2</z2ren>
+          <z3ren>41.5</z3ren>
+          <jsyo>4.47</jsyo>
+          <j2ren>14.5</j2ren>
+          <j3ren>43.6</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>016</mno>
+          <m2ren>26.5</m2ren>
+          <bflg>0</bflg>
+          <bno>157</bno>
+          <b2ren>28.4</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>2</teiban>
+          <toban group="50">5034</toban>
+          <name>若林　　義人</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>27</nenrei>
+          <taiju>54.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.14</p_st>
+          <zsyo>6.63</zsyo>
+          <z2ren>50.3</z2ren>
+          <z3ren>68.1</z3ren>
+          <jsyo>7.65</jsyo>
+          <j2ren>70.5</j2ren>
+          <j3ren>82.3</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>021</mno>
+          <m2ren>40.6</m2ren>
+          <bflg>0</bflg>
+          <bno>124</bno>
+          <b2ren>28.2</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>3</teiban>
+          <toban group="47">4747</toban>
+          <name>山戸　　信二</name>
+          <syusin>長　崎</syusin>
+          <syussinchi>熊　本</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>40</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>3.99</zsyo>
+          <z2ren>17.1</z2ren>
+          <z3ren>31.3</z3ren>
+          <jsyo>3.63</jsyo>
+          <j2ren>17.5</j2ren>
+          <j3ren>20.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>043</mno>
+          <m2ren>45.4</m2ren>
+          <bflg>0</bflg>
+          <bno>132</bno>
+          <b2ren>41.9</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>4</teiban>
+          <toban group="49">4982</toban>
+          <name>中村　　将隆</name>
+          <syusin>兵　庫</syusin>
+          <syussinchi>兵　庫</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>54.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>5.09</zsyo>
+          <z2ren>32.4</z2ren>
+          <z3ren>50.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>066</mno>
+          <m2ren>17.8</m2ren>
+          <bflg>0</bflg>
+          <bno>156</bno>
+          <b2ren>33.8</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>5</teiban>
+          <toban group="53">5307</toban>
+          <name>富永　夏哉人</name>
+          <syusin>佐　賀</syusin>
+          <syussinchi>佐　賀</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>22</nenrei>
+          <taiju>50.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.96</zsyo>
+          <z2ren>29.4</z2ren>
+          <z3ren>48.2</z3ren>
+          <jsyo>3.80</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>30.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>024</mno>
+          <m2ren>30.0</m2ren>
+          <bflg>0</bflg>
+          <bno>146</bno>
+          <b2ren>33.3</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>04</rno>
+          <teiban>6</teiban>
+          <toban group="53">5337</toban>
+          <name>出畑　　孝成</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>19</nenrei>
+          <taiju>54.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>2.58</zsyo>
+          <z2ren>4.7</z2ren>
+          <z3ren>10.7</z3ren>
+          <jsyo>2.54</jsyo>
+          <j2ren>8.8</j2ren>
+          <j3ren>16.6</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>068</mno>
+          <m2ren>32.1</m2ren>
+          <bflg>0</bflg>
+          <bno>110</bno>
+          <b2ren>36.1</b2ren>
+          <haya race_id="22_20251019">09</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>05</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>13:00</stime>
+        <htime>13:03</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>1</teiban>
+          <toban group="49">4918</toban>
+          <name>川島　　拓郎</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>36</nenrei>
+          <taiju>53.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.15</p_st>
+          <zsyo>4.81</zsyo>
+          <z2ren>25.2</z2ren>
+          <z3ren>46.0</z3ren>
+          <jsyo>5.05</jsyo>
+          <j2ren>25.0</j2ren>
+          <j3ren>55.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>065</mno>
+          <m2ren>29.0</m2ren>
+          <bflg>0</bflg>
+          <bno>114</bno>
+          <b2ren>32.3</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>2</teiban>
+          <toban group="51">5131</toban>
+          <name>江藤　　敦宏</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>26</nenrei>
+          <taiju>52.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>3.80</zsyo>
+          <z2ren>16.3</z2ren>
+          <z3ren>26.0</z3ren>
+          <jsyo>3.78</jsyo>
+          <j2ren>18.0</j2ren>
+          <j3ren>23.6</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>061</mno>
+          <m2ren>31.7</m2ren>
+          <bflg>0</bflg>
+          <bno>123</bno>
+          <b2ren>38.3</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>3</teiban>
+          <toban group="51">5178</toban>
+          <name>成貞　　琳平</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>岡　山</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>53.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.21</p_st>
+          <zsyo>3.75</zsyo>
+          <z2ren>13.5</z2ren>
+          <z3ren>29.6</z3ren>
+          <jsyo>4.21</jsyo>
+          <j2ren>21.4</j2ren>
+          <j3ren>32.1</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>062</mno>
+          <m2ren>15.4</m2ren>
+          <bflg>0</bflg>
+          <bno>116</bno>
+          <b2ren>33.8</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>4</teiban>
+          <toban group="49">4932</toban>
+          <name>新開　　　航</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.15</p_st>
+          <zsyo>6.70</zsyo>
+          <z2ren>44.3</z2ren>
+          <z3ren>58.2</z3ren>
+          <jsyo>7.13</jsyo>
+          <j2ren>58.9</j2ren>
+          <j3ren>69.2</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>041</mno>
+          <m2ren>31.8</m2ren>
+          <bflg>0</bflg>
+          <bno>147</bno>
+          <b2ren>42.8</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>5</teiban>
+          <toban group="50">5071</toban>
+          <name>野見山　拓己</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>31</nenrei>
+          <taiju>52.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.88</zsyo>
+          <z2ren>25.5</z2ren>
+          <z3ren>48.8</z3ren>
+          <jsyo>5.44</jsyo>
+          <j2ren>35.6</j2ren>
+          <j3ren>54.7</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>019</mno>
+          <m2ren>12.0</m2ren>
+          <bflg>0</bflg>
+          <bno>103</bno>
+          <b2ren>30.7</b2ren>
+          <haya race_id="22_20251019">11</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>05</rno>
+          <teiban>6</teiban>
+          <toban group="54">5407</toban>
+          <name>中岡　　　駿</name>
+          <syusin>香　川</syusin>
+          <syussinchi>香　川</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>20</nenrei>
+          <taiju>52.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st></p_st>
+          <zsyo>1.62</zsyo>
+          <z2ren>1.6</z2ren>
+          <z3ren>5.0</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>046</mno>
+          <m2ren>37.4</m2ren>
+          <bflg>0</bflg>
+          <bno>172</bno>
+          <b2ren>33.9</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>06</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>13:27</stime>
+        <htime>13:30</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>1</teiban>
+          <toban group="52">5237</toban>
+          <name>永松　　良教</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>26</nenrei>
+          <taiju>54.9</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.47</zsyo>
+          <z2ren>24.3</z2ren>
+          <z3ren>43.5</z3ren>
+          <jsyo>3.48</jsyo>
+          <j2ren>19.7</j2ren>
+          <j3ren>33.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>075</mno>
+          <m2ren>27.9</m2ren>
+          <bflg>0</bflg>
+          <bno>119</bno>
+          <b2ren>29.6</b2ren>
+          <haya race_id="22_20251019">10</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>2</teiban>
+          <toban group="44">4497</toban>
+          <name>桑原　　　悠</name>
+          <syusin>長　崎</syusin>
+          <syussinchi>長　崎</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>38</nenrei>
+          <taiju>52.3</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>6.41</zsyo>
+          <z2ren>42.0</z2ren>
+          <z3ren>62.5</z3ren>
+          <jsyo>7.39</jsyo>
+          <j2ren>55.5</j2ren>
+          <j3ren>66.6</j3ren>
+          <fsu>2</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>055</mno>
+          <m2ren>22.8</m2ren>
+          <bflg>0</bflg>
+          <bno>152</bno>
+          <b2ren>26.7</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>3</teiban>
+          <toban group="52">5262</toban>
+          <name>鈴木　　章司</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>愛　知</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>27</nenrei>
+          <taiju>52.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>3.85</zsyo>
+          <z2ren>13.1</z2ren>
+          <z3ren>32.1</z3ren>
+          <jsyo>4.40</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>43.3</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>067</mno>
+          <m2ren>35.1</m2ren>
+          <bflg>0</bflg>
+          <bno>115</bno>
+          <b2ren>36.7</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>4</teiban>
+          <toban group="44">4438</toban>
+          <name>森作　　雄大</name>
+          <syusin>東　京</syusin>
+          <syussinchi>茨　城</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>39</nenrei>
+          <taiju>52.9</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>5.73</zsyo>
+          <z2ren>44.7</z2ren>
+          <z3ren>57.2</z3ren>
+          <jsyo>4.74</jsyo>
+          <j2ren>26.3</j2ren>
+          <j3ren>47.3</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>026</mno>
+          <m2ren>44.7</m2ren>
+          <bflg>0</bflg>
+          <bno>128</bno>
+          <b2ren>35.6</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>5</teiban>
+          <toban group="52">5270</toban>
+          <name>小玉　　啓太</name>
+          <syusin>佐　賀</syusin>
+          <syussinchi>佐　賀</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>24</nenrei>
+          <taiju>52.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>3.52</zsyo>
+          <z2ren>10.3</z2ren>
+          <z3ren>27.2</z3ren>
+          <jsyo>2.23</jsyo>
+          <j2ren>3.1</j2ren>
+          <j3ren>9.3</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>057</mno>
+          <m2ren>21.7</m2ren>
+          <bflg>0</bflg>
+          <bno>102</bno>
+          <b2ren>26.6</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>06</rno>
+          <teiban>6</teiban>
+          <toban group="46">4684</toban>
+          <name>楠原　　翔太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>34</nenrei>
+          <taiju>54.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>5.44</zsyo>
+          <z2ren>33.6</z2ren>
+          <z3ren>51.9</z3ren>
+          <jsyo>5.59</jsyo>
+          <j2ren>37.5</j2ren>
+          <j3ren>52.5</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>040</mno>
+          <m2ren>30.9</m2ren>
+          <bflg>0</bflg>
+          <bno>158</bno>
+          <b2ren>44.7</b2ren>
+          <haya race_id="22_20251019">11</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>07</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>13:55</stime>
+        <htime>13:58</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>1</teiban>
+          <toban group="51">5186</toban>
+          <name>遠藤　　圭吾</name>
+          <syusin>東　京</syusin>
+          <syussinchi>神奈川</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>25</nenrei>
+          <taiju>53.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.00</zsyo>
+          <z2ren>18.1</z2ren>
+          <z3ren>35.2</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>052</mno>
+          <m2ren>35.7</m2ren>
+          <bflg>0</bflg>
+          <bno>163</bno>
+          <b2ren>24.5</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>2</teiban>
+          <toban group="52">5223</toban>
+          <name>森清　　友翔</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>24</nenrei>
+          <taiju>54.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.20</p_st>
+          <zsyo>4.30</zsyo>
+          <z2ren>21.2</z2ren>
+          <z3ren>34.3</z3ren>
+          <jsyo>3.40</jsyo>
+          <j2ren>11.3</j2ren>
+          <j3ren>18.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>071</mno>
+          <m2ren>30.0</m2ren>
+          <bflg>0</bflg>
+          <bno>101</bno>
+          <b2ren>32.5</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">４</chk>
+            <cs>5</cs>
+            <st>.16</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>3</teiban>
+          <toban group="50">5011</toban>
+          <name>高木　　圭大</name>
+          <syusin>長　崎</syusin>
+          <syussinchi>長　崎</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>28</nenrei>
+          <taiju>53.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.20</p_st>
+          <zsyo>3.85</zsyo>
+          <z2ren>16.4</z2ren>
+          <z3ren>31.7</z3ren>
+          <jsyo>4.23</jsyo>
+          <j2ren>7.6</j2ren>
+          <j3ren>38.4</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>015</mno>
+          <m2ren>25.1</m2ren>
+          <bflg>0</bflg>
+          <bno>150</bno>
+          <b2ren>30.6</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>4</teiban>
+          <toban group="42">4269</toban>
+          <name>杉山　　裕也</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>愛　知</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>40</nenrei>
+          <taiju>52.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.15</p_st>
+          <zsyo>7.09</zsyo>
+          <z2ren>57.2</z2ren>
+          <z3ren>72.5</z3ren>
+          <jsyo>6.19</jsyo>
+          <j2ren>32.2</j2ren>
+          <j3ren>61.2</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>029</mno>
+          <m2ren>35.0</m2ren>
+          <bflg>0</bflg>
+          <bno>117</bno>
+          <b2ren>31.0</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>5</teiban>
+          <toban group="54">5409</toban>
+          <name>宮本　　琉正</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>沖　縄</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>20</nenrei>
+          <taiju>55.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st></p_st>
+          <zsyo>1.43</zsyo>
+          <z2ren>0.0</z2ren>
+          <z3ren>1.5</z3ren>
+          <jsyo>1.44</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>034</mno>
+          <m2ren>30.3</m2ren>
+          <bflg>0</bflg>
+          <bno>162</bno>
+          <b2ren>23.6</b2ren>
+          <haya race_id="22_20251019">01</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>01</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">６</chk>
+            <cs>6</cs>
+            <st>.20</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>07</rno>
+          <teiban>6</teiban>
+          <toban group="41">4148</toban>
+          <name>枝尾　　　賢</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>43</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>5.38</zsyo>
+          <z2ren>33.9</z2ren>
+          <z3ren>52.4</z3ren>
+          <jsyo>7.47</jsyo>
+          <j2ren>55.8</j2ren>
+          <j3ren>86.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>042</mno>
+          <m2ren>40.9</m2ren>
+          <bflg>0</bflg>
+          <bno>144</bno>
+          <b2ren>40.3</b2ren>
+          <haya race_id="22_20251019">12</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>08</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>01</rscd>
+        <rsname>予　選</rsname>
+        <rmei>予選　　　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>14:23</stime>
+        <htime>14:26</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>1</teiban>
+          <toban group="48">4875</toban>
+          <name>大塚　　康雅</name>
+          <syusin>東　京</syusin>
+          <syussinchi>神奈川</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>31</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.71</zsyo>
+          <z2ren>31.6</z2ren>
+          <z3ren>39.8</z3ren>
+          <jsyo>5.22</jsyo>
+          <j2ren>40.7</j2ren>
+          <j3ren>48.1</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>048</mno>
+          <m2ren>27.3</m2ren>
+          <bflg>0</bflg>
+          <bno>107</bno>
+          <b2ren>22.0</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>2</teiban>
+          <toban group="47">4715</toban>
+          <name>村上　　　遼</name>
+          <syusin>長　崎</syusin>
+          <syussinchi>長　崎</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>33</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>6.73</zsyo>
+          <z2ren>51.4</z2ren>
+          <z3ren>62.8</z3ren>
+          <jsyo>7.00</jsyo>
+          <j2ren>56.2</j2ren>
+          <j3ren>71.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>053</mno>
+          <m2ren>28.0</m2ren>
+          <bflg>0</bflg>
+          <bno>167</bno>
+          <b2ren>34.9</b2ren>
+          <haya race_id="22_20251019">01</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>01</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">２</chk>
+            <cs>3</cs>
+            <st>.21</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>3</teiban>
+          <toban group="48">4864</toban>
+          <name>小川　日紀太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>宮　崎</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>36</nenrei>
+          <taiju>52.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.36</zsyo>
+          <z2ren>26.3</z2ren>
+          <z3ren>36.8</z3ren>
+          <jsyo>4.64</jsyo>
+          <j2ren>24.0</j2ren>
+          <j3ren>42.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>058</mno>
+          <m2ren>35.6</m2ren>
+          <bflg>0</bflg>
+          <bno>151</bno>
+          <b2ren>30.3</b2ren>
+          <haya race_id="22_20251019">03</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>03</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">１</chk>
+            <cs>4</cs>
+            <st>.10</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>4</teiban>
+          <toban group="50">5033</toban>
+          <name>藤原　　孝斗</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>愛　知</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>27</nenrei>
+          <taiju>55.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>3.79</zsyo>
+          <z2ren>17.6</z2ren>
+          <z3ren>28.2</z3ren>
+          <jsyo>3.89</jsyo>
+          <j2ren>21.0</j2ren>
+          <j3ren>21.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>028</mno>
+          <m2ren>32.0</m2ren>
+          <bflg>0</bflg>
+          <bno>104</bno>
+          <b2ren>29.8</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>5</teiban>
+          <toban group="52">5244</toban>
+          <name>黒田　　　剛</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>25</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>3.64</zsyo>
+          <z2ren>11.1</z2ren>
+          <z3ren>28.8</z3ren>
+          <jsyo>2.85</jsyo>
+          <j2ren>9.2</j2ren>
+          <j3ren>20.3</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>014</mno>
+          <m2ren>32.8</m2ren>
+          <bflg>0</bflg>
+          <bno>134</bno>
+          <b2ren>30.6</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>08</rno>
+          <teiban>6</teiban>
+          <toban group="51">5179</toban>
+          <name>藤本　　元輝</name>
+          <syusin>兵　庫</syusin>
+          <syussinchi>兵　庫</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>28</nenrei>
+          <taiju>53.3</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.61</zsyo>
+          <z2ren>29.3</z2ren>
+          <z3ren>41.3</z3ren>
+          <jsyo>2.80</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>20.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>047</mno>
+          <m2ren>32.6</m2ren>
+          <bflg>0</bflg>
+          <bno>171</bno>
+          <b2ren>39.3</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">１</chk>
+            <cs>2</cs>
+            <st>.16</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>09</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>02</rscd>
+        <rsname>特賞戦</rsname>
+        <rmei>予選特賞　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>14:52</stime>
+        <htime>14:55</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>1</teiban>
+          <toban group="46">4638</toban>
+          <name>小林　　遼太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>35</nenrei>
+          <taiju>53.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>4.83</zsyo>
+          <z2ren>28.4</z2ren>
+          <z3ren>43.1</z3ren>
+          <jsyo>4.51</jsyo>
+          <j2ren>25.3</j2ren>
+          <j3ren>43.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>072</mno>
+          <m2ren>29.5</m2ren>
+          <bflg>0</bflg>
+          <bno>173</bno>
+          <b2ren>36.0</b2ren>
+          <haya race_id="22_20251019">03</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>03</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">６</chk>
+            <cs>3</cs>
+            <st>.20</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>2</teiban>
+          <toban group="53">5321</toban>
+          <name>一色　　颯輝</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>愛　知</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>23</nenrei>
+          <taiju>55.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.85</zsyo>
+          <z2ren>31.5</z2ren>
+          <z3ren>42.4</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>030</mno>
+          <m2ren>34.1</m2ren>
+          <bflg>0</bflg>
+          <bno>125</bno>
+          <b2ren>36.8</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>3</teiban>
+          <toban group="45">4567</toban>
+          <name>上村　慎太郎</name>
+          <syusin>山　口</syusin>
+          <syussinchi>山　口</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>37</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.23</p_st>
+          <zsyo>3.47</zsyo>
+          <z2ren>10.1</z2ren>
+          <z3ren>23.7</z3ren>
+          <jsyo>3.64</jsyo>
+          <j2ren>10.7</j2ren>
+          <j3ren>17.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>051</mno>
+          <m2ren>30.3</m2ren>
+          <bflg>0</bflg>
+          <bno>168</bno>
+          <b2ren>35.0</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">６</chk>
+            <cs>1</cs>
+            <st>.26</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>4</teiban>
+          <toban group="48">4899</toban>
+          <name>占部　　一真</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>33</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.52</zsyo>
+          <z2ren>28.2</z2ren>
+          <z3ren>38.0</z3ren>
+          <jsyo>4.92</jsyo>
+          <j2ren>32.6</j2ren>
+          <j3ren>44.9</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>035</mno>
+          <m2ren>28.9</m2ren>
+          <bflg>0</bflg>
+          <bno>130</bno>
+          <b2ren>42.8</b2ren>
+          <haya race_id="22_20251019">01</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>01</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">１</chk>
+            <cs>1</cs>
+            <st>.17</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>5</teiban>
+          <toban group="53">5337</toban>
+          <name>出畑　　孝成</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>19</nenrei>
+          <taiju>54.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>2.58</zsyo>
+          <z2ren>4.7</z2ren>
+          <z3ren>10.7</z3ren>
+          <jsyo>2.54</jsyo>
+          <j2ren>8.8</j2ren>
+          <j3ren>16.6</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>068</mno>
+          <m2ren>32.1</m2ren>
+          <bflg>0</bflg>
+          <bno>110</bno>
+          <b2ren>36.1</b2ren>
+          <haya race_id="22_20251019">04</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>04</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">６</chk>
+            <cs>6</cs>
+            <st>.12</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>09</rno>
+          <teiban>6</teiban>
+          <toban group="42">4295</toban>
+          <name>小坂　　尚哉</name>
+          <syusin>兵　庫</syusin>
+          <syussinchi>大　阪</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>39</nenrei>
+          <taiju>53.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>6.46</zsyo>
+          <z2ren>50.0</z2ren>
+          <z3ren>67.4</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>017</mno>
+          <m2ren>31.6</m2ren>
+          <bflg>0</bflg>
+          <bno>120</bno>
+          <b2ren>31.2</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>10</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>02</rscd>
+        <rsname>特賞戦</rsname>
+        <rmei>予選特賞　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>15:22</stime>
+        <htime>15:25</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>1</teiban>
+          <toban group="39">3908</toban>
+          <name>重成　　一人</name>
+          <syusin>香　川</syusin>
+          <syussinchi>香　川</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>47</nenrei>
+          <taiju>55.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.14</p_st>
+          <zsyo>6.89</zsyo>
+          <z2ren>46.6</z2ren>
+          <z3ren>63.9</z3ren>
+          <jsyo>7.86</jsyo>
+          <j2ren>51.7</j2ren>
+          <j3ren>86.2</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>056</mno>
+          <m2ren>41.6</m2ren>
+          <bflg>0</bflg>
+          <bno>133</bno>
+          <b2ren>34.9</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>4</cs>
+            <st>.13</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>2</teiban>
+          <toban group="53">5307</toban>
+          <name>富永　夏哉人</name>
+          <syusin>佐　賀</syusin>
+          <syussinchi>佐　賀</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>22</nenrei>
+          <taiju>50.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.96</zsyo>
+          <z2ren>29.4</z2ren>
+          <z3ren>48.2</z3ren>
+          <jsyo>3.80</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>30.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>024</mno>
+          <m2ren>30.0</m2ren>
+          <bflg>0</bflg>
+          <bno>146</bno>
+          <b2ren>33.3</b2ren>
+          <haya race_id="22_20251019">04</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>04</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">４</chk>
+            <cs>5</cs>
+            <st>.17</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>3</teiban>
+          <toban group="47">4723</toban>
+          <name>寺島　　吉彦</name>
+          <syusin>東　京</syusin>
+          <syussinchi>福　島</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>39</nenrei>
+          <taiju>50.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.65</zsyo>
+          <z2ren>26.0</z2ren>
+          <z3ren>43.4</z3ren>
+          <jsyo>5.50</jsyo>
+          <j2ren>30.0</j2ren>
+          <j3ren>60.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>045</mno>
+          <m2ren>37.3</m2ren>
+          <bflg>0</bflg>
+          <bno>153</bno>
+          <b2ren>28.8</b2ren>
+          <haya race_id="22_20251019">03</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>03</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>1</cs>
+            <st>.20</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>4</teiban>
+          <toban group="52">5237</toban>
+          <name>永松　　良教</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>26</nenrei>
+          <taiju>54.9</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>4.47</zsyo>
+          <z2ren>24.3</z2ren>
+          <z3ren>43.5</z3ren>
+          <jsyo>3.48</jsyo>
+          <j2ren>19.7</j2ren>
+          <j3ren>33.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>075</mno>
+          <m2ren>27.9</m2ren>
+          <bflg>0</bflg>
+          <bno>119</bno>
+          <b2ren>29.6</b2ren>
+          <haya race_id="22_20251019">06</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>06</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">２</chk>
+            <cs>1</cs>
+            <st>.07</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>5</teiban>
+          <toban group="49">4918</toban>
+          <name>川島　　拓郎</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>36</nenrei>
+          <taiju>53.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.15</p_st>
+          <zsyo>4.81</zsyo>
+          <z2ren>25.2</z2ren>
+          <z3ren>46.0</z3ren>
+          <jsyo>5.05</jsyo>
+          <j2ren>25.0</j2ren>
+          <j3ren>55.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>065</mno>
+          <m2ren>29.0</m2ren>
+          <bflg>0</bflg>
+          <bno>114</bno>
+          <b2ren>32.3</b2ren>
+          <haya race_id="22_20251019">05</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>05</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>1</cs>
+            <st>.09</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>10</rno>
+          <teiban>6</teiban>
+          <toban group="52">5212</toban>
+          <name>西川　　拓利</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>27</nenrei>
+          <taiju>53.6</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>5.22</zsyo>
+          <z2ren>33.3</z2ren>
+          <z3ren>54.5</z3ren>
+          <jsyo>3.46</jsyo>
+          <j2ren>15.5</j2ren>
+          <j3ren>28.8</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>063</mno>
+          <m2ren>34.9</m2ren>
+          <bflg>0</bflg>
+          <bno>136</bno>
+          <b2ren>43.6</b2ren>
+          <haya race_id="22_20251019">01</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>01</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>4</cs>
+            <st>.25</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>11</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>03</rscd>
+        <rsname>特選戦</rsname>
+        <rmei>予選特選　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>15:55</stime>
+        <htime>15:58</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>1</teiban>
+          <toban group="40">4064</toban>
+          <name>原田　　篤志</name>
+          <syusin>山　口</syusin>
+          <syussinchi>山　口</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>45</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>7.27</zsyo>
+          <z2ren>58.5</z2ren>
+          <z3ren>79.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>073</mno>
+          <m2ren>30.5</m2ren>
+          <bflg>0</bflg>
+          <bno>138</bno>
+          <b2ren>31.6</b2ren>
+          <haya race_id="22_20251019">03</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>03</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">２</chk>
+            <cs>5</cs>
+            <st>.12</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>2</teiban>
+          <toban group="50">5071</toban>
+          <name>野見山　拓己</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>31</nenrei>
+          <taiju>52.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.88</zsyo>
+          <z2ren>25.5</z2ren>
+          <z3ren>48.8</z3ren>
+          <jsyo>5.44</jsyo>
+          <j2ren>35.6</j2ren>
+          <j3ren>54.7</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>019</mno>
+          <m2ren>12.0</m2ren>
+          <bflg>0</bflg>
+          <bno>103</bno>
+          <b2ren>30.7</b2ren>
+          <haya race_id="22_20251019">05</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>05</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">４</chk>
+            <cs>5</cs>
+            <st>.05</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>3</teiban>
+          <toban group="46">4684</toban>
+          <name>楠原　　翔太</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>34</nenrei>
+          <taiju>54.2</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>5.44</zsyo>
+          <z2ren>33.6</z2ren>
+          <z3ren>51.9</z3ren>
+          <jsyo>5.59</jsyo>
+          <j2ren>37.5</j2ren>
+          <j3ren>52.5</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>040</mno>
+          <m2ren>30.9</m2ren>
+          <bflg>0</bflg>
+          <bno>158</bno>
+          <b2ren>44.7</b2ren>
+          <haya race_id="22_20251019">06</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>06</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>6</cs>
+            <st>.07</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>4</teiban>
+          <toban group="46">4661</toban>
+          <name>中島　　昂章</name>
+          <syusin>佐　賀</syusin>
+          <syussinchi>佐　賀</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>33</nenrei>
+          <taiju>52.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.21</p_st>
+          <zsyo>4.40</zsyo>
+          <z2ren>22.0</z2ren>
+          <z3ren>38.9</z3ren>
+          <jsyo>5.61</jsyo>
+          <j2ren>28.5</j2ren>
+          <j3ren>53.5</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>036</mno>
+          <m2ren>29.0</m2ren>
+          <bflg>0</bflg>
+          <bno>140</bno>
+          <b2ren>34.3</b2ren>
+          <haya race_id="22_20251019"></haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>5</teiban>
+          <toban group="51">5133</toban>
+          <name>堀越　　雄貴</name>
+          <syusin>東　京</syusin>
+          <syussinchi>神奈川</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>26</nenrei>
+          <taiju>52.4</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>4.83</zsyo>
+          <z2ren>26.6</z2ren>
+          <z3ren>47.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>020</mno>
+          <m2ren>26.4</m2ren>
+          <bflg>0</bflg>
+          <bno>165</bno>
+          <b2ren>35.6</b2ren>
+          <haya race_id="22_20251019">01</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>01</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">４</chk>
+            <cs>2</cs>
+            <st>.23</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>11</rno>
+          <teiban>6</teiban>
+          <toban group="47">4727</toban>
+          <name>安部　　慎一</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>38</nenrei>
+          <taiju>54.1</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.16</p_st>
+          <zsyo>4.86</zsyo>
+          <z2ren>27.7</z2ren>
+          <z3ren>42.2</z3ren>
+          <jsyo>4.74</jsyo>
+          <j2ren>31.8</j2ren>
+          <j3ren>42.4</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>025</mno>
+          <m2ren>31.5</m2ren>
+          <bflg>0</bflg>
+          <bno>174</bno>
+          <b2ren>22.3</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">２</chk>
+            <cs>3</cs>
+            <st>.12</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+      <race>
+        <hdate>20251019</hdate>
+        <jcd>22</jcd>
+        <rno>12</rno>
+        <ktitl>Ａ１チャレンジカップ　マンスリーＢＯＡＴＲＡＣＥ杯</ktitl>
+        <kake>1111111000000000</kake>
+        <rscd>04</rscd>
+        <rsname>選抜戦</rsname>
+        <rmei>福岡選抜　　　</rmei>
+        <kyori>1800</kyori>
+        <kotei>0</kotei>
+        <stime>16:30</stime>
+        <htime>16:33</htime>
+        <bscd>H</bscd>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>1</teiban>
+          <toban group="49">4932</toban>
+          <name>新開　　　航</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>A1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.15</p_st>
+          <zsyo>6.70</zsyo>
+          <z2ren>44.3</z2ren>
+          <z3ren>58.2</z3ren>
+          <jsyo>7.13</jsyo>
+          <j2ren>58.9</j2ren>
+          <j3ren>69.2</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>041</mno>
+          <m2ren>31.8</m2ren>
+          <bflg>0</bflg>
+          <bno>147</bno>
+          <b2ren>42.8</b2ren>
+          <haya race_id="22_20251019">05</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>05</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">１</chk>
+            <cs>4</cs>
+            <st>.01</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>2</teiban>
+          <toban group="49">4982</toban>
+          <name>中村　　将隆</name>
+          <syusin>兵　庫</syusin>
+          <syussinchi>兵　庫</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>54.8</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>5.09</zsyo>
+          <z2ren>32.4</z2ren>
+          <z3ren>50.6</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>066</mno>
+          <m2ren>17.8</m2ren>
+          <bflg>0</bflg>
+          <bno>156</bno>
+          <b2ren>33.8</b2ren>
+          <haya race_id="22_20251019">04</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>04</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">３</chk>
+            <cs>4</cs>
+            <st>.20</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>3</teiban>
+          <toban group="41">4148</toban>
+          <name>枝尾　　　賢</name>
+          <syusin>福　岡</syusin>
+          <syussinchi>福　岡</syussinchi>
+          <kyu>B2</kyu>
+          <nenrei>43</nenrei>
+          <taiju>51.5</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.17</p_st>
+          <zsyo>5.38</zsyo>
+          <z2ren>33.9</z2ren>
+          <z3ren>52.4</z3ren>
+          <jsyo>7.47</jsyo>
+          <j2ren>55.8</j2ren>
+          <j3ren>86.0</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>042</mno>
+          <m2ren>40.9</m2ren>
+          <bflg>0</bflg>
+          <bno>144</bno>
+          <b2ren>40.3</b2ren>
+          <haya race_id="22_20251019">07</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>07</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">２</chk>
+            <cs>5</cs>
+            <st>.17</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>4</teiban>
+          <toban group="50">5076</toban>
+          <name>石原　　　光</name>
+          <syusin>静　岡</syusin>
+          <syussinchi>静　岡</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>53.7</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.18</p_st>
+          <zsyo>5.30</zsyo>
+          <z2ren>34.4</z2ren>
+          <z3ren>48.2</z3ren>
+          <jsyo>0.00</jsyo>
+          <j2ren>0.0</j2ren>
+          <j3ren>0.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>018</mno>
+          <m2ren>30.9</m2ren>
+          <bflg>0</bflg>
+          <bno>166</bno>
+          <b2ren>26.9</b2ren>
+          <haya race_id="22_20251019">02</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>02</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">５</chk>
+            <cs>6</cs>
+            <st>.14</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>5</teiban>
+          <toban group="51">5127</toban>
+          <name>沼田　　大都</name>
+          <syusin>愛　知</syusin>
+          <syussinchi>広　島</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>29</nenrei>
+          <taiju>51.0</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.19</p_st>
+          <zsyo>4.66</zsyo>
+          <z2ren>19.8</z2ren>
+          <z3ren>46.8</z3ren>
+          <jsyo>3.90</jsyo>
+          <j2ren>20.0</j2ren>
+          <j3ren>30.0</j3ren>
+          <fsu>0</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>012</mno>
+          <m2ren>29.4</m2ren>
+          <bflg>1</bflg>
+          <bno>121</bno>
+          <b2ren>36.5</b2ren>
+          <haya race_id="22_20251019">03</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>03</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">５</chk>
+            <cs>2</cs>
+            <st>.21</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+        <syussou>
+          <hdate>20251019</hdate>
+          <jcd>22</jcd>
+          <rno>12</rno>
+          <teiban>6</teiban>
+          <toban group="44">4438</toban>
+          <name>森作　　雄大</name>
+          <syusin>東　京</syusin>
+          <syussinchi>茨　城</syussinchi>
+          <kyu>B1</kyu>
+          <nenrei>39</nenrei>
+          <taiju>52.9</taiju>
+          <seibetsu>1</seibetsu>
+          <p_st>0.13</p_st>
+          <zsyo>5.73</zsyo>
+          <z2ren>44.7</z2ren>
+          <z3ren>57.2</z3ren>
+          <jsyo>4.74</jsyo>
+          <j2ren>26.3</j2ren>
+          <j3ren>47.3</j3ren>
+          <fsu>1</fsu>
+          <lsu>0</lsu>
+          <mflg>0</mflg>
+          <mno>026</mno>
+          <m2ren>44.7</m2ren>
+          <bflg>1</bflg>
+          <bno>141</bno>
+          <b2ren>32.0</b2ren>
+          <haya race_id="22_20251019">06</haya>
+          <kjo>0</kjo>
+          <com1></com1>
+          <kekka>
+            <nj>11</nj>
+            <rno>06</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20251019">不</chk>
+            <cs>4</cs>
+            <st>.07</st>
+          </kekka>
+          <kekka>
+            <nj>12</nj>
+            <rno></rno>
+            <waku></waku>
+            <rsflg></rsflg>
+            <chk></chk>
+            <cs></cs>
+            <st></st>
+          </kekka>
+        </syussou>
+      </race>
+    </record>
+  </table>
+</boatrace>

@@ -1,0 +1,15 @@
+<div class ="selector-panel">
+  <label for="dateSelect">日付:</label>
+  <select id="dateSelect" [(ngModel)]="selectedDate" (change)="onDateChange()">
+    <option value="">--選択--</option>
+    <option *ngFor="let date of dates" [value]="date">{{ date }}</option>
+  </select>
+
+  <label for="seriesSelect">場(節):</label>
+  <select id="seriesSelect" [(ngModel)]="selectedSeriesKey" (change)="onSeriesChange()"
+   [disabled]="!seriesList.length">
+    <option value="">--選択--</option>
+    <option *ngFor="let s of seriesList" [value]="getSeriesKey(s)"> {{ formatSeriesLabel(s) }}
+    </option>
+  </select>
+</div>
