@@ -7,10 +7,11 @@ const http = require('http');
 const socketIO = require('socket.io');
 const path = require('path');
 
-const { setIO,notifyClients } = require('./modules/notify');
+const { setIO, notifyClients } = require('./modules/notify');
 
 const app = express();
 const server = http.createServer(app) //ExpressとSocket.ioを共通サーバ
+const fs = require('fs');
 
 // CORS設定（Express + Socket.IO 共通）
 const corsOptions = {
@@ -37,9 +38,78 @@ io.on('connection', (socket) => {
   // 例: 更新通知 (明示的に emit)
   socket.emit('update', '初回接続通知');
 
-  socket.on('disconnect',() => {
+  socket.on('disconnect', () => {
     console.log('❌ クライアント切断:', socket.id);
   });
+});
+
+// =========================================================
+// 2️⃣ public (LIVE画面) を最初に登録
+// =========================================================
+app.use(express.static(path.join(__dirname, 'public')));
+
+// ルートアクセスでLIVE画面を表示
+app.get('/live', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index2.html'))
+})
+
+// ==============================================
+// 1⃣当日開催場（raceheader.json)を返すAPI
+// ===========================================-
+// 日本時間で今日の日付を取得
+function getTodayYMD() {
+  const now = new Date();
+  const jst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  return jst.toISOString().slice(0, 10).replace(/-/g, '');
+}
+
+app.get('/api/today-raceheader', (req, res) => {
+  const today = getTodayYMD();
+  const filepath = path.join(__dirname, 'xml', `${today}-raceHeader.json`);
+
+  // ファイル存在チェック
+  if (!fs.existsSync(filepath)) {
+    return res.status(404).json({ error: `ファイルが見つかりません: ${filepath}` });
+  }
+
+  // JSONを読み込んで返す
+  try {
+    const json = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+    res.json(json);
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+});
+
+// =============================================
+// 2⃣series_infoテーブルから開催情報 (タイトル・グレード）を取得するAPい
+// ==========================================-==
+app.get('/api/today-series', (req, res) => {
+  const today = getTodayYMD();
+  const dbPath = path.join(__dirname, 'db', 'program1.db')
+
+  const db2 = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY, (err) => {
+    if (err) {
+      console.error('DB接続エラー:', err.message);
+      return res.status(500).json({ error: 'DB接続失敗' });
+    }
+  });
+
+  // 今日の日付が含まれる節（series_info.dates) を検索
+  const sql = `
+    SELECT jcd,jname,grade,title
+    FROM series_info
+    WHERE dates LIKE ?;
+    `;
+
+  db2.all(sql, [`%${today}%`], (err, rows) => {
+    if (err) {
+      console.error('DBクエリエラー:', err.message);
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(rows);
+    db2.close();
+  })
 });
 
 // Angularのdistを静的ファイルとして公開
@@ -47,28 +117,28 @@ app.use(express.static(path.join(__dirname, 'boat-racer-profile', 'dist', 'brows
 
 // DB接続時の再試行とハンドリング強化
 function createDBConnection(retry = 3, delay = 1000) {
-    return new Promise((resolve,reject) => {
-        let attempts = 0;
+  return new Promise((resolve, reject) => {
+    let attempts = 0;
 
-        function connect(){
-            // DBファイルを指定
-          const db = new sqlite3.Database('./db/program1.db', sqlite3.OPEN_READONLY, (err) => { 
-        if(!err) {
-            console.log('🗃️ SQLite DB接続完了');
-            resolve(db);
+    function connect() {
+      // DBファイルを指定
+      const db = new sqlite3.Database('./db/program1.db', sqlite3.OPEN_READONLY, (err) => {
+        if (!err) {
+          console.log('🗃️ SQLite DB接続完了');
+          resolve(db);
         } else {
           console.error(`❌ DB接続エラー: ${err.message}`);
-          if(++attempts < retry) {
+          if (++attempts < retry) {
             console.log(`🔁 再接続を試行中 (${attempts}/${retry})...`);
-            setTimeout(connect,delay);
+            setTimeout(connect, delay);
           } else {
             reject(new Error('DB接続に失敗しました (再試行上限)'));
           }
-          }
-    });
-}
-connect();
-    });
+        }
+      });
+    }
+    connect();
+  });
 }
 
 //---------apiを構成するsqLiteサーバーの構築--------------
@@ -86,31 +156,32 @@ app.post('/api/notify-update', (req, res) => {
 });
 
 // angular ルーティング対応 (リロード対策)
-app.get(/^\/(?!api).*/,(req,res) => {
-  res.sendFile(path.join(__dirname, 'boat-racer-profile', 'dist', 'browser','index.html'));
+app.get(/^\/(?!api|live).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, 'boat-racer-profile', 'dist', 'browser', 'index.html'));
 });
 
-const PORT  = 4200;
+const PORT = 4200;
 
 // DB接続後ルーティング開始
 let db;
 
 createDBConnection().then(conn => {
-    db = conn;
+  db = conn;
 
-    // ルーティング分割の読み込み
-app.use('/api/racers',require('./routes/racers')(db));
-app.use('/api/series',require('./routes/series')(db));
+  // ルーティング分割の読み込み
+  app.use('/api/racers', require('./routes/racers')(db));
+  app.use('/api/series', require('./routes/series')(db));
 
-// サーバー起動 (Express + Socket.IO 両方)
-server.listen(PORT, '0.0.0.0',() => {
+  // サーバー起動 (Express + Socket.IO 両方)
+  server.listen(PORT, '0.0.0.0', () => {
     console.log(`🌐 Webサーバー起動中 → http://localhost:${PORT}`);
-});
+  });
 
 
 }).catch(err => {
-    console.error("⚠  最終的にDB接続できませんでした:", err.message);
-    process.exit(1); // 致命的なエラーとして終了
+  console.error("⚠  最終的にDB接続できませんでした:", err.message);
+  process.exit(1); // 致命的なエラーとして終了
 });
 
 // 動作確認　http://localhost:4200/api/racers?hdate=20250418&jcd=13
+

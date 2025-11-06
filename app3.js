@@ -19,15 +19,16 @@ if (runMode === 'now') {
     (async () => {
         const targetDate = cliDate && /^\d{8}$/.test(cliDate)
             ? cliDate
-            : new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            : getToday()
 
         console.log(`🚀 即時実行: ${targetDate}`);
         writeLog(`🚀 即時実行: ${targetDate}`);
 
-        if (mode === 'download' || mode === 'both') { await runDownload(targetDate,jcdOnly); }
-        if (mode === 'database' || mode === 'both') 
-            { console.log("▶ runImport を実行します:", targetDate, jcdOnly);
-            await runImport(targetDate,jcdOnly); }
+        if (mode === 'download' || mode === 'both') { await runDownload(targetDate, jcdOnly); }
+        if (mode === 'database' || mode === 'both') {
+            console.log("▶ runImport を実行します:", targetDate, jcdOnly);
+            await runImport(targetDate, jcdOnly);
+        }
     })();
 }
 

@@ -1,5 +1,7 @@
 function getToday() {
-    return new Date().toISOString().slice(0,10).replace(/-/g,'');
+    const now = new Date();
+    const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000)); //UTC→JSt変換
+    return jst.toISOString().slice(0, 10).replace(/-/g, '');
 }
 
 module.exports = { getToday };

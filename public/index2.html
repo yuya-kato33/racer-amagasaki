@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport " content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ボートレースライブ -タッチ対応版</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <!-- ヘッダー (ロゴ + タイトル) -->
+    <header class="header">
+        <div class="logo">
+            🚤 <span>ボートレース</span> <strong>ライブ映像 (タッチ対応)</strong>
+        </div>
+    </header>
+
+    <!-- メインレイアウト -->
+    <main class="layout">
+        <!-- 左パネル(ボタン一覧) -->
+        <section class="panel left-panel">
+            <h2>開催場一覧</h2>
+            <div id="button-container" class="button-grid"></div>
+        </section>
+
+        <!-- 右パネル ライブ情報・映像)エリア -->
+        <section class="panel right-panel">
+            <div id="liveInfo">レース場を選択してください</div>
+
+            <!-- カテゴリボタン群 -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-view="live">LIVE</button>
+                <button class="tab-btn" data-view="result">レース結果</button>
+                <button class="tab-btn" data-view="past10">枠番別10走表</button>
+                <button class="tab-btn" data-view="racers">出場選手一覧</button>
+            </div>
+
+            <!-- コンテンツ領域 -->
+            <div id="contentArea">
+
+                <!-- LIVEエリア -->
+                <div id="view-live" class="view-panel active-view">
+                    <iframe id="liveFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <!-- レース結果ダミー -->
+                <div id="view-result" class="view-panel">
+                    <div class="dummy-content"> レース結果 (ダミー表示) </div>
+                </div>
+
+                <!-- 枠番別過去10走表ダミー -->
+                <div id="view-past10" class="view-panel">
+                    <div class="dummy-content"> 枠番別過去10走表 (ダミー表示) </div>
+                </div>
+
+                <!-- 出場選手一覧ダミー -->
+                <div id="view-racers" class="view-panel">
+                    <div class="racer-container">
+                        <div id="racerListContainer" class="racer-grid"></div>
+
+                        <!-- ページ送りナビ -->
+                        <div class="racer-pager">
+                            <button id="prevPage" class="pager-btn">← 前へ</button>
+                            <span id="pageIndicator">1 / 1</span>
+                            <button id="nextPage" class="pager-btn">次へ →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

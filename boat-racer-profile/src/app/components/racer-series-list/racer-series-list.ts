@@ -18,18 +18,18 @@ export class RacerSeriesList implements OnChanges {
   isLoading = false;
   error: string | null = null;
 
-  constructor(private seriesService: SeriesService) {}
+  constructor(private seriesService: SeriesService) { }
 
   ngOnChanges(): void {
-    if(this.startDate && this.jcd) {
+    if (this.startDate && this.jcd) {
       this.fetchRacersBySeries();
-      };
+    };
   }
 
   fetchRacersBySeries() {
     this.isLoading = true;
     this.error = null;
-    this.seriesService.getRacersBySeries(this.startDate,this.jcd).subscribe({
+    this.seriesService.getRacersBySeries(this.startDate, this.jcd).subscribe({
       next: (data) => {
         console.log('節ごとの選手データ', data);
         this.racers = data;
@@ -50,13 +50,13 @@ export class RacerSeriesList implements OnChanges {
   setFallbackImage(event: Event): void {
     const img = event.target as HTMLImageElement;
     // placeholder.png の再読み込み防止
-    if(!img.src.includes('placeholder.png')) {
+    if (!img.src.includes('placeholder.png')) {
       img.src = '/assets/placeholder.png';
     }
   }
-  
+
   // 支部から全角スペースを削除する
-  normalizeShibu(shibu: string):string {
+  normalizeShibu(shibu: string): string {
     return shibu.replace(/\s+/g, '').replace(/　/g, ''); // 半角・全角空白を削除
   }
 }
