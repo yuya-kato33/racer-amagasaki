@@ -214,6 +214,12 @@ let totalPages = 1;
 let racersData = [];
 let cardsPerPage = 18; //初期値
 
+// 支部から全角スペースを削除する
+function normalizeShibu(shibu) {
+    if (!shibu) return '';
+    return shibu.replace(/\s+/g, '').replace(/　/g, ''); // 半角・全角空白を削除
+}
+
 async function loadracers(joCode) {
     const now = new Date();
     const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000)); //UTC→JSt変換
@@ -224,7 +230,8 @@ async function loadracers(joCode) {
     container.innerHTML = `<p style="color:white;">読み込み中...</p>`
 
     try {
-        const res = await fetch(`/api/racers?hdate=${today}&jcd=${joCode}`);
+        const startDate = today;
+        const res = await fetch(`/api/series/${startDate}/${joCode}/racers`);
         if (!res.ok) throw new Error('選手データの取得に失敗しました');
         racersData = await res.json();
 
@@ -284,7 +291,7 @@ function renderRacerPage() {
             />
             <div class="racer-info">
               <strong>${r.name}</strong>
-              <div>(${r.kyu || '-'}・${r.shibu || '-'}支部)</div>
+              <div>(${r.kyu || '-'}・${normalizeShibu(r.shibu) || '-'}支部)</div>
               <div>登録番号: ${r.toban}</div>
               <div>勝率: ${Number(r.zsyo).toFixed(2)}</div>
               <div>2連: ${r.z2ren || '-'}% / 3連: ${r.z3ren || '-'}%</div>

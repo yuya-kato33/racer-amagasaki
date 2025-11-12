@@ -457,3 +457,16 @@ button.grade-normal {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
     margin-top: 4px;
 }
+
+iframe {
+    -webkit-user-select: none;
+    /* Safari, iOS：文字選択禁止 */
+    -ms-user-select: none;
+    /* 旧Edge, IE：選択禁止 */
+    user-select: none;
+    /* 標準プロパティ */
+    -webkit-touch-callout: none;
+    /* Safari, iOS：長押しメニュー禁止 */
+    touch-action: manipulation;
+    /* ✅ ダブルタップズーム防止 */
+}

@@ -82,7 +82,7 @@ app.get('/api/today-raceheader', (req, res) => {
 });
 
 // =============================================
-// 2⃣series_infoテーブルから開催情報 (タイトル・グレード）を取得するAPい
+// 2⃣series_infoテーブルから開催情報 (タイトル・グレード）を取得するAP
 // ==========================================-==
 app.get('/api/today-series', (req, res) => {
   const today = getTodayYMD();
