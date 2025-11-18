@@ -470,3 +470,25 @@ iframe {
     touch-action: manipulation;
     /* ✅ ダブルタップズーム防止 */
 }
+
+
+.view-panel.active-view {
+    opacity: 1;
+    visibility: visible;
+}
+
+#view-result {
+    /* iframeロード中に透けて見える色 */
+    background-color: #0a1633;
+}
+
+#resultFrame {
+    /* about:blank時の背景 */
+    background-color: #0a1633;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#resultFrame.loaded {
+    opacity: 1;
+}

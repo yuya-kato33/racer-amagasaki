@@ -6,6 +6,7 @@
     <meta name="viewport " content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ボートレースライブ -タッチ対応版</title>
     <link rel="stylesheet" href="style2.css">
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
@@ -31,8 +32,8 @@
             <!-- カテゴリボタン群 -->
             <div class="category-tabs">
                 <button class="tab-btn active" data-view="live">LIVE</button>
-                <!-- <button class="tab-btn" data-view="result">レース結果</button>
-                <button class="tab-btn" data-view="past10">枠番別10走表</button> -->
+                <button class="tab-btn" data-view="result">レース結果</button>
+                <!-- <button class="tab-btn" data-view="past10">枠番別10走表</button> -->
                 <button class="tab-btn" data-view="racers">出場選手一覧</button>
             </div>
 
@@ -46,7 +47,9 @@
 
                 <!-- レース結果ダミー -->
                 <div id="view-result" class="view-panel">
-                    <div class="dummy-content"> レース結果 (ダミー表示) </div>
+                    <iframe id="resultFrame" src="" width="100%" height="900"
+                        style="border: none; background-color: #000;">
+                    </iframe>
                 </div>
 
                 <!-- 枠番別過去10走表ダミー -->

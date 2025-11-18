@@ -54,6 +54,23 @@ const mascotMap = {
     "大村": "oomura"
 };
 
+
+// 超重要: ポート判定と相互補完URL設定
+const HOST = "192.168.1.22";
+const PORT = location.port;
+
+// 8083 の racers API パス
+const RACERS_API_PATH = "/api/series";
+
+// ● 8081 → レース結果は自前、選手一覧は 8083 から取りに行く
+// ● 8083 → レース結果は 8081 から取得、選手一覧は自前
+const RESULT_BASE = `http://${HOST}:8081` // 8083→8081の結果を参照
+const RACERS_BASE = `http://${HOST}:8083`   // 8083 → 自前
+
+// socket.io 初期化
+const socket = io(); // これだけでOK 
+console.log(" LIVE socket.io 接続開始")
+
 //ブラウザの強制ズーム が残る場合
 document.addEventListener('gesturestart', e => e.preventDefault)
 document.addEventListener('dblclick', e => e.preventDefault)
@@ -66,9 +83,12 @@ const liveInfo = document.getElementById("liveInfo");
 let raceInfo = []; //series_infoのデータ核の用
 
 // 今日の日付をYYYYMMDD形式で取得　（日本時間9
-const now = new Date();
-const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000)); //UTC→JSt変換
-const today = jst.toISOString().slice(0, 10).replace(/-/g, '');
+function getTodayYMD() {
+    const now = new Date();
+    const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000)); //UTC→JSt変換
+    return jst.toISOString().slice(0, 10).replace(/-/g, '');
+}
+
 
 // JSON から開催場を取得
 async function loadRaceHeader() {
@@ -173,11 +193,36 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     })
 })
 
+
 // 表示更新 (タブに応じてHTMLの表示を切り替え)
 function updateView() {
-    document.querySelectorAll('.view-panel').forEach(v => v.classList.remove('active-view'));
-    const activePanel = document.getElementById(`view-${currentView}`);
-    if (activePanel) activePanel.classList.add('active-view');
+    // すべて非表示（フェードアウト）
+    const panels = document.querySelectorAll('.view-panel');
+    panels.forEach(v => {
+        if (v.id === `view-${currentView}`) {
+            //フェードイン・
+            v.classList.add('active-view');
+            v.style.opacity = 1;
+        } else {
+            // フェードアウト
+            v.classList.remove('active-view');
+            v.style.opacity = 0;
+        }
+    });
+
+    // 🟡 特殊ケース：レース結果タブの場合のみ iframe もフェード演出
+    if (currentView === 'result') {
+        const resultFrame = document.getElementById('resultFrame');
+        if (resultFrame) {
+            resultFrame.style.transition = 'opacity 0.3s ease';
+            resultFrame.style.opacity = 0;
+
+            // iframeが描画完了してからフェードイン開始
+            resultFrame.onload = () => {
+                resultFrame.style.opacity = 1;
+            };
+        }
+    }
 }
 
 //　ボタンを押して 再生処理 (タイトル表示付き)
@@ -195,11 +240,88 @@ function playLive(joCode, btn) {
         ? `${info.jname} (${info.grade} ${info.title})`
         : `${joCode} - ライブ映像`
 
-
-    // iframe更新
+    // ライブiframe更新
     const frame = document.getElementById('liveFrame');
     const baseUrl = "https://race.boatcast.jp/boatcastpc/streamer/streamer.php";
     frame.src = `${baseUrl}?md=L&jo=${joCode}&_=${Date.now()}`;
+
+    // 結果iframe再読み込み（フェードつき）
+    const resultPanel = document.getElementById('view-result');
+    if (resultPanel.classList.contains('active-view')) {
+        // 結果iframe取得
+        const resultFrame = document.getElementById('resultFrame');
+        const today = getTodayYMD();
+        const newurl = `/results?date=${today}&jcd=${currentPlace}&live=true`;
+        console.log("結果再読み込み:", newurl);
+
+        // フェードアウト
+        resultFrame.style.opacity = 0;
+        setTimeout(() => {
+            resultFrame.src = newurl;
+            // 読み込み完了後にフェードイン
+            resultFrame.onload = () => {
+                resultFrame.style.transition = "opacity 0.3s ease";
+                resultFrame.style.opacity = 1;
+            };
+        }, 150);
+    }
+
+    // タブ切り替え
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const view = btn.dataset.view;
+            document.querySelectorAll('.view-panel').forEach(v => v.classList.remove('active-view'));
+            document.getElementById(`view-${view}`).classList.add('active-view');
+
+            // 🆕 レース結果タブを開いたときだけロード
+            if (view === 'result') {
+                const resultFrame = document.getElementById('resultFrame');
+                const today = getTodayYMD();
+
+                if (currentPlace) {
+                    // ANgulrルートではなくHTMLを直に指定
+                    const url = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`; // live=true追加
+                    console.log(" レース結果URL:", url);
+                    resultFrame.src = url;
+                } else {
+                    console.warn(" currentPlaceが未設定です。")
+                }
+            }
+
+            // 🟡 ▼▼▼ ここが 8081 側に欠けていた ▼▼▼
+            // 出場選手一覧タブを開いたときだけロード
+            if (view === 'racers') {
+                if (currentPlace) {
+                    console.log("🔵 出場選手一覧ロード:", currentPlace);;
+                    loadracers(currentPlace);
+                } else {
+                    console.warn("出場選手一覧：currentPlace が未セット");
+                }
+            }
+            // ▲▲▲ 追加ここまで ▲▲▲
+        });
+    });
+
+    // サーバーから結果更新通知を受け取ったら結果iframeを更新
+    socket.on('update', (msg) => {
+        console.log(' 結果更新通知を受信:', msg);
+
+        const resultPanel = document.getElementById('view-result');
+        const resultFrame = document.getElementById('resultFrame');
+
+        // 現在「レース結果」パネルがアクティブならリロード
+        if (resultPanel && resultPanel.classList.contains('active-view')) {
+            try {
+                resultFrame.contentWindow.postMessage({ type: 'RESULT_UPDATE' }, '*');
+                console.log("Angularへ RESULT_UPDATE 送信");
+            } catch (err) {
+                console.warn("postMessage送信失敗:", err)
+            }
+        }
+    });
 
     // LIVEtabを自動選択
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -221,6 +343,7 @@ function normalizeShibu(shibu) {
 }
 
 async function loadracers(joCode) {
+    console.log("loadracers 実行:", joCode);
     const now = new Date();
     const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000)); //UTC→JSt変換
     const today = jst.toISOString().slice(0, 10).replace(/-/g, '');
@@ -231,7 +354,8 @@ async function loadracers(joCode) {
 
     try {
         const startDate = today;
-        const res = await fetch(`/api/series/${startDate}/${joCode}/racers`);
+        console.log("FETCH URL:", `${RACERS_BASE}/api/series/${startDate}/${joCode}/racers`);
+        const res = await fetch(`${RACERS_BASE}/api/series/${startDate}/${joCode}/racers`);
         if (!res.ok) throw new Error('選手データの取得に失敗しました');
         racersData = await res.json();
 
