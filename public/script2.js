@@ -190,8 +190,30 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         if (currentView === 'racers' && currentPlace) {
             loadracers(currentPlace);
         }
+
+        // 🆕 レース結果タブを開いたときだけロード
+        if (currentView === 'result' && currentPlace) {
+
+            const today = getTodayYMD();
+            // ANgulrルートではなくHTMLを直に指定
+            const url = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`; // live=true追加
+            console.log(" レース結果URL:", url);
+            document.getElementById('resultFrame').src = url;
+
+        }
     })
 })
+
+// ===================================
+// 結果 iframe の READY 検知
+let resultFrameReady = false;
+
+const resultFrame = document.getElementById("resultFrame");
+
+resultFrame.onload = () => {
+    console.log("結果iframe Ready!")
+    resultFrameReady = true;
+}
 
 
 // 表示更新 (タブに応じてHTMLの表示を切り替え)
@@ -202,11 +224,9 @@ function updateView() {
         if (v.id === `view-${currentView}`) {
             //フェードイン・
             v.classList.add('active-view');
-            v.style.opacity = 1;
         } else {
             // フェードアウト
             v.classList.remove('active-view');
-            v.style.opacity = 0;
         }
     });
 
@@ -215,12 +235,12 @@ function updateView() {
         const resultFrame = document.getElementById('resultFrame');
         if (resultFrame) {
             resultFrame.style.transition = 'opacity 0.3s ease';
+            resultFrame.style.opacity = 1;
+        }
+    } else {
+        const resultFrame = document.getElementById('resultFrame');
+        if (resultFrame) {
             resultFrame.style.opacity = 0;
-
-            // iframeが描画完了してからフェードイン開始
-            resultFrame.onload = () => {
-                resultFrame.style.opacity = 1;
-            };
         }
     }
 }
@@ -251,77 +271,38 @@ function playLive(joCode, btn) {
         // 結果iframe取得
         const resultFrame = document.getElementById('resultFrame');
         const today = getTodayYMD();
-        const newurl = `/results?date=${today}&jcd=${currentPlace}&live=true`;
+        const newurl = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`;
         console.log("結果再読み込み:", newurl);
 
-        // フェードアウト
-        resultFrame.style.opacity = 0;
-        setTimeout(() => {
-            resultFrame.src = newurl;
-            // 読み込み完了後にフェードイン
-            resultFrame.onload = () => {
-                resultFrame.style.transition = "opacity 0.3s ease";
-                resultFrame.style.opacity = 1;
-            };
-        }, 150);
+        // // フェードアウト
+        // resultFrame.style.opacity = 0;
+        // setTimeout(() => {
+        //     resultFrame.src = newurl;
+        //     // 読み込み完了後にフェードイン
+        //     resultFrame.onload = () => {
+        //         resultFrame.style.transition = "opacity 0.3s ease";
+        //         resultFrame.style.opacity = 1;
+        //     };
+        // }, 150);
     }
 
-    // タブ切り替え
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    // // サーバーから結果更新通知を受け取ったら結果iframeを更新
+    // socket.on('update', (msg) => {
+    //     console.log(' 結果更新通知を受信:', msg);
 
-            const view = btn.dataset.view;
-            document.querySelectorAll('.view-panel').forEach(v => v.classList.remove('active-view'));
-            document.getElementById(`view-${view}`).classList.add('active-view');
+    //     const resultPanel = document.getElementById('view-result');
+    //     const resultFrame = document.getElementById('resultFrame');
 
-            // 🆕 レース結果タブを開いたときだけロード
-            if (view === 'result') {
-                const resultFrame = document.getElementById('resultFrame');
-                const today = getTodayYMD();
-
-                if (currentPlace) {
-                    // ANgulrルートではなくHTMLを直に指定
-                    const url = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`; // live=true追加
-                    console.log(" レース結果URL:", url);
-                    resultFrame.src = url;
-                } else {
-                    console.warn(" currentPlaceが未設定です。")
-                }
-            }
-
-            // 🟡 ▼▼▼ ここが 8081 側に欠けていた ▼▼▼
-            // 出場選手一覧タブを開いたときだけロード
-            if (view === 'racers') {
-                if (currentPlace) {
-                    console.log("🔵 出場選手一覧ロード:", currentPlace);;
-                    loadracers(currentPlace);
-                } else {
-                    console.warn("出場選手一覧：currentPlace が未セット");
-                }
-            }
-            // ▲▲▲ 追加ここまで ▲▲▲
-        });
-    });
-
-    // サーバーから結果更新通知を受け取ったら結果iframeを更新
-    socket.on('update', (msg) => {
-        console.log(' 結果更新通知を受信:', msg);
-
-        const resultPanel = document.getElementById('view-result');
-        const resultFrame = document.getElementById('resultFrame');
-
-        // 現在「レース結果」パネルがアクティブならリロード
-        if (resultPanel && resultPanel.classList.contains('active-view')) {
-            try {
-                resultFrame.contentWindow.postMessage({ type: 'RESULT_UPDATE' }, '*');
-                console.log("Angularへ RESULT_UPDATE 送信");
-            } catch (err) {
-                console.warn("postMessage送信失敗:", err)
-            }
-        }
-    });
+    //     // 現在「レース結果」パネルがアクティブならリロード
+    //     if (resultPanel && resultPanel.classList.contains('active-view')) {
+    //         try {
+    //             resultFrame.contentWindow.postMessage({ type: 'RESULT_UPDATE' }, '*');
+    //             console.log("Angularへ RESULT_UPDATE 送信");
+    //         } catch (err) {
+    //             console.warn("postMessage送信失敗:", err)
+    //         }
+    //     }
+    // });
 
     // LIVEtabを自動選択
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -329,6 +310,40 @@ function playLive(joCode, btn) {
     currentView = 'live';
     updateView();
 }
+
+// 結果iframe へ RESULT_UPDATE を安全に送る関数
+function sendResultUpdate() {
+    if (!resultFrameReady) {
+        console.warn("iframe未準備 → 200ms後に再送");
+        setTimeout(sendResultUpdate, 200);
+        return;
+    }
+    try {
+        resultFrame.contentWindow.postMessage({ type: "RESULT_UPDATE" }, "*");
+        console.log("RESULT_UPDATE 送信成功");
+    } catch (e) {
+        console.warn("RESULT_UPDATE送信失敗:", e)
+    }
+}
+
+// READY 受信用 listener
+window.addEventListener("message", (event) => {
+    if (event.data?.type === "RESULT_READY") {
+        console.log(" Angular iframe READY を受信");
+        resultFrameReady = true;
+        sendResultUpdate();
+    }
+})
+
+// サーバーから結果更新通知を受け取ったら結果iframeを更新
+socket.on('update', (msg) => {
+    console.log(' 結果更新通知を受信:', msg);
+
+    // 現在「レース結果」パネルがアクティブならリロード
+    if (currentView === 'result') {
+        sendResultUpdate();
+    }
+});
 
 // 出場選手一覧dataを読み込んで表示 (ページ送り対応版)
 let currentPage = 1;
