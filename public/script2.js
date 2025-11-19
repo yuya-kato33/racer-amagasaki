@@ -245,6 +245,29 @@ function updateView() {
     }
 }
 
+// =============================================
+// 結果 iframe のロード状態管理
+// =============================================
+
+function updateResultFrame(newurl) {
+    const frame = document.getElementById("resultFrame");
+    resultFrameReady = false;
+
+    // フェードアウト（背景はCSSで #0a1633）
+    frame.classList.remove("loaded");
+
+    // ★ 遅延して src を更新（白フラッシュ吸収）
+    setTimeout(() => {
+        frame.src = newurl;
+
+        frame.onload = () => {
+            resultFrameReady = true;
+            frame.classList.add("loaded");
+        };
+
+    }, 250); // ← 遅延時間は 250〜400ms が最適
+}
+
 //　ボタンを押して 再生処理 (タイトル表示付き)
 function playLive(joCode, btn) {
     // ボタンのアクティブ状態を切り替え
@@ -266,49 +289,25 @@ function playLive(joCode, btn) {
     frame.src = `${baseUrl}?md=L&jo=${joCode}&_=${Date.now()}`;
 
     // 結果iframe再読み込み（フェードつき）
-    const resultPanel = document.getElementById('view-result');
-    if (resultPanel.classList.contains('active-view')) {
-        // 結果iframe取得
-        const resultFrame = document.getElementById('resultFrame');
-        const today = getTodayYMD();
-        const newurl = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`;
-        console.log("結果再読み込み:", newurl);
+    const today = getTodayYMD();
+    const newurl = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`;
+    console.log("結果iframe 更新:", newurl);
 
-        // // フェードアウト
-        // resultFrame.style.opacity = 0;
-        // setTimeout(() => {
-        //     resultFrame.src = newurl;
-        //     // 読み込み完了後にフェードイン
-        //     resultFrame.onload = () => {
-        //         resultFrame.style.transition = "opacity 0.3s ease";
-        //         resultFrame.style.opacity = 1;
-        //     };
-        // }, 150);
-    }
+    const resultFrame = document.getElementById('resultFrame');
 
-    // // サーバーから結果更新通知を受け取ったら結果iframeを更新
-    // socket.on('update', (msg) => {
-    //     console.log(' 結果更新通知を受信:', msg);
+    // フェードアウト（透過）
+    resultFrame.style.opacity = 0;
 
-    //     const resultPanel = document.getElementById('view-result');
-    //     const resultFrame = document.getElementById('resultFrame');
+    // ★ 遅延して about:blank を直接見せない
+    setTimeout(() => {
+        resultFrame.src = newurl;
 
-    //     // 現在「レース結果」パネルがアクティブならリロード
-    //     if (resultPanel && resultPanel.classList.contains('active-view')) {
-    //         try {
-    //             resultFrame.contentWindow.postMessage({ type: 'RESULT_UPDATE' }, '*');
-    //             console.log("Angularへ RESULT_UPDATE 送信");
-    //         } catch (err) {
-    //             console.warn("postMessage送信失敗:", err)
-    //         }
-    //     }
-    // });
+        resultFrame.onload = () => {
+            resultFrame.style.transition = "opacity 0.3s ease";
+            resultFrame.style.opacity = 1;
+        };
 
-    // LIVEtabを自動選択
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('.tab-btn[data-view="live"]').classList.add('active');
-    currentView = 'live';
-    updateView();
+    }, 350);  // ← 300〜500msで効果が高い
 }
 
 // 結果iframe へ RESULT_UPDATE を安全に送る関数
@@ -337,13 +336,28 @@ window.addEventListener("message", (event) => {
 
 // サーバーから結果更新通知を受け取ったら結果iframeを更新
 socket.on('update', (msg) => {
-    console.log(' 結果更新通知を受信:', msg);
+    console.log("🛰 結果更新通知:", msg);
 
-    // 現在「レース結果」パネルがアクティブならリロード
-    if (currentView === 'result') {
-        sendResultUpdate();
+    function trySend() {
+        if (!resultFrameReady) {
+            console.log("iframe未準備 → 再試行");
+            setTimeout(trySend, 200);
+            return;
+        }
+
+        const frame = document.getElementById("resultFrame");
+
+        try {
+            frame.contentWindow.postMessage({ type: "RESULT_UPDATE" }, "*");
+            console.log("📨 Angular へ RESULT_UPDATE 送信");
+        } catch (e) {
+            console.warn("postMessage失敗:", e);
+        }
     }
+
+    trySend();
 });
+
 
 // 出場選手一覧dataを読み込んで表示 (ページ送り対応版)
 let currentPage = 1;

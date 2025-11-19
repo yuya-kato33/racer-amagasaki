@@ -483,12 +483,13 @@ iframe {
 }
 
 #resultFrame {
-    /* about:blank時の背景 */
-    background-color: #0a1633;
-    transition: opacity 0.3s ease;
+    background-color: #0a1633 !important;
     opacity: 0;
+    transition: none;
+    color-scheme: dark;
 }
 
 #resultFrame.loaded {
     opacity: 1;
+    transition: opacity 0.3s ease;
 }
