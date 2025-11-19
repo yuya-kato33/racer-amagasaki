@@ -229,12 +229,17 @@ button.grade-normal {
     display: none;
     width: 100%;
     flex: 1;
+    opacity: 0;
+    transition: opacity 0.25s ease;
 }
+
 
 .view-panel.active-view {
     display: flex !important;
     width: 100%;
     flex: 1;
+    opacity: 1 !important;
+    visibility: visible;
 }
 
 /* === 追加: 出場選手一覧をLIVEに重ねないための確実な非表示設定 === */
@@ -469,12 +474,6 @@ iframe {
     /* Safari, iOS：長押しメニュー禁止 */
     touch-action: manipulation;
     /* ✅ ダブルタップズーム防止 */
-}
-
-
-.view-panel.active-view {
-    opacity: 1;
-    visibility: visible;
 }
 
 #view-result {

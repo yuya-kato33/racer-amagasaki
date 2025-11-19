@@ -220,13 +220,15 @@ resultFrame.onload = () => {
 function updateView() {
     // すべて非表示（フェードアウト）
     const panels = document.querySelectorAll('.view-panel');
-    panels.forEach(v => {
-        if (v.id === `view-${currentView}`) {
-            //フェードイン・
-            v.classList.add('active-view');
+    panels.forEach(panel => {
+        if (panel.id === `view-${currentView}`) {
+            // フェードイン（少し遅らせると自然）
+            setTimeout(() => {
+                panel.classList.add('active-view');
+            }, 250);
         } else {
             // フェードアウト
-            v.classList.remove('active-view');
+            panel.classList.remove('active-view');
         }
     });
 
@@ -308,6 +310,12 @@ function playLive(joCode, btn) {
         };
 
     }, 350);  // ← 300〜500msで効果が高い
+
+    // ⭐ 出場選手タブが開いているなら一覧を再取得
+    if (currentView === 'racers') {
+        console.log("出場選手タブ開 → 他場押下 → 選手一覧を更新");
+        loadracers(currentPlace);
+    }
 }
 
 // 結果iframe へ RESULT_UPDATE を安全に送る関数
