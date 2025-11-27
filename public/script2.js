@@ -190,17 +190,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         if (currentView === 'racers' && currentPlace) {
             loadracers(currentPlace);
         }
-
-        // 🆕 レース結果タブを開いたときだけロード
-        if (currentView === 'result' && currentPlace) {
-
-            const today = getTodayYMD();
-            // ANgulrルートではなくHTMLを直に指定
-            const url = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`; // live=true追加
-            console.log(" レース結果URL:", url);
-            document.getElementById('resultFrame').src = url;
-
-        }
     })
 })
 
@@ -250,32 +239,12 @@ function updateView() {
 // =============================================
 // 結果 iframe のロード状態管理
 // =============================================
-
-function updateResultFrame(newurl) {
-    const frame = document.getElementById("resultFrame");
-    resultFrameReady = false;
-
-    // フェードアウト（背景はCSSで #0a1633）
-    frame.classList.remove("loaded");
-
-    // ★ 遅延して src を更新（白フラッシュ吸収）
-    setTimeout(() => {
-        frame.src = newurl;
-
-        frame.onload = () => {
-            resultFrameReady = true;
-            frame.classList.add("loaded");
-        };
-
-    }, 250); // ← 遅延時間は 250〜400ms が最適
-}
-
 //　ボタンを押して 再生処理 (タイトル表示付き)
 function playLive(joCode, btn) {
     // ボタンのアクティブ状態を切り替え
     currentPlace = joCode;
 
-    //ボタン選択表示
+    //ボタン選択表示処理
     document.querySelectorAll("#button-container button").forEach(b => b.classList.remove("selected"));
     btn.classList.add("selected");
 
@@ -286,24 +255,37 @@ function playLive(joCode, btn) {
         : `${joCode} - ライブ映像`
 
     // ライブiframe更新
-    const frame = document.getElementById('liveFrame');
+    const live = document.getElementById('liveFrame');
     const baseUrl = "https://race.boatcast.jp/boatcastpc/streamer/streamer.php";
-    frame.src = `${baseUrl}?md=L&jo=${joCode}&_=${Date.now()}`;
+    live.src = `${baseUrl}?md=L&jo=${joCode}&_=${Date.now()}`;
 
-    // 結果iframe再読み込み（フェードつき）
+    // 結果iframeに場変更について指示（フェードつき） 
     const today = getTodayYMD();
-    const newurl = `${RESULT_BASE}/results?date=${today}&jcd=${currentPlace}&live=true`;
-    console.log("結果iframe 更新:", newurl);
-
     const resultFrame = document.getElementById('resultFrame');
+
+    resultFrame.contentWindow.postMessage({
+        type: "CHANGE_PLACE",
+        jcd: joCode,
+        date: today
+    }, "*");
+
+    resultFrameReady = true; // ★　これが超重要
+
+    console.log("→ Angularに場切替を依頼:", joCode, today);
+
+    if (currentView === 'result') {
+        updateView();  // ← 結果パネルを表示に戻す
+    } else {
+        // ★結果が裏で更新されても表示だけは確実にOnにする
+        const resultFrame = document.getElementById('resultFrame');
+        resultFrame.style.opacity = 1;
+    }
 
     // フェードアウト（透過）
     resultFrame.style.opacity = 0;
 
     // ★ 遅延して about:blank を直接見せない
     setTimeout(() => {
-        resultFrame.src = newurl;
-
         resultFrame.onload = () => {
             resultFrame.style.transition = "opacity 0.3s ease";
             resultFrame.style.opacity = 1;
@@ -353,16 +335,15 @@ socket.on('update', (msg) => {
             return;
         }
 
-        const frame = document.getElementById("resultFrame");
+        const resultFrame = document.getElementById("resultFrame");
 
         try {
-            frame.contentWindow.postMessage({ type: "RESULT_UPDATE" }, "*");
+            resultFrame.contentWindow.postMessage({ type: "RESULT_UPDATE" }, "*");
             console.log("📨 Angular へ RESULT_UPDATE 送信");
         } catch (e) {
             console.warn("postMessage失敗:", e);
         }
     }
-
     trySend();
 });
 
@@ -523,3 +504,16 @@ window.addEventListener("resize", checkFullscreenMode)
 checkFullscreenMode();
 
 buildButtons();
+
+// 初期ロード (結果iframe を1回だけ起動)
+window.addEventListener("load", () => {
+    const today = getTodayYMD();
+    const initJcd = "04"; // ★スタート場 (なんでもOK)
+
+    const initUrl = `${RESULT_BASE}/results?date=${today}&jcd=${initJcd}&live=true`;
+
+    console.log("★ 初期ロード:", initUrl);
+
+    const frame = document.getElementById("resultFrame");
+    frame.src = initUrl;
+})

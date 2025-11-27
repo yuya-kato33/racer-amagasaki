@@ -151,6 +151,11 @@ async function runDownload(targetDate, jcdOnly = null) {
 
         if (status === 200) {
           const xml = await res.text();
+
+          // 保存処理を追加する！！
+          const savePath = path.join(dateDir, `${targetDate}-${place}.race_header.xml`);
+          saveXmlWithCheck(savePath, xml);
+
           // raceHeaderに重複登録されないように既存場を除去
           raceHeader = raceHeader.filter(p => p.place !== place);
           raceHeader.push({ place });
