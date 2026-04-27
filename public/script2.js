@@ -56,7 +56,7 @@ const mascotMap = {
 
 
 // 超重要: ポート判定と相互補完URL設定
-const HOST = "192.168.1.22";
+const HOST = "192.168.1.24";
 const PORT = location.port;
 
 // 8083 の racers API パス

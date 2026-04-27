@@ -20,8 +20,8 @@ const server = http.createServer(app) //ExpressとSocket.ioを共通サーバ
 const corsOptions = {
   origin: [
     "http://localhost:4200", //開発用
-    "http://192.168.1.22:8081", //LAnアクセス
-    "http://192.168.1.22:8083" //LAnアクセス用
+    "http://192.168.1.24:8081", //LAnアクセス
+    "http://192.168.1.24:8083" //LAnアクセス用
   ],
   methods: ["GET", "POST"],
   credentials: true
@@ -197,7 +197,7 @@ createDBConnection().then(conn => {
   const PORT = 8083;
   // サーバー起動 (Express + Socket.IO 両方)
   server.listen(PORT, '0.0.0.0', () => {
-    console.log(`🌐 Webサーバー起動 → http://192.168.1.22:${PORT}`);
+    console.log(`🌐 Webサーバー起動 → http://192.168.1.24:${PORT}`);
     console.log("🚀 API → 静的 → Angular の順序で完全動作中");
   });
 
