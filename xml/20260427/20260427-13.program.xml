@@ -3311,7 +3311,7 @@
           <syussinchi>山　口</syussinchi>
           <kyu>B1</kyu>
           <nenrei>34</nenrei>
-          <taiju>57.9</taiju>
+          <taiju>58.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.19</p_st>
           <zsyo>4.23</zsyo>
@@ -3397,7 +3397,7 @@
           <syussinchi>長　崎</syussinchi>
           <kyu>B1</kyu>
           <nenrei>43</nenrei>
-          <taiju>55.1</taiju>
+          <taiju>55.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.41</zsyo>
@@ -3569,7 +3569,7 @@
           <syussinchi>徳　島</syussinchi>
           <kyu>A1</kyu>
           <nenrei>48</nenrei>
-          <taiju>56.8</taiju>
+          <taiju>57.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.53</zsyo>
@@ -3655,7 +3655,7 @@
           <syussinchi>長　野</syussinchi>
           <kyu>B2</kyu>
           <nenrei>22</nenrei>
-          <taiju>47.0</taiju>
+          <taiju>47.3</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.21</p_st>
           <zsyo>1.92</zsyo>
@@ -3900,12 +3900,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">４</chk>
+            <cs>5</cs>
+            <st>.23</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -4603,12 +4603,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">６</chk>
+            <cs>6</cs>
+            <st>.31</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -4962,12 +4962,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>06</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">２</chk>
+            <cs>4</cs>
+            <st>.32</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -5048,12 +5048,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">１</chk>
+            <cs>1</cs>
+            <st>.29</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -5134,12 +5134,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>05</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">３</chk>
+            <cs>2</cs>
+            <st>.14</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -5579,12 +5579,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">３</chk>
+            <cs>2</cs>
+            <st>.23</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -5665,12 +5665,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>05</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">１</chk>
+            <cs>1</cs>
+            <st>.18</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -5938,12 +5938,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">２</chk>
+            <cs>3</cs>
+            <st>.19</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -6110,12 +6110,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>05</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">４</chk>
+            <cs>6</cs>
+            <st>.15</st>
           </kekka>
           <kekka>
             <nj>32</nj>
@@ -6196,12 +6196,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>06</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">１</chk>
+            <cs>1</cs>
+            <st>.18</st>
           </kekka>
           <kekka>
             <nj>32</nj>
