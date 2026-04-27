@@ -18,6 +18,8 @@ export class RacerSeriesList implements OnChanges {
   isLoading = false;
   error: string | null = null;
 
+  cols = 6;
+
   constructor(private seriesService: SeriesService) { }
 
   ngOnChanges(): void {

@@ -7,20 +7,23 @@
 <div *ngIf="error" class="error">{{ error }}</div>
 
 <!-- 選手カードのグリッド表示 -->
-<div class="racer-grid">
-  <div class="racer-card" *ngFor="let racer of racers">
-    <img 
-      [src]="getPhotoPath(racer.toban)"
-      [alt]="racer.name" 
-      width="100" height="120" 
-      (error)="setFallbackImage($event)" />
+<div class="racer-grid" [style.--cols]="cols">
 
+  <div class="racer-card" *ngFor="let racer of racers">
+
+    <!-- 左: 写真 -->
+    <!-- 画像エリア -->
+    <div class="racer-photo">
+      <img [src]="getPhotoPath(racer.toban)" (error)="setFallbackImage($event)" />
+    </div>
+
+    <!-- 右: 情報 -->
     <div class="racer-info">
-      <strong>{{ racer.name }}</strong> 
-      <div>({{ racer.kyu }}・{{ normalizeShibu(racer.shibu) }} 支部)</div>
-      <div>登録番号: {{ racer.toban }}</div>
-      <div>勝率: {{ racer.zsyo }}</div>
-      <div>2連: {{ racer.z2ren }}% / 3連: {{ racer.z3ren }}%</div>
+      <div class="name">{{ racer.name }}</div>
+      <div class="sub">({{ racer.kyu }}・{{ normalizeShibu(racer.shibu) }} 支部)</div>
+      <div class="row">登録番号: {{ racer.toban }}</div>
+      <div class="row">勝率: {{ racer.zsyo }}</div>
+      <div class="row">2連: {{ racer.z2ren }}% / 3連: {{ racer.z3ren }}%</div>
     </div>
   </div>
 </div>
