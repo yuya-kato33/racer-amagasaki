@@ -16,3 +16,11 @@ Addresses:  23.193.119.198
           23.193.119.197
 Aliases:  xml-sv.boatrace.jp
           xml-sv.boatrace.jp.edgekey.net
+
+
+## 依存関係壊れたとき
+rmdir /s /q node_modules
+del package-lock.json
+npm install
+npm install undici-types --save-dev
+ng serve
