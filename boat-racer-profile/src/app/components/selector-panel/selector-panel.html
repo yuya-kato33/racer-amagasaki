@@ -1,4 +1,4 @@
-<div class ="selector-panel">
+<div class="selector-panel">
   <label for="dateSelect">日付:</label>
   <select id="dateSelect" [(ngModel)]="selectedDate" (change)="onDateChange()">
     <option value="">--選択--</option>
@@ -6,10 +6,45 @@
   </select>
 
   <label for="seriesSelect">場(節):</label>
-  <select id="seriesSelect" [(ngModel)]="selectedSeriesKey" (change)="onSeriesChange()"
-   [disabled]="!seriesList.length">
+  <select id="seriesSelect" [(ngModel)]="selectedSeriesKey" (change)="onSeriesChange()" [disabled]="!seriesList.length">
     <option value="">--選択--</option>
     <option *ngFor="let s of seriesList" [value]="getSeriesKey(s)"> {{ formatSeriesLabel(s) }}
     </option>
   </select>
+</div>
+
+<div class="header">
+
+  <!-- 左：ロゴ＋タイトル -->
+  <div class="header-left">
+    <div class="logo">
+      <img src="assets/boatrace-amagasaki.png">
+    </div>
+
+    <div class="title">
+      {{ selectedSeriesLabel }}
+    </div>
+  </div>
+
+  <!-- 右: 日程 -->
+  <div class="header-right">
+    <div class="schedule">
+
+      <!-- 上段（優勝戦など) -->
+      <div class="schedule-top">
+        <div *ngFor="let d of dateList" class="cell">
+          {{d.topLabel}}
+        </div>
+      </div>
+
+      <!-- 下段（日付） -->
+      <div class="schedule-bottom">
+        <div *ngFor="let d of dateList" class="cell" [ngClass]="d.class">
+          {{d.label}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

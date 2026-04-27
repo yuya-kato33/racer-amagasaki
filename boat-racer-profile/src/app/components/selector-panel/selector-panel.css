@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    height: 90px;
+    padding: 8px 16px;
+
+    background: linear-gradient(to right, #e6edf2, #d5dee6);
+}
+
+/* 左 */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ロゴ */
+.logo img {
+    height: 40px;
+}
+
+/* タイトル */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 右（日程） */
+.header-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 日程全体 */
+.schedule {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 上段 */
+.schedule-top {
+    display: flex;
+}
+
+/* 下段 */
+.schedule-bottom {
+    display: flex;
+}
+
+/* セル */
+.cell {
+    min-width: 50px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* 曜日カラー */
+.cell.sun {
+    color: red;
+}
+
+.cell.sat {
+    color: blue;
+}
+
+/* 終了日（横線） */
+.cell.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
