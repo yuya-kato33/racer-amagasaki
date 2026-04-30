@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 import { App } from './app'; // ← Appコンポーネント（トップ）
+import { SelectorPanel } from './components/selector-panel/selector-panel';
+import { SelectorPanel2 } from './components/selector-panel2/selector-panel2';
 
 export const routes: Routes = [
-    {path: '', component: App }, // // / ルートで App を表示
+    { path: '', component: SelectorPanel }, // // / ルートで App を表示
+    { path: 'manual', component: SelectorPanel2 }
 ];

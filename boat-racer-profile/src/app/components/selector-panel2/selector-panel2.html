@@ -1,9 +1,8 @@
 <!-- 表示画面 -->
 <div class="container">
+  <h1>出場選手一覧</h1>
 
-  <!-- <h1>出場選手一覧</h1> -->
-
-  <!-- <div class="selector-panel">
+  <div class="selector-panel2">
     <label for="dateSelect">日付:</label>
     <select id="dateSelect" [(ngModel)]="selectedDate" (change)="onDateChange()">
       <option value="">--選択--</option>
@@ -17,7 +16,7 @@
       <option *ngFor="let s of seriesList" [value]="getSeriesKey(s)"> {{ formatSeriesLabel(s) }}
       </option>
     </select>
-  </div> -->
+  </div>
 
   <div class="header">
 
@@ -55,11 +54,11 @@
 
   </div>
 
-  <!-- 表示切替ボタン
+  <!-- 表示切替ボタン -->
   <div style="margin: 10px 0;">
     <button (click)="useSeries = false" [disabled]="!useSeries">当日モード</button>
     <button (click)="useSeries = true" [disabled]="useSeries">シリーズモード</button>
-  </div> -->
+  </div>
 
   <!-- 表示内容切替 -->
   <div *ngIf="useSeries">

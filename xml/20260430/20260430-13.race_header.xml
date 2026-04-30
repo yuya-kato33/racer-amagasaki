@@ -12,8 +12,8 @@
       <gcd>4</gcd>
       <ksname>一般競走</ksname>
       <ksu>6</ksu>
-      <nj>3</nj>
-      <sflg>0</sflg>
+      <nj>6</nj>
+      <sflg>1</sflg>
       <rsu>12</rsu>
       <cflg>0</cflg>
       <nidate1 race_id="13_20260425">20260425</nidate1>
@@ -26,7 +26,7 @@
       <nidate8></nidate8>
       <nidate9></nidate9>
       <kscd>00</kscd>
-      <hdate>20260427</hdate>
+      <hdate>20260430</hdate>
       <nflg>0</nflg>
       <summer>0</summer>
       <ss_r1>1</ss_r1>
@@ -38,11 +38,11 @@
       <tyoku5>1</tyoku5>
       <tyoku6>1</tyoku6>
       <tyoku7>1</tyoku7>
-      <tyoku8>1</tyoku8>
-      <tyoku9>1</tyoku9>
-      <tyoku10>1</tyoku10>
-      <tyoku11>1</tyoku11>
-      <tyoku12>1</tyoku12>
+      <tyoku8>0</tyoku8>
+      <tyoku9>0</tyoku9>
+      <tyoku10>0</tyoku10>
+      <tyoku11>0</tyoku11>
+      <tyoku12>0</tyoku12>
       <start1>1</start1>
       <start2>1</start2>
       <start3>1</start3>
@@ -50,35 +50,35 @@
       <start5>1</start5>
       <start6>1</start6>
       <start7>1</start7>
-      <start8>1</start8>
-      <start9>1</start9>
-      <start10>1</start10>
-      <start11>1</start11>
-      <start12>1</start12>
+      <start8>0</start8>
+      <start9>0</start9>
+      <start10>0</start10>
+      <start11>0</start11>
+      <start12>0</start12>
       <kek_r1>1</kek_r1>
       <kek_r2>1</kek_r2>
       <kek_r3>1</kek_r3>
       <kek_r4>1</kek_r4>
       <kek_r5>1</kek_r5>
       <kek_r6>1</kek_r6>
-      <kek_r7>1</kek_r7>
-      <kek_r8>1</kek_r8>
-      <kek_r9>1</kek_r9>
-      <kek_r10>1</kek_r10>
-      <kek_r11>1</kek_r11>
-      <kek_r12>1</kek_r12>
+      <kek_r7>0</kek_r7>
+      <kek_r8>0</kek_r8>
+      <kek_r9>0</kek_r9>
+      <kek_r10>0</kek_r10>
+      <kek_r11>0</kek_r11>
+      <kek_r12>0</kek_r12>
       <kek_t1>1</kek_t1>
       <kek_t2>1</kek_t2>
       <kek_t3>1</kek_t3>
       <kek_t4>1</kek_t4>
       <kek_t5>1</kek_t5>
       <kek_t6>1</kek_t6>
-      <kek_t7>1</kek_t7>
-      <kek_t8>1</kek_t8>
-      <kek_t9>1</kek_t9>
-      <kek_t10>1</kek_t10>
-      <kek_t11>1</kek_t11>
-      <kek_t12>1</kek_t12>
+      <kek_t7>0</kek_t7>
+      <kek_t8>0</kek_t8>
+      <kek_t9>0</kek_t9>
+      <kek_t10>0</kek_t10>
+      <kek_t11>0</kek_t11>
+      <kek_t12>0</kek_t12>
       <sui>1</sui>
       <deme>1</deme>
       <pt>0</pt>

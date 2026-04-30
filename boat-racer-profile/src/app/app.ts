@@ -5,20 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RacerList } from './components/racer-list/racer-list';
 import { RacerSeriesList } from './components/racer-series-list/racer-series-list';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    SelectorPanel,
-    RacerList,
-    RacerSeriesList
+    RouterOutlet
   ],
   templateUrl: './app.html',
-  styleUrls: ['./app.css'] 
+  styleUrls: ['./app.css']
 })
 
 export class App {
@@ -26,7 +22,7 @@ export class App {
   selectedJcd: string = '';
   useSeries: boolean = true; // デフォルトはシリーズ表示
 
-  onSelectionChanged(selection: { date: string, jcd: string}) {
+  onSelectionChanged(selection: { date: string, jcd: string }) {
     this.selectedDate = selection.date;
     this.selectedJcd = selection.jcd;
   }

@@ -15,36 +15,27 @@ interface SeriesSummary {
 }
 
 @Component({
-  selector: 'app-selector-panel',
+  selector: 'app-selector-panel2',
   standalone: true,
   imports: [CommonModule, FormsModule, RacerList, RacerSeriesList],
-  templateUrl: './selector-panel.html',
-  styleUrls: ['./selector-panel.css']
+  templateUrl: './selector-panel2.html',
+  styleUrls: ['./selector-panel2.css']
 })
 
-export class SelectorPanel implements OnInit {
+export class SelectorPanel2 implements OnInit {
   dates: string[] = [];
   seriesList: SeriesSummary[] = [];
   selectedDate: string = '';
   selectedSeriesKey: string = '';
   selectedSeriesLabel: string = '';
   selectedJcd: string = '';
-  useSeries = true;
+  useSeries = false;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get<string[]>('/api/series/dates').subscribe(data => {
-      // 数値として降順ソート
-      this.dates = data.sort((a, b) => Number(b) - Number(a));
-
-      if (this.dates.length > 0) {
-        // 最新日（最後）を選択
-        this.selectedDate = this.dates[0]; // 最新
-
-        //自動で次処理へ
-        this.onDateChange();
-      }
+      this.dates = data;
     });
   }
 
@@ -53,19 +44,8 @@ export class SelectorPanel implements OnInit {
 
     this.http.get<SeriesSummary[]>(`/api/series/bydate/${this.selectedDate}`).subscribe(data => {
       this.seriesList = data;
-
-      if (this.seriesList.length > 0) {
-
-        const first = this.seriesList[0];
-
-        // 自動選択
-        this.selectedSeriesKey = this.getSeriesKey(first);
-
-        // 次処理
-        this.onSeriesChange();
-      }
+      this.selectedSeriesKey = '';
     });
-
   }
 
   onSeriesChange(): void {

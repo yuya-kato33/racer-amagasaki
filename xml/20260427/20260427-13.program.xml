@@ -5966,7 +5966,7 @@
           <syussinchi>埼　玉</syussinchi>
           <kyu>B1</kyu>
           <nenrei>39</nenrei>
-          <taiju>54.0</taiju>
+          <taiju>53.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>4.24</zsyo>
@@ -6138,7 +6138,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>A2</kyu>
           <nenrei>56</nenrei>
-          <taiju>55.0</taiju>
+          <taiju>54.6</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>5.27</zsyo>
@@ -6224,7 +6224,7 @@
           <syussinchi>兵　庫</syussinchi>
           <kyu>A2</kyu>
           <nenrei>25</nenrei>
-          <taiju>45.5</taiju>
+          <taiju>44.5</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>5.84</zsyo>
@@ -6282,12 +6282,12 @@
           </kekka>
           <kekka>
             <nj>31</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>07</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260427">３</chk>
+            <cs>4</cs>
+            <st>.08</st>
           </kekka>
           <kekka>
             <nj>32</nj>
