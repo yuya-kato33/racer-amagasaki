@@ -2,11 +2,9 @@
 :host {
   display: block;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 0;
 
-  background: linear-gradient(to bottom,
-      #1e3fa0,
-      #0b1f5c);
 }
 
 .racer-container {
@@ -19,9 +17,21 @@
 .racer-grid {
   display: grid;
   /* ここが核心 */
-  grid-template-columns: repeat(var(--cols, 6), 1fr);
-  gap: 14px;
-  padding: 10px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+
+  width: 100%;
+  height: 100%;
+
+  gap: 4px;
+  padding: 4px;
+  box-sizing: border-box;
+
+  background: linear-gradient(to bottom,
+      #1e3fa0,
+      #0b1f5c);
+
+  overflow: hidden;
 }
 
 /* 各選手カード全体 */
@@ -30,25 +40,30 @@
   /* 横並びに変更 */
   flex-direction: row;
 
-  /* 超重要 */
-  aspect-ratio: 2 / 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
 
   background: linear-gradient(#2a4fc9, #142f8a);
   color: white;
 
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* 画像エリア */
 .racer-photo {
-  width: 35%;
+  flex: 0 0 35%;
   height: 100%;
+
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+
   background: #000;
-  position: relative;
+  /* position: relative; */
 
   /* トリミング */
   overflow: hidden;
@@ -64,36 +79,46 @@
 
 /* 情報エリア */
 .racer-info {
-  width: 65%;
+  /* width: 65%; */
+  flex: 1;
+  min-width: 0;
+
   padding: 6px 8px;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 4px;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  gap: 3px;
+
+  box-sizing: border-box;
 
   /* /* text-align: center; * */
 }
 
 /* 名前 */
 .name {
-  font-size: 24px;
+  font-size: clamp(16px, 1.15vw, 22px);
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 2px black;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 /* サブ情報 */
 .sub {
-  font-size: 18px;
-  margin-bottom: 4px;
+  font-size: clamp(12px, 0.9vw, 17px);
   text-align: center;
+  line-height: 1.15;
+  white-space: nowrap;
   /* opacity: 0.9; */
 }
 
 /* 行 */
 .row {
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: clamp(11px, 0.8vw, 15px);
+  line-height: 1.15;
   text-align: center;
+  white-space: nowrap;
 }

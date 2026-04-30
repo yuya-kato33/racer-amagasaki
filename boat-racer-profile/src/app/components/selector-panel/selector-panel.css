@@ -1,3 +1,37 @@
+/* 外枠 */
+.stage {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+}
+
+.canvas {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+
+    /* 高さ基準で横が足りない時 */
+    max-height: 100%;
+
+    background: #1e3fa0;
+    overflow: hidden;
+}
+
+.container {
+    /* 縦flex */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
 button {
     margin-right: 10px;
     padding: 6px 12px;
@@ -12,12 +46,18 @@ button:disabled {
     display: flex;
     justify-content: space-between;
 
-    height: 100px;
+    flex: 0 0 100px;
+
     padding: 12px 20px;
-
     background: linear-gradient(to right, #cfd8df, #aeb8c2);
-
     box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.racer-area {
+    flex: 1;
+    /* 中のgridのはみ出し防止 */
+    min-height: 0;
+    overflow: hidden;
 }
 
 /* 左 */

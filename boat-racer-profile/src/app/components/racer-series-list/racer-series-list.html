@@ -9,7 +9,7 @@
 <!-- 選手カードのグリッド表示 -->
 <div class="racer-grid" [style.--cols]="cols">
 
-  <div class="racer-card" *ngFor="let racer of racers">
+  <div class="racer-card" *ngFor="let racer of pagedRacers">
 
     <!-- 左: 写真 -->
     <!-- 画像エリア -->
@@ -26,4 +26,5 @@
       <div class="row">2連: {{ racer.z2ren }}% / 3連: {{ racer.z3ren }}%</div>
     </div>
   </div>
+
 </div>

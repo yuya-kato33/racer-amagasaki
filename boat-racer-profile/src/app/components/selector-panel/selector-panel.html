@@ -1,9 +1,11 @@
 <!-- 表示画面 -->
-<div class="container">
+<div class="stage">
+  <div class="canvas">
+    <div class="container">
 
-  <!-- <h1>出場選手一覧</h1> -->
+      <!-- <h1>出場選手一覧</h1> -->
 
-  <!-- <div class="selector-panel">
+      <!-- <div class="selector-panel">
     <label for="dateSelect">日付:</label>
     <select id="dateSelect" [(ngModel)]="selectedDate" (change)="onDateChange()">
       <option value="">--選択--</option>
@@ -19,54 +21,58 @@
     </select>
   </div> -->
 
-  <div class="header">
+      <div class="header">
 
-    <!-- 左：ロゴ＋タイトル -->
-    <div class="header-left">
-      <div class="logo">
-        <img src="assets/boatrace-amagasaki.png">
-      </div>
+        <!-- 左：ロゴ＋タイトル -->
+        <div class="header-left">
+          <div class="logo">
+            <img src="assets/boatrace-amagasaki.png">
+          </div>
 
-      <div class="title">
-        {{ selectedSeriesLabel }}
-      </div>
-    </div>
-
-    <!-- 右: 日程 -->
-    <div class="header-right">
-      <div class="schedule">
-
-        <!-- 上段（優勝戦など) -->
-        <div class="schedule-top">
-          <div *ngFor="let d of dateList" class="cell">
-            {{d.topLabel}}
+          <div class="title">
+            {{ selectedSeriesLabel }}
           </div>
         </div>
 
-        <!-- 下段（日付） -->
-        <div class="schedule-bottom">
-          <div *ngFor="let d of dateList" class="cell" [ngClass]="d.class">
-            {{d.label}}
+        <!-- 右: 日程 -->
+        <div class="header-right">
+          <div class="schedule">
+
+            <!-- 上段（優勝戦など) -->
+            <div class="schedule-top">
+              <div *ngFor="let d of dateList" class="cell">
+                {{d.topLabel}}
+              </div>
+            </div>
+
+            <!-- 下段（日付） -->
+            <div class="schedule-bottom">
+              <div *ngFor="let d of dateList" class="cell" [ngClass]="d.class">
+                {{d.label}}
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
-    </div>
 
-  </div>
-
-  <!-- 表示切替ボタン
+      <!-- 表示切替ボタン
   <div style="margin: 10px 0;">
     <button (click)="useSeries = false" [disabled]="!useSeries">当日モード</button>
     <button (click)="useSeries = true" [disabled]="useSeries">シリーズモード</button>
   </div> -->
 
-  <!-- 表示内容切替 -->
-  <div *ngIf="useSeries">
-    <app-racer-series-list [startDate]="selectedDate" [jcd]="selectedJcd"></app-racer-series-list>
+      <!-- 表示内容切替 -->
+      <div class="racer-area" *ngIf="useSeries">
+        <app-racer-series-list [startDate]="selectedDate" [jcd]="selectedJcd"></app-racer-series-list>
+      </div>
+
+      <div class="racer-area" *ngIf="!useSeries">
+        <app-racer-list [hdate]="selectedDate" [jcd]="selectedJcd"></app-racer-list>
+      </div>
+    </div>
+
   </div>
 
-  <div *ngIf="!useSeries">
-    <app-racer-list [hdate]="selectedDate" [jcd]="selectedJcd"></app-racer-list>
-  </div>
 </div>
