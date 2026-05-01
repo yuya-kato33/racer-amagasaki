@@ -24,3 +24,7 @@ del package-lock.json
 npm install
 npm install undici-types --save-dev
 ng serve
+
+## インストール
+1⃣ npm install 
+＋α express, puppeteer

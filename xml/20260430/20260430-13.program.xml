@@ -8841,12 +8841,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>07</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260430">１</chk>
+            <cs>1</cs>
+            <st>.08</st>
           </kekka>
           <kekka>
             <nj>62</nj>

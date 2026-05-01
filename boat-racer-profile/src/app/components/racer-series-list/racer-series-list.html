@@ -6,6 +6,10 @@
 <!-- エラー表示 -->
 <div *ngIf="error" class="error">{{ error }}</div>
 
+<div id="total-pages" style="display: none;">
+  {{ pages.length }}
+</div>
+
 <!-- 選手カードのグリッド表示 -->
 <div class="racer-grid" [style.--cols]="cols">
 
