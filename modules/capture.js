@@ -45,7 +45,7 @@ async function runCapture(targetDate) {
         const filename = `${OUTPUT_DIR}/${targetDate}_ichiran_page_${i + 1}.png`;
         // const filename = `${OUTPUT_DIR}/${targetDate}_${jcdOnly || 'all'}_ichiran_page_${i + 1}.png`;
 
-        await page.screenshot({ path: filename });
+        await page.screenshot({ path: filename, type: 'png', omitBackground: false });
 
         console.log(`📸 ${filename}`);
     }

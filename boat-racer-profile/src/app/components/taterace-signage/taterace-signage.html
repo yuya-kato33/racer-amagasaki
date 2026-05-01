@@ -1,0 +1,32 @@
+<div class="screen" [style.background]="getBgColor(racer.teiban)" [style.color]="getTextColor(racer.teiban)">
+
+    <!-- 上部 -->
+    <div class="header">
+        第{{ formatRaceNo(racer.rno) }}レース {{ getRaceTitle() }}
+    </div>
+
+    <!-- 中央 -->
+    <div class="main">
+
+        <!-- 左: 縦文字 -->
+        <div class="left">
+            <div class="vertical">
+                BOATRACE AMAGASAKI
+            </div>
+        </div>
+
+        <!-- 右: 写真 -->
+        <div class="right">
+            <img [src]="getPhoto()" />
+        </div>
+
+    </div>
+
+    <!-- 下部 -->
+    <div class="footer">
+        <div class="toban">{{ racer.toban }}</div>
+        <div class="name">{{ racer.name }}</div>
+        <div class="shibu">({{ racer.shusin }})</div>
+    </div>
+
+</div>

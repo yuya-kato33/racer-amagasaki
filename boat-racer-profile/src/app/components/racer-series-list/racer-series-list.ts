@@ -76,9 +76,28 @@ export class RacerSeriesList implements OnInit, OnChanges {
 
         // this.currentPage = 0;
 
+        // 人数条件分岐
         this.pages = [];
-        for (let i = 0; i < data.length; i += this.pageSize) {
-          this.pages.push(data.slice(i, i + this.pageSize));
+
+        const total = data.length;
+
+        // 48人以内
+        if (total <= 48) {
+          const firstPageSize = 24;
+
+          // 1ページ目 (24人)
+          this.pages.push(data.slice(0, firstPageSize));
+
+          // 2ページ目（残り)
+          if (total > firstPageSize) {
+            this.pages.push(data.slice(firstPageSize));
+          }
+
+        } else {
+          // 従来通り (30人ずつ)
+          for (let i = 0; i < data.length; i += this.pageSize) {
+            this.pages.push(data.slice(i, i + this.pageSize));
+          }
         }
 
         // ここが鳥獣用
