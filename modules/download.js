@@ -40,8 +40,8 @@ function sleep(ms) {
 // 本体関数
 async function runDownload(targetDate, jcdOnly = null) {
 
-  // 固定場コード
-  const place = '13'
+  // 場コード
+  const place = jcdOnly || '13';
 
   //--- 入力引数: 日付 (例: node boatDB.js 20250612) ====
   if (!targetDate || !/^\d{8}$/.test(targetDate)) {

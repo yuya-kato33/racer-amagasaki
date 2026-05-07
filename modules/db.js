@@ -4,16 +4,20 @@
 
 // ✅ 管理しやすいようにカラム名を配列で定義　(順番が大事)
 const racerColumns = [
-    'hdate','jcd',
-    'toban', 'name', 'shibu', 'kyu',
-    'zsyo', 'z2ren', 'z3ren'
+  'hdate', 'jcd',
+  // ★追加（レース情報） + (出走情報)
+  'rno', 'rsname', 'rmei', 'teiban',
+
+  // 既存
+  'toban', 'name', 'shibu', 'kyu',
+  'zsyo', 'z2ren', 'z3ren'
 ];
 
 // CREATE TABLE 文を自動生成 (列が増えても保守が楽) 
 const racerColumnDefs = `
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  ${racerColumns.map(col => `${col} TEXT`).join(',\n ')},
- UNIQUE(toban) 
+ UNIQUE(hdate,jcd,rno,toban) 
  `;
 
 //プレースホルダを生成 
@@ -22,20 +26,20 @@ const racerPlaceholders = racerColumns.map(() => '?').join(',');
 // ON CONFLICT(hdate, toban) による条件付き上書き (同日・同選手番でなければ上書き)
 const racerInsertSQL = `INSERT INTO racer_programs (${racerColumns.join(', ')}) 
                    VALUES (${racerPlaceholders})
-                   ON CONFLICT(toban) DO UPDATE SET 
+                   ON CONFLICT(hdate,jcd,rno,toban) DO UPDATE SET 
                      ${racerColumns
-                       .filter(col => col !== 'toban') //主キー以外を更新対象に
-                       .map(col => `${col} = excluded.${col}`)
-                       .join(',\n    ')}
+    .filter(col => !['hdate', 'jcd', 'rno', 'toban'].includes(col)) //主キー以外を更新対象に
+    .map(col => `${col} = excluded.${col}`)
+    .join(',\n    ')}
                   `;
 
 // ----------------2⃣節管理テーブル: 出場選手カード作成関係------------------------------
 
 // ✅ 管理しやすいようにカラム名を配列で定義　(順番が大事)
 const seriesColumns = [
-    'hdate_source','jcd', 'jname',
-    'grade','title',
-    'start_date','end_date','dates','created_at'
+  'hdate_source', 'jcd', 'jname',
+  'grade', 'title',
+  'start_date', 'end_date', 'dates', 'created_at'
 ];
 
 // CREATE TABLE 文を自動生成 (列が増えても保守が楽) 
@@ -53,15 +57,15 @@ const seriesInsertSQL = `INSERT INTO series_info (${seriesColumns.join(', ')})
                    VALUES (${seriesPlaceholders})
                    ON CONFLICT(jcd,start_date) DO UPDATE SET 
                      ${seriesColumns
-                       .filter(col => col !== 'jcd' && col !== 'start_date') //主キー以外を更新対象に
-                       .map(col => `${col} = excluded.${col}`)
-                       .join(',\n    ')}
+    .filter(col => col !== 'jcd' && col !== 'start_date') //主キー以外を更新対象に
+    .map(col => `${col} = excluded.${col}`)
+    .join(',\n    ')}
                   `;
 
 // ---------------------3⃣登録選手マスター: 半期に一度更新する全選手基本情報----------------------------
 const masterColumns = [
-  'toban','entry_period',
-  'kyu','img','updated_at'
+  'toban', 'entry_period',
+  'kyu', 'img', 'updated_at'
 ];
 
 const masterColumnDefs = `
@@ -80,6 +84,8 @@ ON CONFLICT(toban) DO UPDATE SET
     .map(col => `${col} = excluded.${col}`)
     .join(',\n  ')}`;
 
-module.exports = { racerColumns, racerColumnDefs, racerInsertSQL,
-                   seriesColumns,seriesColumnDefs,seriesInsertSQL,
-                   masterColumns,masterColumnDefs,masterInsertSQL };
+module.exports = {
+  racerColumns, racerColumnDefs, racerInsertSQL,
+  seriesColumns, seriesColumnDefs, seriesInsertSQL,
+  masterColumns, masterColumnDefs, masterInsertSQL
+};

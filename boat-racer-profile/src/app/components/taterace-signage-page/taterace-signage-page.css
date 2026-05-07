@@ -1,0 +1,36 @@
+/* 外枠 */
+.stage {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ★追加 */
+.stage.capture {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* スケーリング用 */
+.canvas-wrapper {
+    transform-origin: center center;
+}
+
+/* 縦画面を強制 (実寸固定）*/
+.canvas {
+    width: 1080px;
+    height: 1920px;
+    /* background: #000; */
+    overflow: hidden;
+    background: red;
+}
+
+app-taterace-signage {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

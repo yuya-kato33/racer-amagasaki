@@ -1,8 +1,13 @@
-<div class="screen" [style.background]="getBgColor(racer.teiban)" [style.color]="getTextColor(racer.teiban)">
+<div class="taterace-screen" [style.background]="getBgColor(racer.teiban)" [style.color]="getTextColor(racer.teiban)">
 
     <!-- 上部 -->
     <div class="header">
-        第{{ formatRaceNo(racer.rno) }}レース {{ getRaceTitle() }}
+        <div class="header-left">
+            第{{ formatRaceNo(racer.rno) }}レース
+        </div>
+        <div class="header-right">
+            {{ getRaceTitle() }}
+        </div>
     </div>
 
     <!-- 中央 -->
@@ -26,7 +31,7 @@
     <div class="footer">
         <div class="toban">{{ racer.toban }}</div>
         <div class="name">{{ racer.name }}</div>
-        <div class="shibu">({{ racer.shusin }})</div>
+        <div class="shibu">({{ racer.shibu }})</div>
     </div>
 
 </div>

@@ -154,6 +154,9 @@ createDBConnection().then(conn => {
     })
   });
 
+  // レース情報APi
+  app.use('/api/race', require('./routes/race')(db));
+
   // DB更新通知API (app.js からたたくよう)
   app.post('/api/notify-update', (req, res) => {
     console.log('🛎️ 通知API リクエスト受信');  // ← 必須ログ

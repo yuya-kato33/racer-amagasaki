@@ -1,1 +1,10 @@
-<p>taterace-signage-page works!</p>
+<div class="stage">
+    <div class="canvas-wrapper" [style.transform]="'scale(' + scale + ')'">
+
+        <div class="canvas">
+            <app-taterace-signage *ngIf="racer" [racer]="racer">
+            </app-taterace-signage>
+        </div>
+
+    </div>
+</div>

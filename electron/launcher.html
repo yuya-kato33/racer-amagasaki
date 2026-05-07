@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BoatRace Manager</title>
+
+    <link rel="stylesheet" href="launcher.css">
+</head>
+
+<body>
+
+    <h1>BoatRace Manager</h1>
+
+    <div class="panel">
+
+        <label>runMode</label>
+        <select id="runMode">
+            <option value="now">now</option>
+            <option value="schedule">schedule</option>
+        </select>
+
+        <label>開始日</label>
+        <input id="startDate" value="20260506">
+
+        <label>終了日</label>
+        <input id="endDate" value="20260507">
+
+        <label>mode</label>
+        <select id="mode">
+            <option value="both">both</option>
+            <option value="download">download</option>
+            <option value="database">database</option>
+            <option value="capture">capture</option>
+            <option value="capture-signage">capture-signage</option>
+        </select>
+
+        <label>jcd</label>
+        <input id="jcd" value="13">
+
+    </div>
+
+    <div class="buttons">
+        <button id="serverBtn">
+            サーバ起動
+        </button>
+
+        <button id="runBtn">
+            app3.js 実行
+        </button>
+    </div>
+
+    <textarea id="logArea"></textarea>
+
+    <script src="renderer.js"></script>
+
+</body>
+
+</html>

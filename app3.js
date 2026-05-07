@@ -7,6 +7,7 @@ const { runImport } = require('./modules/import');
 const { runCapture } = require('./modules/capture')
 const { writeLog } = require('./modules/logger');
 const { getToday } = require('./modules/utils');
+const { runCaptureSignage } = require('./modules/captureSignage');
 
 
 // ====================実行系====================--
@@ -14,7 +15,7 @@ const runMode = process.argv[2] || 'now';      // 実行モード: now schedule
 let cliDateStart = process.argv[3];
 let cliDateEnd = process.argv[4]; // 実行日
 const mode = process.argv[5] || 'both';        // 処理モード: download/ database/ both
-const jcdOnly = process.argv[6] || null;       // 場コード: 指定有ればその場のみ対象
+const jcdOnly = process.argv[6] || '13';       // 場コード: 指定有ればその場のみ対象
 
 // 日付省略時は今日
 if (!cliDateStart) cliDateStart = getToday();
@@ -85,7 +86,13 @@ if (runMode === 'now') {
                     await runImport(targetDate, jcdOnly);
                 }
                 // ここに追加
-                await runCapture(targetDate);
+                if (mode === 'capture' || mode === 'both') {
+                    await runCapture(targetDate);
+                }
+                if (mode === 'capture-signage' || mode === 'both') {
+                    await runCaptureSignage(targetDate, jcdOnly);
+                }
+
 
                 await notifyUpdate();
                 console.log(`✅ 即時実行完了 ${targetDate}`);

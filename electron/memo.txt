@@ -1,0 +1,14 @@
+1 electron  追加
+npm install electron --save-dev
+
+2 各種JS,html.cssを作成
+
+3 package.json
+"main": "electron/main.js"
+"scripts": {
+  "start": "node server03.js",
+  "electron": "electron ."
+}
+
+4 起動方法
+npm run electron
