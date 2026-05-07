@@ -21,5 +21,5 @@ contextBridge.exposeInMainWorld('api', {
     onServerStatus: (callback) =>
         ipcRenderer.on(
             'server-status', (_, status) => callback(status)
-        )
+        ),
 });

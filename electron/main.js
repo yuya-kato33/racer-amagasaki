@@ -26,6 +26,9 @@ function createWindow() {
     });
 
     mainWindow.loadFile(path.join(__dirname, 'launcher.html'));
+
+    // DevToolの確認用
+    // mainWindow.webContents.openDevTools();
 }
 
 // port確認関数

@@ -33,10 +33,10 @@
                 </select>
 
                 <label>開始日</label>
-                <input id="startDate" value="20260506">
+                <input type="date" id="startDate" placeholder="20260506">
 
                 <label>終了日</label>
-                <input id="endDate" value="20260507">
+                <input type="date" id="endDate" placeholder="20260507">
 
                 <label>mode</label>
                 <select id="mode">
@@ -48,11 +48,39 @@
                 </select>
 
                 <label>jcd</label>
-                <input id="jcd" value="13">
+                <input id="jcd" list="placeList" placeholder="場名または番号">
 
+                <datalist id="placeList">
+                    <option value="01 桐生"></option>
+                    <option value="02 戸田"></option>
+                    <option value="03 江戸川"></option>
+                    <option value="04 平和島"></option>
+                    <option value="05 多摩川"></option>
+                    <option value="06 浜名湖"></option>
+                    <option value="07 蒲郡"></option>
+                    <option value="08 常滑"></option>
+                    <option value="09 津"></option>
+                    <option value="10 三国"></option>
+                    <option value="11 びわこ"></option>
+                    <option value="12 住之江"></option>
+                    <option value="13 尼崎"></option>
+                    <option value="14 鳴門"></option>
+                    <option value="15 丸亀"></option>
+                    <option value="16 児島"></option>
+                    <option value="17 宮島"></option>
+                    <option value="18 徳山"></option>
+                    <option value="19 下関"></option>
+                    <option value="20 若松"></option>
+                    <option value="21 芦屋"></option>
+                    <option value="22 福岡"></option>
+                    <option value="23 唐津"></option>
+                    <option value="24 大村"></option>
+                </datalist>
             </div>
 
             <div class="buttons">
+                <button id="todayBtn">今日</button>
+                <button id="tomorrowBtn">明日</button>
                 <button id="serverBtn">
                     サーバ起動
                 </button>
@@ -78,11 +106,11 @@
             <div class="panel">
 
                 <label>開始登録番号</label>
-                <input id="startToban" value="5400">
+                <input id="startToban" placeholder="5400">
 
 
                 <label>終了登録番号</label>
-                <input id="endToban" value="5404">
+                <input id="endToban" placeholder="5404">
 
             </div>
 

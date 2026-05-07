@@ -29,16 +29,19 @@ document
                 document.getElementById('runMode').value,
 
             startDate:
-                document.getElementById('startDate').value,
+                document.getElementById('startDate').value
+                    .replaceAll('-', ''),
 
             endDate:
-                document.getElementById('endDate').value,
+                document.getElementById('endDate').value
+                    .replaceAll('-', ''),
 
             mode:
                 document.getElementById('mode').value,
 
             jcd:
-                document.getElementById('jcd').value,
+                document.getElementById('jcd').value
+                    .split(' ')[0],
         };
 
         await window.api.runApp3(args);
@@ -69,3 +72,50 @@ window.api.onServerStatus(status => {
     document.getElementById('serverStatus')
         .innerText = `server: ${status}`;
 });
+
+// 今日 - 明日 ボタン
+async function setDate(offset = 0) {
+    appendLog(`\n 日付ボタン押下 offset=${offset}\n`)
+
+    const now = new Date();
+
+    const jst = new Date(
+        now.getTime() + (9 * 60 * 60 * 1000)
+    );
+    const today = jst.toISOString().slice(0, 10).replace(/-/g, '');
+
+    appendLog(` getToday=${today}\n`)
+
+    const y = Number(today.slice(0, 4));
+    const m = Number(today.slice(4, 6));
+    const d = Number(today.slice(6, 8));
+    const date = new Date(y, m - 1, d)
+
+    date.setDate(date.getDate() + offset);
+
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1)
+        .padStart(2, '0');
+    const dd = String(date.getDate())
+        .padStart(2, '0');
+
+    const value = `${yyyy}-${mm}-${dd}`;
+
+    appendLog(` set value=${value}\n`)
+
+    document.getElementById('startDate').value = value;
+    document.getElementById('endDate').value = value;
+
+}
+
+// 今日ボタン
+document.getElementById('todayBtn')
+    .addEventListener('click', () => {
+        setDate(0);
+    })
+
+// 明日ボタン
+document.getElementById('tomorrowBtn')
+    .addEventListener('click', () => {
+        setDate(1);
+    });
