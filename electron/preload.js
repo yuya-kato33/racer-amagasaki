@@ -9,6 +9,17 @@ contextBridge.exposeInMainWorld('api', {
     runApp3: (args) =>
         ipcRenderer.invoke('run-app3', args),
 
+    runImportMaster: (args) =>
+        ipcRenderer.invoke('run-import-master', args),
+
     onLog: (callback) =>
-        ipcRenderer.on('log', (_, data) => callback(data))
+        ipcRenderer.on('log', (_, data) => callback(data)),
+
+    stopServer: () =>
+        ipcRenderer.invoke('stop-server'),
+
+    onServerStatus: (callback) =>
+        ipcRenderer.on(
+            'server-status', (_, status) => callback(status)
+        )
 });

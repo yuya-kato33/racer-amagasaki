@@ -6,6 +6,8 @@ import { TateraceSignagePage } from './components/taterace-signage-page/taterace
 
 export const routes: Routes = [
     { path: '', component: SelectorPanel }, // // / ルートで App を表示
+
+    { path: 'auto', component: SelectorPanel },
     { path: 'manual', component: SelectorPanel2 },
     { path: 'racer', component: TateraceSignagePage }
 ];

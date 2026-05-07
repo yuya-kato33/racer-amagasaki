@@ -12,46 +12,91 @@
 
     <h1>BoatRace Manager</h1>
 
-    <div class="panel">
-
-        <label>runMode</label>
-        <select id="runMode">
-            <option value="now">now</option>
-            <option value="schedule">schedule</option>
-        </select>
-
-        <label>開始日</label>
-        <input id="startDate" value="20260506">
-
-        <label>終了日</label>
-        <input id="endDate" value="20260507">
-
-        <label>mode</label>
-        <select id="mode">
-            <option value="both">both</option>
-            <option value="download">download</option>
-            <option value="database">database</option>
-            <option value="capture">capture</option>
-            <option value="capture-signage">capture-signage</option>
-        </select>
-
-        <label>jcd</label>
-        <input id="jcd" value="13">
-
+    <div id="serverStatus">
+        server: stopped
     </div>
 
-    <div class="buttons">
-        <button id="serverBtn">
-            サーバ起動
-        </button>
+    <div class="container">
+        <!-- ======================= -->
+        <!-- app3.js -->
+        <!-- ======================= -->
+        <section class="card">
 
-        <button id="runBtn">
-            app3.js 実行
-        </button>
+            <h2>XML / DB / Capture</h2>
+
+            <div class="panel">
+
+                <label>runMode</label>
+                <select id="runMode">
+                    <option value="now">now</option>
+                    <option value="schedule">schedule</option>
+                </select>
+
+                <label>開始日</label>
+                <input id="startDate" value="20260506">
+
+                <label>終了日</label>
+                <input id="endDate" value="20260507">
+
+                <label>mode</label>
+                <select id="mode">
+                    <option value="both">both</option>
+                    <option value="download">download</option>
+                    <option value="database">database</option>
+                    <option value="capture">capture</option>
+                    <option value="capture-signage">capture-signage</option>
+                </select>
+
+                <label>jcd</label>
+                <input id="jcd" value="13">
+
+            </div>
+
+            <div class="buttons">
+                <button id="serverBtn">
+                    サーバ起動
+                </button>
+
+                <button id="runBtn">
+                    app3.js 実行
+                </button>
+
+                <button id="stopServerBtn">
+                    サーバ停止
+                </button>
+            </div>
+
+        </section>
+
+        <!-- ======================== -->
+        <!-- import_master -->
+        <!-- ======================== -->
+        <section class="card">
+
+            <h2>選手顔写真取得</h2>
+
+            <div class="panel">
+
+                <label>開始登録番号</label>
+                <input id="startToban" value="5400">
+
+
+                <label>終了登録番号</label>
+                <input id="endToban" value="5404">
+
+            </div>
+
+            <button id="masterBtn">
+                顔写真取得開始
+            </button>
+
+        </section>
     </div>
 
+    <!-- ログ -->
     <textarea id="logArea"></textarea>
 
+    <!-- これは必ずbodyの一番下においてください -->
     <script src="renderer.js"></script>
 
 </body>

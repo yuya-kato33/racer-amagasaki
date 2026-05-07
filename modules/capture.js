@@ -6,7 +6,7 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 async function runCapture(targetDate) {
 
-    const BASE_URL = 'http://192.168.1.24:8083';
+    const BASE_URL = 'http://192.168.1.24:8083/auto';
     const OUTPUT_DIR = path.join(__dirname, `../output/${targetDate}`);
 
     if (!fs.existsSync(OUTPUT_DIR)) {

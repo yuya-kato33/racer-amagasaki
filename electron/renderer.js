@@ -43,3 +43,29 @@ document
 
         await window.api.runApp3(args);
     });
+
+document.getElementById('masterBtn')
+    .addEventListener('click', async () => {
+
+        const startToban =
+            document.getElementById('startToban').value;
+
+        const endToban =
+            document.getElementById('endToban').value;
+
+        await window.api.runImportMaster({
+            startToban,
+            endToban
+        });
+    });
+
+document.getElementById('stopServerBtn')
+    .addEventListener('click', async () => {
+        await window.api.stopServer();
+    });
+
+// サーバ状態
+window.api.onServerStatus(status => {
+    document.getElementById('serverStatus')
+        .innerText = `server: ${status}`;
+});

@@ -202,6 +202,7 @@ createDBConnection().then(conn => {
   server.listen(PORT, '0.0.0.0', () => {
     console.log(`🌐 Webサーバー起動 → http://192.168.1.24:${PORT}`);
     console.log("🚀 API → 静的 → Angular の順序で完全動作中");
+    console.log('SERVER_READY');
   });
 
 

@@ -136,8 +136,8 @@ const randomsleep = async () => {
             writeLog(`[警告] ${tobanStr} の顔写真が取得できませんでした`)
           }
         } else {
-          console.log(`[情報] ${tobanStr} の顔写真は既に存在するためスキップしました`);
-          writeLog(`[情報] ${tobanStr} の顔写真は既に存在するためスキップしました`);
+          console.log(`[情報] ${tobanStr} の顔写真は${dir}に存在するためスキップしました`);
+          writeLog(`[情報] ${tobanStr} の顔写真は${dir}に存在するためスキップしました`);
           skipCount++;
         }
       }

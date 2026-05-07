@@ -1,31 +1,46 @@
 body {
-
     font-family: sans-serif;
     padding: 20px;
 }
 
-.panel {
+/* 横並び */
+.container {
+    display: flex;
+    gap: 20px;
 
-    display: grid;
-    grid-template-columns: 120px 250px;
-    gap: 10px;
+    align-items: flex-start;
 
     margin-bottom: 20px;
+}
+
+/* カード */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 420px;
+    background: #fafafa;
+}
+
+/* 入力群 */
+.panel {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
 .buttons {
-
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 button {
-    margin-right: 10px;
     padding: 10px 20px;
 }
 
 #logArea {
     width: 100%;
-    height: 400px;
+    height: 350px;
 
     font-family: monospace;
 }
