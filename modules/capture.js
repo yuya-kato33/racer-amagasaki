@@ -4,7 +4,7 @@ const path = require('path');
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-async function runCapture(targetDate) {
+async function runCapture(targetDate, jcdOnly) {
 
     const BASE_URL = 'http://192.168.1.24:8083/auto';
     const OUTPUT_DIR = path.join(__dirname, `../output/${targetDate}`);
@@ -21,10 +21,17 @@ async function runCapture(targetDate) {
     const page = await browser.newPage();
 
     // 初回アクセス
-    await page.goto(BASE_URL, { waitUntil: 'networkidle0' });
+    const firstUrl = `${BASE_URL}?page=0&jcd=${jcdOnly}`;
+    console.log('FIRST URL:', firstUrl);
 
-    await page.waitForSelector('#total-pages');
-    await page.waitForSelector('.racer-card');
+    await page.goto(firstUrl, { waitUntil: 'networkidle0' });
+
+    // await page.waitForSelector('#total-pages');
+    // await page.waitForSelector('.racer-card');
+
+    await page.waitForSelector(
+        '#capture-ready', { timeout: 60000 }
+    );
 
     await page.evaluateHandle('document.fonts.ready');
 
@@ -36,13 +43,16 @@ async function runCapture(targetDate) {
     // 各ページをキャプチャ
     for (let i = 0; i < totalPages; i++) {
 
-        const url = `${BASE_URL}?page=${i}`;
+        const url = `${BASE_URL}?page=${i}&jcd=${jcdOnly}`;
         await page.goto(url, { waitUntil: 'networkidle0' });
 
-        await page.waitForSelector('.racer-card');
-        await sleep(500);
+        // await page.waitForSelector('.racer-card');
+        await page.waitForSelector(
+            '#capture-ready', { timeout: 60000 }
+        );
+        await sleep(1500);
 
-        const filename = `${OUTPUT_DIR}/${targetDate}_ichiran_page_${i + 1}.png`;
+        const filename = `${OUTPUT_DIR}/${targetDate}_${jcdOnly}_ichiran_page_${i + 1}.png`;
         // const filename = `${OUTPUT_DIR}/${targetDate}_${jcdOnly || 'all'}_ichiran_page_${i + 1}.png`;
 
         await page.screenshot({ path: filename, type: 'png', omitBackground: false });

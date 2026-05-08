@@ -7,8 +7,7 @@ const ROOT = path.resolve(__dirname, '..');
 const net = require('net');
 
 // main,js追加
-const find = require('find-process');
-const treeKill = require('tree-kill');
+const { execSync } = require('child_process')
 const { resolve } = require('dns');
 
 let mainWindow;
@@ -54,17 +53,26 @@ function isPortInUse(port) {
 // //////////////////////////////////
 async function cleanUpPort8083() {
 
-    const list = await find('port', 8083);
+    try {
+        const result = execSync(
+            'netstat -ano | findstr :8083'
+        ).toString();
 
-    for (const proc of list) {
+        console.log(result);
 
-        console.log(`🛑 kill PID=${proc.pid} ${proc.name}`);
+        const lines = result
+            .split('\n')
+            .filter(Boolean);
 
-        await new Promise(resolve => {
-            treeKill(proc.pid, 'SIGTERM', () => {
-                resolve();
-            });
-        });
+        for (const line of lines) {
+            const parts = line.trim().split(/\s+/);
+
+            const pid = parts[parts.length - 1];
+            console.log(`🛑 kill PID=${pid}`);
+            execSync(`taskkill /PID ${pid} /F`);
+        }
+    } catch (err) {
+        console.log('8083 使用プロセスなし');
     }
 
 }

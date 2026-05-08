@@ -87,7 +87,7 @@ if (runMode === 'now') {
                 }
                 // ここに追加
                 if (mode === 'capture' || mode === 'both') {
-                    await runCapture(targetDate);
+                    await runCapture(targetDate, jcdOnly);
                 }
                 if (mode === 'capture-signage' || mode === 'both') {
                     await runCaptureSignage(targetDate, jcdOnly);

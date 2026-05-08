@@ -10,6 +10,10 @@
   {{ pages.length }}
 </div>
 
+<!-- マーカー登録 -->
+<div id="capture-ready" *ngIf="pagedRacers.length > 0">
+</div>
+
 <!-- 選手カードのグリッド表示 -->
 <div class="racer-grid" [style.--cols]="cols">
 

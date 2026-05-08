@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RacerList } from '../racer-list/racer-list';
 import { RacerSeriesList } from '../racer-series-list/racer-series-list';
+import { ActivatedRoute } from '@angular/router';
 
 interface SeriesSummary {
   start_date: string;
@@ -31,20 +32,30 @@ export class SelectorPanel implements OnInit {
   selectedJcd: string = '';
   useSeries = true;
 
-  constructor(private http: HttpClient) { }
+  // クエリ保持用関数追加
+  queryStartDate = '';
+  queryJcd = '';
+
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.http.get<string[]>('/api/series/dates').subscribe(data => {
-      // 数値として降順ソート
-      this.dates = data.sort((a, b) => Number(b) - Number(a));
+    this.route.queryParams.subscribe(params => {
+      this.queryStartDate = params['startDate'] || '';
+      this.queryJcd = params['jcd'] || '';
 
-      if (this.dates.length > 0) {
-        // 最新日（最後）を選択
-        this.selectedDate = this.dates[0]; // 最新
+      this.http.get<string[]>('/api/series/dates').subscribe(data => {
+        // 数値として降順ソート
+        this.dates = data.sort((a, b) => Number(b) - Number(a));
 
-        //自動で次処理へ
-        this.onDateChange();
-      }
+        if (this.dates.length > 0) {
+          // 最新日（最後）を選択
+          this.selectedDate = this.dates[0]; // 最新
+
+          //自動で次処理へ
+          this.onDateChange();
+
+        }
+      });
     });
   }
 
@@ -56,10 +67,14 @@ export class SelectorPanel implements OnInit {
 
       if (this.seriesList.length > 0) {
 
-        const first = this.seriesList[0];
+        const matched = this.seriesList.find(s =>
+          (!this.queryJcd || s.jcd === this.queryJcd)
+        );
+
+        const selected = matched || this.seriesList[0];
 
         // 自動選択
-        this.selectedSeriesKey = this.getSeriesKey(first);
+        this.selectedSeriesKey = this.getSeriesKey(selected);
 
         // 次処理
         this.onSeriesChange();
