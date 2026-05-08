@@ -164,19 +164,20 @@ ipcMain.handle('stop-server', async () => {
         return 'server not running';
     }
 
-    await new Promise(resolve => {
-
-        treeKill(
-            serverProcess.pid,
-            'SIGTERM',
-            () => resolve()
-        );
-    });
-
     mainWindow.webContents.send(
         'log',
         '\n🛑 サーバ停止要求\n'
     );
+
+    try {
+        execSync(
+            `taskkill /PID ${serverProcess.pid} /F`
+        );
+    } catch (err) {
+        console.error('taskkill失敗:', err.message);
+    }
+
+    serverProcess = null;
 
     setTimeout(async () => {
 
