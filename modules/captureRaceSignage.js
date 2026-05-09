@@ -49,42 +49,13 @@ async function runCaptureRaceSignage(targetDate, jcd) {
             return iframes.length === 6;
         });
 
-        // iframe 内部ロード待ち (内部DOMに入る)
-        const frames = page.frames();
 
-        for (const frame of frames) {
-
-            console.log('frame url=', frame.url());
-            try {
-                // racerページだけ対象
-                if (!frame.url().includes('/racer')) {
-                    continue;
-                }
-
-                await frame.waitForSelector(
-                    '.taterace-screen img',
-                    { timeout: 30000 }
-                );
-
-                await frame.waitForFunction(() => {
-                    const img =
-                        document.querySelector(
-                            '.taterace-screen img'
-                        );
-
-                    return (img && img.compleate && img.naturalWidth > 0);
-                });
-
-                // font待ち
-                await page.evaluateHandle(
-                    'document.fonts.ready'
-                );
-            } catch (err) {
-                console.log('⚠ frame wait skip: ', err.message)
-            }
-        }
         // 最終安定待ち
-        await sleep(1000);
+        await sleep(2500);
+
+        await page.evaluateHandle(
+            'document.fonts.ready'
+        );
 
         const filename = path.join(
             OUTPUT_DIR, `${targetDate}_${rno2}R_race.png`
