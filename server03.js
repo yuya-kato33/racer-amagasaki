@@ -184,14 +184,14 @@ createDBConnection().then(conn => {
   // 7️⃣ Angular（出場選手プロファイル dist）
   // =========================================================
   // Angularのdistを静的ファイルとして公開
-  app.use(express.static(path.join(__dirname, 'boat-racer-profile', 'dist', 'browser')));
+  app.use(express.static(path.join(__dirname, 'angular', 'dist', 'browser')));
 
   // =========================================================
   // 8️⃣ Angular の catch-all（最下位ルート）
   // =========================================================
   // angular ルーティング対応 (リロード対策)
   app.get(/^\/(?!api|live).*/, (req, res) => {
-    res.sendFile(path.join(__dirname, 'boat-racer-profile', 'dist', 'browser', 'index.html'));
+    res.sendFile(path.join(__dirname, 'angular', 'dist', 'browser', 'index.html'));
   });
 
   // =========================================================

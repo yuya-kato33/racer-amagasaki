@@ -1,6 +1,7 @@
 1 electron  追加
 npm install electron --save-dev
 npm install find-process tree-kill
+npm install --save-dev electron-builder
 
 2 各種JS,html.cssを作成
 
@@ -13,6 +14,8 @@ npm install find-process tree-kill
 
 4 起動方法
 npm run electron
+npm run dist 
+→dist/win-unpacked/BoatRaceManager.exe　→exe化したもの
 
 5 ポート殺す
 netstat -ano | findstr :8083

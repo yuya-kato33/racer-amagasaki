@@ -1,7 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const { spawn } = require('child_process');
+// const { spawn } = require('child_process');
+const { fork } = require('child_process');
 
+// EXE時対応
 const ROOT = path.resolve(__dirname, '..');
 
 const net = require('net');
@@ -114,10 +116,8 @@ ipcMain.handle('start-server', async () => {
         return 'server already used';
     }
 
-    serverProcess = spawn('node', ['server03.js'], {
-        cwd: ROOT,
-        shell: true
-    });
+    serverProcess = fork(path.join(ROOT, 'server03.js'), { cwd: ROOT, silent: true }
+    );
 
     serverProcess.stdout.on('data', data => {
 
@@ -204,17 +204,13 @@ ipcMain.handle('stop-server', async () => {
 //////////////////////////////
 ipcMain.handle('run-app3', async (event, args) => {
 
-    const proc = spawn('node', [
-        'app3.js',
+    const proc = fork(path.join(ROOT, 'app3.js'), [
         args.runMode,
         args.startDate,
         args.endDate,
         args.mode,
         args.jcd
-    ], {
-        cwd: ROOT,
-        shell: true
-    });
+    ], { cwd: ROOT, silent: true });
 
     proc.stdout.on('data', data => {
         mainWindow.webContents.send('log', data.toString());
@@ -243,17 +239,11 @@ ipcMain.handle(
 
     async (event, args) => {
 
-        const proc = spawn('node', [
-
-            'import_master.js',
-
+        const proc = fork(path.join(ROOT, 'import_master.js'), [
             args.startToban,
             args.endToban
-
-        ], {
-            cwd: ROOT,
-            shell: true
-        });
+        ],
+            { cwd: ROOT, silent: true });
 
         proc.stdout.on('data', data => {
             mainWindow.webContents.send(

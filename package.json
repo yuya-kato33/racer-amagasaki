@@ -21,16 +21,46 @@
   },
   "scripts": {
     "start": "node server03.js",
-    "electron": "electron ."
+    "electron": "electron .",
+    "dist": "electron-builder"
   },
   "name": "traning",
-  "description": "",
+  "description": "BoatRace Manager",
   "version": "1.0.0",
   "main": "electron/main.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^42.0.0"
+    "electron": "^42.0.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "asar": false,
+    "npmRebuild": false,
+    "appId": "com.boatrace.manager",
+    "productName": "BoatRaceManager",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "modules/**/*",
+      "angular/dist/**/*",
+      "routes/**/*",
+      "public/**/*",
+      "db/**/*",
+      "xml/**/*",
+      "*.js",
+      "*.json",
+      ".env",
+      "node_modules/**/*",
+      "!release/**/*",
+      "!dist/**/*",
+      "!node_modules/.cache/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
   }
 }

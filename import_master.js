@@ -17,7 +17,7 @@ const db = new sqlite3.Database(dbPath);
 
 // 顔写真保存先
 const imageDirs = [
-  path.join(__dirname, 'boat-racer-profile', 'src', 'assets', 'racerphoto'),
+  path.join(__dirname, 'angular', 'src', 'assets', 'racerphoto'),
   path.join(__dirname, 'public', 'assets', 'racerphoto')
 ];
 
