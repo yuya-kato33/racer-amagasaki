@@ -1,0 +1,34 @@
+.stage {
+    width: 3240px;
+    height: 3840px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* 3列 x 2行 */
+.race-grid {
+    width: 3240px;
+    height: 3840px;
+
+    display: grid;
+
+    grid-template-columns: 1080px 1080px 1080px;
+    grid-template-rows: 1920px 1920px;
+    gap: 0;
+}
+
+/* 1艇固定サイズ */
+.signage-cell {
+    width: 1080px;
+    height: 1920px;
+
+    overflow: hidden;
+}
+
+/* 捻のため固定 */
+app-taterace-signage {
+    display: block;
+
+    width: 1080px;
+    height: 1920px;
+}

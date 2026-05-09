@@ -16,7 +16,7 @@ async function runCaptureSignage(targetDate, jcd) {
     const page = await browser.newPage();
 
     for (let teiban = 1; teiban <= 6; teiban++) {
-        const OUTPUT_DIR = path.join(__dirname, `../output/${targetDate}/${teiban}`);
+        const OUTPUT_DIR = path.join(__dirname, `../output/${targetDate}/single`);
 
         if (!fs.existsSync(OUTPUT_DIR)) {
             fs.mkdirSync(OUTPUT_DIR, { recursive: true });

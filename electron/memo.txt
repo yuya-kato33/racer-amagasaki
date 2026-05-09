@@ -2,6 +2,7 @@
 npm install electron --save-dev
 npm install find-process tree-kill
 npm install --save-dev electron-builder
+npm install pdf-lib
 
 2 各種JS,html.cssを作成
 
