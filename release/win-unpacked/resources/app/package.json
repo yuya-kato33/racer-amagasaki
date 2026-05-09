@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "csv": "^6.3.11",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "find-process": "^2.1.1",
+    "http": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "node-schedule": "^2.1.1",
+    "puppeteer": "^24.42.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "socket.io": "^4.8.1",
+    "sqlite3": "^5.1.7",
+    "tree-kill": "^1.2.2",
+    "undici": "^7.10.0",
+    "xml2js": "^0.6.2",
+    "zone.js": "^0.15.1"
+  },
+  "name": "traning",
+  "description": "BoatRace Manager",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "author": "",
+  "license": "ISC"
+}

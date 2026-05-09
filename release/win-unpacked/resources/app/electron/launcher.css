@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* 横並び */
+.container {
+    display: flex;
+    gap: 20px;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+/* カード */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 420px;
+    background: #fafafa;
+}
+
+/* 入力群 */
+.panel {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.buttons {
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#logArea {
+    width: 100%;
+    height: 350px;
+
+    font-family: monospace;
+}

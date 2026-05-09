@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BoatRace Manager</title>
+
+    <link rel="stylesheet" href="launcher.css">
+</head>
+
+<body>
+
+    <h1>BoatRace Manager</h1>
+
+    <div id="serverStatus">
+        server: stopped
+    </div>
+
+    <div class="container">
+        <!-- ======================= -->
+        <!-- app3.js -->
+        <!-- ======================= -->
+        <section class="card">
+
+            <h2>XML / DB / Capture</h2>
+
+            <div class="panel">
+
+                <label>runMode</label>
+                <select id="runMode">
+                    <option value="now">now</option>
+                    <option value="schedule">schedule</option>
+                </select>
+
+                <label>開始日</label>
+                <input type="date" id="startDate" placeholder="20260506">
+
+                <label>終了日</label>
+                <input type="date" id="endDate" placeholder="20260507">
+
+                <label>mode</label>
+                <select id="mode">
+                    <option value="both">both</option>
+                    <option value="download">download</option>
+                    <option value="database">database</option>
+                    <option value="capture">capture</option>
+                    <option value="capture-signage">capture-signage</option>
+                </select>
+
+                <label>jcd</label>
+                <input id="jcd" list="placeList" placeholder="場名または番号">
+
+                <datalist id="placeList">
+                    <option value="01 桐生"></option>
+                    <option value="02 戸田"></option>
+                    <option value="03 江戸川"></option>
+                    <option value="04 平和島"></option>
+                    <option value="05 多摩川"></option>
+                    <option value="06 浜名湖"></option>
+                    <option value="07 蒲郡"></option>
+                    <option value="08 常滑"></option>
+                    <option value="09 津"></option>
+                    <option value="10 三国"></option>
+                    <option value="11 びわこ"></option>
+                    <option value="12 住之江"></option>
+                    <option value="13 尼崎"></option>
+                    <option value="14 鳴門"></option>
+                    <option value="15 丸亀"></option>
+                    <option value="16 児島"></option>
+                    <option value="17 宮島"></option>
+                    <option value="18 徳山"></option>
+                    <option value="19 下関"></option>
+                    <option value="20 若松"></option>
+                    <option value="21 芦屋"></option>
+                    <option value="22 福岡"></option>
+                    <option value="23 唐津"></option>
+                    <option value="24 大村"></option>
+                </datalist>
+            </div>
+
+            <div class="buttons">
+                <button id="todayBtn">今日</button>
+                <button id="tomorrowBtn">明日</button>
+                <button id="serverBtn">
+                    サーバ起動
+                </button>
+
+                <button id="runBtn">
+                    app3.js 実行
+                </button>
+
+                <button id="stopServerBtn">
+                    サーバ停止
+                </button>
+            </div>
+
+        </section>
+
+        <!-- ======================== -->
+        <!-- import_master -->
+        <!-- ======================== -->
+        <section class="card">
+
+            <h2>選手顔写真取得</h2>
+
+            <div class="panel">
+
+                <label>開始登録番号</label>
+                <input id="startToban" placeholder="5400">
+
+
+                <label>終了登録番号</label>
+                <input id="endToban" placeholder="5404">
+
+            </div>
+
+            <button id="masterBtn">
+                顔写真取得開始
+            </button>
+
+        </section>
+    </div>
+
+    <!-- ログ -->
+    <textarea id="logArea"></textarea>
+
+    <!-- これは必ずbodyの一番下においてください -->
+    <script src="renderer.js"></script>
+
+</body>
+
+</html>
