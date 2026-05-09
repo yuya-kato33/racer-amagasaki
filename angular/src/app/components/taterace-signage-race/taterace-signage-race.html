@@ -1,10 +1,6 @@
 <div class="stage">
     <div class="race-grid">
-        <div class="signage-cell" *ngFor="let racer of racers">
 
-            <app-taterace-signage [racer]="racer">
-
-            </app-taterace-signage>
-        </div>
+        <iframe class="signage-frame" *ngFor="let teiban of teibans" [src]="getIframeUrl(teiban)"></iframe>
     </div>
 </div>

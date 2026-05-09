@@ -31,29 +31,59 @@ async function runCaptureRaceSignage(targetDate, jcd) {
         console.log(`🌐 ${url} `);
 
         await page.goto(url, {
-            waitUntil: 'domcontentloaded'
+            waitUntil: 'networkidle0'
         });
 
-        // 6艇描画待ち
+        // iframe 6艇描画待ち
         await page.waitForSelector(
-            '.taterace-screen img', { timeout: 30000 }
+            '.signage-frame', { timeout: 30000 }
         );
 
-        // 全画面読み込み待機
+        // iframe 6枚待機
         await page.waitForFunction(() => {
-            const imgs = document.querySelectorAll(
-                '.taterace-screen img'
+
+            const iframes = document.querySelectorAll(
+                '.signage-frame'
             );
 
-            return [...imgs].every(
-                img => img.complete
-            );
+            return iframes.length === 6;
         });
 
-        // font待ち
-        await page.evaluateHandle(
-            'document.fonts.ready'
-        );
+        // iframe 内部ロード待ち (内部DOMに入る)
+        const frames = page.frames();
+
+        for (const frame of frames) {
+
+            console.log('frame url=', frame.url());
+            try {
+                // racerページだけ対象
+                if (!frame.url().includes('/racer')) {
+                    continue;
+                }
+
+                await frame.waitForSelector(
+                    '.taterace-screen img',
+                    { timeout: 30000 }
+                );
+
+                await frame.waitForFunction(() => {
+                    const img =
+                        document.querySelector(
+                            '.taterace-screen img'
+                        );
+
+                    return (img && img.compleate && img.naturalWidth > 0);
+                });
+
+                // font待ち
+                await page.evaluateHandle(
+                    'document.fonts.ready'
+                );
+            } catch (err) {
+                console.log('⚠ frame wait skip: ', err.message)
+            }
+        }
+        // 最終安定待ち
         await sleep(1000);
 
         const filename = path.join(

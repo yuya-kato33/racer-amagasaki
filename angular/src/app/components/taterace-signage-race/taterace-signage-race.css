@@ -18,17 +18,11 @@
 }
 
 /* 1艇固定サイズ */
-.signage-cell {
+.signage-frame {
     width: 1080px;
     height: 1920px;
 
-    overflow: hidden;
-}
-
-/* 捻のため固定 */
-app-taterace-signage {
+    border: none;
     display: block;
-
-    width: 1080px;
-    height: 1920px;
+    overflow: hidden;
 }

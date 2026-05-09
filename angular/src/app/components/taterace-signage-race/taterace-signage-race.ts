@@ -1,37 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Route } from '@angular/router';
-import { TateraceSignage } from '../taterace-signage/taterace-signage';
+import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-taterace-signage-race',
   standalone: true,
-  imports: [CommonModule, TateraceSignage],
+  imports: [CommonModule],
   templateUrl: './taterace-signage-race.html',
   styleUrl: './taterace-signage-race.css',
 })
 
 export class TateraceSignageRace implements OnInit {
-  racers: any[] = [];
+  hdate = '';
+  jcd = '';
+  rno = '';
+  teibans = [1, 2, 3, 4, 5, 6];
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      const hdate = params['hdate'];
-      const jcd = params['jcd'];
-      const rno = params['rno'];
-
-      this.http.get<any[]>(`/api/race?hdate=${hdate}&jcd=${jcd}&rno=${rno}`)
-        .subscribe(data => {
-
-          // 艇番順にソート
-          this.racers = [...data].sort(
-            (a, b) => Number(a.teiban) - Number(b.teiban)
-          );
-        });
+      this.hdate = params['hdate'];
+      this.jcd = params['jcd'];
+      this.rno = params['rno'];
     });
+  }
+
+
+  // Iframe用URL
+  getIframeUrl(teiban: number): SafeResourceUrl {
+    const url = `/racer?hdate=${this.hdate}&jcd=${this.jcd}&rno=${this.rno}&teiban=${teiban}&capture=1`;
+
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }
