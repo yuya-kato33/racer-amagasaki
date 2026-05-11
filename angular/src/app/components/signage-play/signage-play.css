@@ -1,11 +1,63 @@
 /* 実際の表示サイズ */
-.viewer-stage {
+/* 1080 x 1920 縦フルHD */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    position: fixed;
+}
 
+:host {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.viewer-stage {
     width: 1080px;
-    height: 1280px;
+    height: 1893px;
     overflow: hidden;
     background: black;
     position: relative;
+    /* display: block; */
+}
+
+/* Youtube Live */
+.youtube-area {
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 1080px;
+    height: 608px;
+    overflow: hidden;
+    background: #111;
+}
+
+.youtube-frame {
+    width: 1080px;
+    height: 608px;
+    border: none;
+    display: block;
+}
+
+/* Race PNG */
+/* 下から1280固定 */
+.race-area {
+    position: absolute;
+    top: 613px;
+    left: 0;
+    /* bottom: 0; */
+    width: 1080px;
+    height: 1280px;
+    overflow: hidden;
+    background: #000;
+    contain: strict;
 }
 
 /* 元画像サイズ維持 */
@@ -18,6 +70,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    overflow: hidden;
+    will-change: transform;
 }
 
 /* 元png */

@@ -104,6 +104,34 @@ function getTodayYMD() {
   return jst.toISOString().slice(0, 10).replace(/-/g, '');
 }
 
+//==============================================
+// youtubeLive系function
+// ============================================-
+function toYoutubeEmbedUrl(url) {
+  if (!url) return '';
+
+  try {
+    const u = new URL(url);
+    // youtube.com/watch?v=
+    if (u.hostname.includes('youtube.com')
+    ) {
+      const v = u.searchParams.get('v');
+      if (v) {
+        return `https://www.youtube.com/embed/${v}?autoplay=1&mute=1`
+      }
+    }
+    // youtu.be/xxxxx
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.replace('/', '');
+      return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1`;
+    }
+    return url;
+  } catch (err) {
+    console.error('youtube url parse error', err);
+    return '';
+  }
+}
+
 // =========================================================
 // 5️⃣ DB接続後 → API登録（最重要ブロック）
 // =========================================================
@@ -219,7 +247,7 @@ createDBConnection().then(conn => {
   // AUTO / MANUAL切替APIを追加
   app.post('/api/signage-control', async (req, res) => {
     try {
-      const { mode, currentRace, jcd, autoAdvanceMinutes } = req.body;
+      const { mode, currentRace, jcd, autoAdvanceMinutes, youtubeLiveUrl } = req.body;
 
       const patch = {};
 
@@ -234,6 +262,10 @@ createDBConnection().then(conn => {
       patch.hdate = nextHdate;
       patch.jcd = nextJcd;
       patch.autoAdvanceMinutes = nextAutoAdvanceMinutes;
+
+      if (youtubeLiveUrl !== undefined) {
+        patch.youtubeLiveUrl = toYoutubeEmbedUrl(youtubeLiveUrl);
+      }
 
       // mode === 'auto' のときはDBの stime から現在Rを再計算します。
       if (nextMode === 'auto') {

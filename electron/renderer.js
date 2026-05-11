@@ -129,9 +129,10 @@ document.getElementById('signageStateBtn').addEventListener('click', async () =>
     const autoAdvanceMinutes = Number(document.getElementById('autoAdvanceMinutes').value);
     const jcdRaw = document.getElementById('jcd').value;
     const jcd = jcdRaw.slice(0, 2)
+    const youtubeLiveUrl = document.getElementById('youtubeLiveUrl').value;
 
     // AUTO / MANUALで分岐
-    const body = { mode, jcd, autoAdvanceMinutes };
+    const body = { mode, jcd, autoAdvanceMinutes, youtubeLiveUrl };
     // MANUAL字だけ　currentraceを送る
     if (mode === 'manual') { body.currentRace = currentRace };
 

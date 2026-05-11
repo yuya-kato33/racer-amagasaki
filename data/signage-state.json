@@ -1,8 +1,9 @@
 {
   "mode": "auto",
   "hdate": "20260511",
-  "jcd": "03",
-  "currentRace": 8,
-  "autoAdvanceMinutes": 10,
-  "updatedAt": "2026-05-11T05:13:39.029Z"
+  "jcd": "12",
+  "currentRace": 6,
+  "autoAdvanceMinutes": 8,
+  "updatedAt": "2026-05-11T08:39:55.167Z",
+  "youtubeLiveUrl": "https://www.youtube.com/embed/PVusk_KeW-M?autoplay=1&mute=1"
 }

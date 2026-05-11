@@ -1,7 +1,24 @@
 <div class="viewer-stage">
-    <div class="image-wrapper">
-
-        <img class="race-image" *ngIf="imageUrl" [src]="imageUrl" [alt]="'Race ' + currentRace"
-            (error)="onImageError()">
+    <!-- ===================== -->
+    <!-- youtube LIVE -->
+    <!-- ===================== -->
+    <div class="youtube-area">
+        <iframe *ngIf="youtubeLiveUrl" class="youtube-frame" [src]="youtubeLiveUrl" allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
     </div>
+
+    <!-- ====================== -->
+    <!-- Race png -->
+    <!--=============================  -->
+    <div class="race-area">
+
+        <div class="image-wrapper">
+
+            <img class="race-image" *ngIf="imageUrl" [src]="imageUrl" [alt]="'Race ' + currentRace"
+                (error)="onImageError()">
+        </div>
+
+    </div>
+
 </div>

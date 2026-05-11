@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-signage-play',
@@ -12,12 +12,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SignagePlay implements OnInit, OnDestroy {
   imageUrl = '';
+  youtubeLiveUrl: SafeResourceUrl | null = null;
 
   currentRace = 1;
 
   private timer: any;
 
-  constructor(private http: HttpClient) { }
+  private lastImageUrl = '';
+  private lastYoutubeUrl = '';
+
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     // 初回
@@ -43,10 +47,30 @@ export class SignagePlay implements OnInit, OnDestroy {
 
         this.currentRace = state.currentRace;
 
-        this.imageUrl = `http://127.0.0.1:8083/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`;
+        const nextImageUrl =
+          `http://127.0.0.1:8083/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`
 
-        console.log('signage image=', this.imageUrl);
+        // ‘変化時だけ更新
+        if (nextImageUrl !== this.lastImageUrl) {
+          console.log('PNG切替:', nextImageUrl);
+
+          this.imageUrl = nextImageUrl;
+          this.lastImageUrl = nextImageUrl;
+        };
+
+        // ==================================
+        // youtube
+        // ==================================
+        const nextYoutubeUrl = state.youtubeLiveUrl || '';
+
+        if (nextYoutubeUrl !== this.lastYoutubeUrl) {
+          console.log('Youtube切替:', nextYoutubeUrl);
+
+          this.youtubeLiveUrl = this.sanitizer.bypassSecurityTrustResourceUrl(nextYoutubeUrl);
+          this.lastYoutubeUrl = nextYoutubeUrl;
+        }
       },
+
       error: err => {
         console.error('signage-state error', err);
       }

@@ -21,7 +21,8 @@ let state = {
     jcd: '13',
     currentRace: 1,
     autoAdvanceMinutes: 10,
-    updatedAt: null
+    updatedAt: null,
+    youtubeLiveUrl: ''
 };
 
 // ===============================
