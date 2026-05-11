@@ -1,6 +1,7 @@
 <div class="viewer-stage">
     <div class="image-wrapper">
 
-        <img class="race-image" [src]="imageUrl">
+        <img class="race-image" *ngIf="imageUrl" [src]="imageUrl" [alt]="'Race ' + currentRace"
+            (error)="onImageError()">
     </div>
 </div>

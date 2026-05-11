@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,21 +10,50 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './signage-play.html',
   styleUrl: './signage-play.css',
 })
-export class SignagePlay implements OnInit {
+export class SignagePlay implements OnInit, OnDestroy {
   imageUrl = '';
 
-  constructor(private route: ActivatedRoute) { }
+  currentRace = 1;
+
+  private timer: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      const hdate = params['hdate'];
-      const jcd = params['jcd'];
-      const rno = params['rno'];
+    // 初回
+    this.loadState();
 
-      const rno2 = String(rno).padStart(2, '0');
-
-      this.imageUrl = `http://127.0.0.1:8083/output/${hdate}/race/${hdate}_${jcd}_${rno2}R_race.png`;
-    })
+    // 5秒ごと更新
+    this.timer = setInterval(() => {
+      this.loadState();
+    }, 5000);
   }
 
+  ngOnDestroy(): void {
+    if (this.timer) {
+      clearInterval(this.timer);
+
+    }
+  }
+
+  loadState(): void {
+    this.http.get<any>('http://127.0.0.1:8083/api/signage-state').subscribe({
+      next: state => {
+        const rno2 = String(state.currentRace).padStart(2, '0');
+
+        this.currentRace = state.currentRace;
+
+        this.imageUrl = `http://127.0.0.1:8083/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`;
+
+        console.log('signage image=', this.imageUrl);
+      },
+      error: err => {
+        console.error('signage-state error', err);
+      }
+    });
+  }
+
+  onImageError(): void {
+    console.error('画像読み込み失敗:', this.imageUrl);
+  }
 }

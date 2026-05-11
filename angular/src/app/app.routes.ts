@@ -4,6 +4,7 @@ import { SelectorPanel } from './components/selector-panel/selector-panel';
 import { SelectorPanel2 } from './components/selector-panel2/selector-panel2';
 import { TateraceSignagePage } from './components/taterace-signage-page/taterace-signage-page';
 import { TateraceSignageRace } from './components/taterace-signage-race/taterace-signage-race';
+import { SignagePlay } from './components/signage-play/signage-play';
 
 export const routes: Routes = [
     { path: '', component: SelectorPanel }, // // / ルートで App を表示
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'auto', component: SelectorPanel },
     { path: 'manual', component: SelectorPanel2 },
     { path: 'racer', component: TateraceSignagePage },
-    { path: 'race-signage', component: TateraceSignageRace }
+    { path: 'race-signage', component: TateraceSignageRace },
+    { path: 'signage-play', component: SignagePlay }
 ];
