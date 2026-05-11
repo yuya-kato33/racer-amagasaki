@@ -81,8 +81,10 @@ if (runMode === 'now') {
             console.log(` 実行日付: ${targetDate}`);
 
             try {
-                if (mode === 'download' || mode === 'both') { await runDownload(targetDate, jcdOnly); }
-                if (mode === 'database' || mode === 'both') {
+                if (mode === 'download' || mode === 'both' ||
+                    mode === 'reload') { await runDownload(targetDate, jcdOnly); }
+                if (mode === 'database' || mode === 'both' ||
+                    mode === 'reload') {
                     console.log("▶ runImport を実行します:", targetDate, jcdOnly);
                     await runImport(targetDate, jcdOnly);
                 }

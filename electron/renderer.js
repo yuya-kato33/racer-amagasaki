@@ -119,3 +119,62 @@ document.getElementById('tomorrowBtn')
     .addEventListener('click', () => {
         setDate(1);
     });
+
+// //////////////////////////////////////
+// サイネージ進行管理系 
+// //////////////////////////////////////
+document.getElementById('signageStateBtn').addEventListener('click', async () => {
+    const mode = document.getElementById('signageMode').value;
+    const currentRace = Number(document.getElementById('currentRace').value);
+    const autoAdvanceMinutes = Number(document.getElementById('autoAdvanceMinutes').value);
+    const jcdRaw = document.getElementById('jcd').value;
+    const jcd = jcdRaw.slice(0, 2)
+
+    // AUTO / MANUALで分岐
+    const body = { mode, jcd, autoAdvanceMinutes };
+    // MANUAL字だけ　currentraceを送る
+    if (mode === 'manual') { body.currentRace = currentRace };
+
+    const res = await fetch('http://127.0.0.1:8083/api/signage-control', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    });
+
+    const json = await res.json();
+    document.getElementById('signageStatus').textContent =
+        `signage: ${json.mode} ${json.currentRace}R jcd=${json.jcd}`;
+});
+
+// 次レースボタン
+document.getElementById('nextRaceBtn').addEventListener('click', async () => {
+    const input = document.getElementById('currentRace');
+    input.value = Math.min(12, Number(input.value) + 1);
+
+    document.getElementById('signageMode').value = 'manual';
+    document.getElementById('signageStateBtn').click();
+})
+
+// 前レース
+document.getElementById('prevRaceBtn').addEventListener('click', async () => {
+    const input = document.getElementById('currentRace');
+    input.value = Math.max(1, Number(input.value) - 1);
+
+    document.getElementById('signageMode').value = 'manual';
+    document.getElementById('signageStateBtn').click();
+})
+
+// 再読み込みボタン
+document.getElementById('reloadSignageBtn').addEventListener('click', async () => {
+    const jcdRaw = document.getElementById('jcd').value;
+    const jcd = jcdRaw.slice(0, 2);
+
+    const res = await fetch('http://127.0.0.1:8083/api/signage-reload', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jcd })
+    });
+
+    const json = await res.json();
+
+    document.getElementById('signageStatus').textContent =
+        `再読み込み開始: jcd=${json.jcd}`;
+})

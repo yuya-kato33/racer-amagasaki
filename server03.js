@@ -13,6 +13,14 @@ const { setIO, notifyClients } = require('./modules/notify');
 const app = express();
 const server = http.createServer(app) //ExpressとSocket.ioを共通サーバ
 
+// サイネージAPI
+const { getState, setState } = require('./modules/signageState');
+const { getRaceSchedule, decideCurrentRace } = require('./modules/signageEngine');
+const { fork } = require('child_process');
+const { start } = require('repl');
+const { error } = require('console');
+const { type } = require('os');
+
 // =========================================================
 // 1️⃣ CORS（最優先）
 // =========================================================
@@ -29,6 +37,9 @@ const corsOptions = {
 
 // ✅ ExpressにCORSを適用（必ずapp定義後すぐ）
 app.use(cors(corsOptions));
+
+// 追加
+app.use(express.json())
 
 // =========================================================
 // 2️⃣ Socket.IO 設定
@@ -178,6 +189,103 @@ createDBConnection().then(conn => {
   app.get('/live', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index2.html'))
   })
+
+  // =========================================================
+  // 8️⃣ サイネージAPI追加
+  // =========================================================
+  app.get('/api/signage-state', async (req, res) => {
+    try {
+      const state = getState();
+
+      if (!state.hdate) {
+        state.hdate = getTodayYMD();
+      }
+
+      let currentRace = state.currentRace;
+      let schedule = [];
+
+      if (state.mode === 'auto') {
+        schedule = await getRaceSchedule(db, state.hdate, state.jcd);
+        currentRace = decideCurrentRace(schedule, state.hdate, state.autoAdvanceMinutes);
+
+        setState({ currentRace });
+      }
+      res.json({ ...getState(), currentRace, schedule });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  // AUTO / MANUAL切替APIを追加
+  app.post('/api/signage-control', async (req, res) => {
+    try {
+      const { mode, currentRace, jcd, autoAdvanceMinutes } = req.body;
+
+      const patch = {};
+
+      const nextMode = mode || getState().mode;
+      const nextHdate = getState().hdate || getTodayYMD();
+      const nextJcd = jcd ? String(jcd).padStart(2, '0') : getState().jcd;
+
+      const nextAutoAdvanceMinutes = autoAdvanceMinutes !== undefined
+        ? Number(autoAdvanceMinutes) : getState().autoAdvanceMinutes;
+
+      patch.mode = nextMode
+      patch.hdate = nextHdate;
+      patch.jcd = nextJcd;
+      patch.autoAdvanceMinutes = nextAutoAdvanceMinutes;
+
+      // mode === 'auto' のときはDBの stime から現在Rを再計算します。
+      if (nextMode === 'auto') {
+        const schedule = await getRaceSchedule(db, nextHdate, nextJcd);
+        patch.currentRace = decideCurrentRace(schedule, nextHdate, nextAutoAdvanceMinutes);
+      } else {
+        if (currentRace !== undefined) {
+          patch.currentRace = Number(currentRace);
+        }
+      }
+
+      const nextState = setState(patch);
+
+      notifyClients({ type: 'signage-state', state: nextState });
+
+      res.json(nextState);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  // 再読み込みAPi
+  app.post('/api/signage-reload', express.json(), async (req, res) => {
+    const today = getTodayYMD();
+    const jcd = String(req.body.jcd || '13').padStart(2, '0');
+
+    try {
+      setState({ hdate: today, jcd, mode: 'auto', currentRace: 1 });
+      const proc = fork(path.join(__dirname, 'app3.js'), [
+        'now', today, today, 'reload', jcd
+      ], { cwd: __dirname, silent: true });
+
+      proc.stdout.on('data', data => {
+        console.log(data.toString());
+      });
+
+      proc.stderr.on('data', data => {
+        console.error(data.toString());
+      });
+
+      proc.on('close', code => {
+        console.log(`signage reload app3.js close code=${code}`);
+
+        notifyClients({ type: 'signage-reload-finished', state: getState() });
+      });
+
+      res.json({ ok: true, message: '再読み込みを開始しました', hdate: today, jcd });
+    } catch (err) { res.status(500).json({ error: err.message }); }
+  });
+
+  // outputを静的公開
+  app.use('/output', express.static(path.join(__dirname, 'output')));
 
 
   // =========================================================

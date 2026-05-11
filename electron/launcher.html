@@ -40,7 +40,8 @@
 
                 <label>mode</label>
                 <select id="mode">
-                    <option value="both">both</option>
+                    <option value="both">all</option>
+                    <option value="reload">download + database</option>
                     <option value="download">download</option>
                     <option value="database">database</option>
                     <option value="capture">capture</option>
@@ -119,6 +120,36 @@
                 顔写真取得開始
             </button>
 
+        </section>
+
+        <!-- サイネージ進行管理UI -->
+        <section class="card">
+            <h2>サイネージ進行管理</h2>
+
+            <div class="panel">
+                <label>モード</label>
+                <select id="signageMode">
+                    <option value="auto">AUTO</option>
+                    <option value="manual">MANUAL</option>
+                </select>
+
+                <label>現在R</label>
+                <input id="currentRace" type="number" min="1" max="12" placeholder="1">
+
+                <label>切替時刻(締切後)</label>
+                <input id="autoAdvanceMinutes" type="number" value="10">
+            </div>
+
+            <div class="buttons">
+                <button id="signageStateBtn">状態反映</button>
+                <button id="prevRaceBtn">前レース</button>
+                <button id="nextRaceBtn">次レース</button>
+                <button id="reloadSignageBtn">出走表再読み込み</button>
+            </div>
+
+            <div id="signageStatus">
+                signage: -
+            </div>
         </section>
     </div>
 

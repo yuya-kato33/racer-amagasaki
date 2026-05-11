@@ -6,7 +6,7 @@
 const racerColumns = [
   'hdate', 'jcd',
   // ★追加（レース情報） + (出走情報)
-  'rno', 'rsname', 'rmei', 'teiban',
+  'rno', 'rsname', 'rmei', 'teiban', 'stime',
 
   // 既存
   'toban', 'name', 'shibu', 'kyu',

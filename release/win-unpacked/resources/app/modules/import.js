@@ -156,6 +156,7 @@ async function runImport(targetDate, jcdOnly = null) {
                 const rno = race.rno?.[0];
                 const rsname = race.rsname?.[0];
                 const rmei = race.rmei?.[0];
+                const stime = race.stime?.[0];
 
                 const entries = race.syussou || [];
 

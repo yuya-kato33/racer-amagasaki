@@ -1,0 +1,28 @@
+/* 実際の表示サイズ */
+.viewer-stage {
+
+    width: 1080px;
+    height: 1280px;
+    overflow: hidden;
+    background: black;
+    position: relative;
+}
+
+/* 元画像サイズ維持 */
+.image-wrapper {
+    width: 3240px;
+    height: 3840px;
+
+    transform: scale(0.3333333);
+    transform-origin: top left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 元png */
+.race-image {
+    width: 3240px;
+    height: 3840px;
+    display: block;
+}
