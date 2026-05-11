@@ -1285,7 +1285,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>12:43</stime>
+        <stime>12:46</stime>
         <htime>12:46</htime>
         <bscd>H</bscd>
         <syussou>
@@ -1600,7 +1600,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>13:12</stime>
+        <stime>13:13</stime>
         <htime>13:15</htime>
         <bscd>H</bscd>
         <syussou>
@@ -2230,7 +2230,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>14:12</stime>
+        <stime>14:36</stime>
         <htime>14:15</htime>
         <bscd>H</bscd>
         <syussou>
@@ -2545,7 +2545,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>14:43</stime>
+        <stime>15:07</stime>
         <htime>14:46</htime>
         <bscd>H</bscd>
         <syussou>
@@ -2860,7 +2860,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>15:16</stime>
+        <stime>15:40</stime>
         <htime>15:19</htime>
         <bscd>H</bscd>
         <syussou>
@@ -2896,12 +2896,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>05</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260511">５</chk>
+            <cs>2</cs>
+            <st>.13</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -3175,7 +3175,7 @@
         <rmei>予選　　　　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>15:50</stime>
+        <stime>16:14</stime>
         <htime>15:53</htime>
         <bscd>H</bscd>
         <syussou>
@@ -3411,12 +3411,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>06</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260511">３</chk>
+            <cs>2</cs>
+            <st>.07</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -3461,12 +3461,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>05</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260511">２</chk>
+            <cs>5</cs>
+            <st>.11</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -3490,7 +3490,7 @@
         <rmei>ドリーム１　　</rmei>
         <kyori>1200</kyori>
         <kotei>0</kotei>
-        <stime>16:25</stime>
+        <stime>16:49</stime>
         <htime>16:28</htime>
         <bscd>H</bscd>
         <syussou>
@@ -3676,12 +3676,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>06</rno>
+            <waku>6</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260511">１</chk>
+            <cs>6</cs>
+            <st>.15</st>
           </kekka>
           <kekka>
             <nj>12</nj>
