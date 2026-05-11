@@ -51,14 +51,14 @@ async function runCaptureRaceSignage(targetDate, jcd) {
 
 
         // 最終安定待ち
-        await sleep(2500);
+        await sleep(1500);
 
         await page.evaluateHandle(
             'document.fonts.ready'
         );
 
         const filename = path.join(
-            OUTPUT_DIR, `${targetDate}_${rno2}R_race.png`
+            OUTPUT_DIR, `${targetDate}_${jcd}_${rno2}R_race.png`
         );
 
         await page.screenshot({

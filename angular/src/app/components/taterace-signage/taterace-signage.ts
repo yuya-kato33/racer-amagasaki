@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-taterace-signage',
@@ -51,5 +51,37 @@ export class TateraceSignage {
   // 画像パス
   getPhoto(): string {
     return `/assets/racerphoto/${this.racer.toban}.jpg`;
+  }
+
+  // 場名
+  getPlaceName(): string {
+    const map: any = {
+      '01': 'BOATRACE KIRYU',
+      '02': 'BOATRACE TODA',
+      '03': 'BOATRACE EDOGAWA',
+      '04': 'BOATRACE HEIWAJIMA',
+      '05': 'BOATRACE TAMAGAWA',
+      '06': 'BOATRACE HAMANAKO',
+      '07': 'BOATRACE GAMAGORI',
+      '08': 'BOATRACE TOKONAME',
+      '09': 'BOATRACE TSU',
+      '10': 'BOATRACE MIKUNI',
+      '11': 'BOATRACE BIWAKO',
+      '12': 'BOATRACE SUMINOE',
+      '13': 'BOATRACE AMAGASAKI',
+      '14': 'BOATRACE NARUTO',
+      '15': 'BOATRACE MARUGAME',
+      '16': 'BOATRACE KOJIMA',
+      '17': 'BOATRACE MIYAJIMA',
+      '18': 'BOATRACE TOKUYAMA',
+      '19': 'BOATRACE SHIMONOSEKI',
+      '20': 'BOATRACE WAKAMATSU',
+      '21': 'BOATRACE ASHIYA',
+      '22': 'BOATRACE FUKUOKA',
+      '23': 'BOATRACE KARATSU',
+      '24': 'BOATRACE OMURA'
+    };
+
+    return map[this.racer.jcd] || 'BOATRACE;'
   }
 }
