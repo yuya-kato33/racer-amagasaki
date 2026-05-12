@@ -13,5 +13,5 @@ export const routes: Routes = [
     { path: 'manual', component: SelectorPanel2 },
     { path: 'racer', component: TateraceSignagePage },
     { path: 'race-signage', component: TateraceSignageRace },
-    { path: 'signage-play', component: SignagePlay }
+    { path: 'youtube', component: SignagePlay }
 ];

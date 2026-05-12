@@ -3,6 +3,74 @@ body {
     padding: 20px;
 }
 
+/* サーバーバナー */
+.server-banner {
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+/* stopped */
+.server-banner.stopped {
+    background: #d9534f;
+}
+
+/* runnning */
+.server-banner.running {
+    background: #28a745;
+}
+
+/* starting */
+.server-banner.starting {
+    background: #ff9800;
+}
+
+/* port used */
+.server-banner.port-used {
+    background: #6c757d;
+}
+
+.server-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.server-sub {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.server-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.server-start-btn,
+.server-stop-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 16px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.server-start-btn {
+    background: white;
+    color: #222;
+}
+
+.server-stop-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
 /* 横並び */
 .container {
     display: flex;

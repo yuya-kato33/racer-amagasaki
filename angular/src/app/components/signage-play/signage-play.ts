@@ -41,14 +41,18 @@ export class SignagePlay implements OnInit, OnDestroy {
   }
 
   loadState(): void {
-    this.http.get<any>('http://127.0.0.1:8083/api/signage-state').subscribe({
+    // this.http.get<any>('http://127.0.0.1:8083/api/signage-state').subscribe({
+    this.http.get<any>('/api/signage-state').subscribe({
       next: state => {
         const rno2 = String(state.currentRace).padStart(2, '0');
 
         this.currentRace = state.currentRace;
 
+        // const nextImageUrl =
+        //   `http://127.0.0.1:8083/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`
         const nextImageUrl =
-          `http://127.0.0.1:8083/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`
+          `/output/${state.hdate}/race/${state.hdate}_${state.jcd}_${rno2}R_race.png`
+
 
         // ‘変化時だけ更新
         if (nextImageUrl !== this.lastImageUrl) {

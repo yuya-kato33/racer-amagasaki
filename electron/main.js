@@ -90,7 +90,15 @@ app.whenReady().then(async () => {
             err.message
         );
     }
+    // electron window生成
     createWindow();
+
+    // --------------------------------------
+    // 自動サーバ起動
+    // --------------------------------------
+    setTimeout(() => {
+        mainWindow.webContents.send('auto-start-server');
+    }, 1500);
 });
 
 ////////////////////////////////////////////

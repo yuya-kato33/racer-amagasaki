@@ -34,27 +34,45 @@ export class SelectorPanel implements OnInit {
 
   // クエリ保持用関数追加
   queryStartDate = '';
-  queryJcd = '';
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
+
       this.queryStartDate = params['startDate'] || '';
-      this.queryJcd = params['jcd'] || '';
+      this.selectedJcd = params['jcd'] || '';
 
-      this.http.get<string[]>('/api/series/dates').subscribe(data => {
-        // 数値として降順ソート
-        this.dates = data.sort((a, b) => Number(b) - Number(a));
+      // URLにjcdが無い場合
+      // signage-stateから取得
+      const stateRequest = this.selectedJcd
+        ? Promise.resolve(null) : this.http.get<any>('/api/signage-state').toPromise();
 
-        if (this.dates.length > 0) {
-          // 最新日（最後）を選択
-          this.selectedDate = this.dates[0]; // 最新
+      Promise.resolve(stateRequest).then(state => {
 
-          //自動で次処理へ
-          this.onDateChange();
+        // state優先適用
+        if (!this.selectedJcd && state?.jcd) {
+          this.selectedJcd = String(state.jcd).padStart(2, '0');
 
+          console.log('signage-state jcd=', this.selectedJcd);
         }
+
+        this.http.get<string[]>('/api/series/dates').subscribe(data => {
+          // 数値として降順ソート (日付降順)
+          this.dates = data.sort((a, b) => Number(b) - Number(a));
+
+          if (this.dates.length > 0) {
+            // URL startDate 優先
+            if (this.queryStartDate && this.dates.includes(this.queryStartDate)
+            ) {
+              this.selectedDate = this.queryStartDate;
+            } else {
+              this.selectedDate = this.dates[0];
+            }
+
+            this.onDateChange();
+          }
+        });
       });
     });
   }
@@ -67,9 +85,19 @@ export class SelectorPanel implements OnInit {
 
       if (this.seriesList.length > 0) {
 
-        const matched = this.seriesList.find(s =>
-          (!this.queryJcd || s.jcd === this.queryJcd)
+        const normalizeSelectedJcd =
+          String(this.selectedJcd || '').padStart(2, '0');
+
+        console.log('selectedJcd=', normalizeSelectedJcd);
+
+        console.log('seriesList=', this.seriesList.map(x => x.jcd)
         );
+
+        const matched = this.seriesList.find(s =>
+          String(s.jcd).padStart(2, '0') === normalizeSelectedJcd
+        );
+
+        console.log('matched=', matched);
 
         const selected = matched || this.seriesList[0];
 

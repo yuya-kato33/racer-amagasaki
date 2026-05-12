@@ -19,6 +19,14 @@ document
         await window.api.startServer();
     });
 
+// ==========================================-
+// 自動サーバ起動
+//============================================
+window.api.onAutoStartServer(() => {
+    appendLog('\n 自動サーバ起動開始\n');
+    document.getElementById('serverBtn').click();
+});
+
 document
     .getElementById('runBtn')
     .addEventListener('click', async () => {
@@ -67,11 +75,53 @@ document.getElementById('stopServerBtn')
         await window.api.stopServer();
     });
 
-// サーバ状態
+// サーバ状態情報
 window.api.onServerStatus(status => {
-    document.getElementById('serverStatus')
-        .innerText = `server: ${status}`;
+    const banner = document.getElementById('serverBanner');
+    const title = banner.querySelector('.server-title');
+    const sub = banner.querySelector('.server-sub');
+    const serverBtn = document.getElementById('serverBtn');
+    banner.className = `server-banner ${status}`;
+
+    // ボタン制御
+    if (status === 'running') {
+        setControlsEnabled(true);
+        title.innerText = 'SERVER RUNNING';
+        sub.innerText = 'http://127.0.0.1:8083';
+        serverBtn.disabled = true;
+
+    } else {
+        setControlsEnabled(false);
+    }
+
+    if (status === 'starting') {
+        title.innerText = 'SERVER STARTING...';
+        sub.innerText = 'server03.jsを起動しています';
+        serverBtn.disabled = true;
+    }
+
+    else if (status === 'stopped') {
+        title.innerText = 'SERVER STOPPED';
+        sub.innerText = 'server03.jsが停止しています';
+        serverBtn.disabled = false;
+    }
+
+    else if (status === 'port-used') {
+        title.innerText = 'PORT 8083 USED';
+        sub.innerText = '既に server03.js が起動しています';
+        serverBtn.disabled = false;
+    }
 });
+
+// ボタン無効化（サーバー起動前）
+function setControlsEnabled(enabled) {
+    document.getElementById('runBtn').disabled = !enabled;
+    document.getElementById('masterBtn').disabled = !enabled;
+    document.getElementById('reloadSignageBtn').disabled = !enabled;
+    document.getElementById('signageStateBtn').disabled = !enabled;
+    document.getElementById('nextRaceBtn').disabled = !enabled;
+    document.getElementById('prevRaceBtn').disabled = !enabled;
+}
 
 // 今日 - 明日 ボタン
 async function setDate(offset = 0) {
