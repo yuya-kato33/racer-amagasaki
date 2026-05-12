@@ -90,6 +90,9 @@ window.api.onServerStatus(status => {
         sub.innerText = 'http://127.0.0.1:8083';
         serverBtn.disabled = true;
 
+        // signage-state 読み込み
+        loadSignageStateToUI();
+
     } else {
         setControlsEnabled(false);
     }
@@ -229,3 +232,38 @@ document.getElementById('reloadSignageBtn').addEventListener('click', async () =
     document.getElementById('signageStatus').textContent =
         `再読み込み開始: jcd=${json.jcd}`;
 })
+
+
+// サイネージ状態function
+async function loadSignageStateToUI() {
+    try {
+        const res = await fetch('http://127.0.0.1:8083/api/signage-state');
+        const json = await res.json();
+        appendLog(`\n signage-state loaded:\n`);
+        appendLog(JSON.stringify(json, null, 2) + '\n');
+
+        // UIへ反映
+        document.getElementById('signageMode').value = json.mode || 'auto';
+        document.getElementById('currentRace').value = json.currentRace || '1';
+        document.getElementById('autoAdvanceMinutes').value = json.autoAdvanceMinutes || 10;
+        // jcd
+        if (json.jcd) {
+            document.getElementById('jcd').value = json.jcd;
+        }
+        // Youtube URL
+        if (json.youtubeLiveUrl) {
+            const watchUrl = embedToWatchUrl(json.youtubeLiveUrl);
+            document.getElementById('youtubeLiveUrl').value = watchUrl;
+        }
+    } catch (err) {
+        appendLog(`\n signage-state load error: ${err.message}\n`);
+    }
+}
+
+function embedToWatchUrl(embedUrl) {
+    if (!embedUrl) return '';
+    const match = embedUrl.match(/embed\/([^?]+)/);
+
+    if (!match) return embedUrl;
+    return `https://www.youtube.com/watch?v=${match[1]}`;
+}
