@@ -68,9 +68,25 @@ button:disabled {
     gap: 4px;
 }
 
+/* ロゴ + マスコット横並び */
+.header-images {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 /* ロゴ */
 .logo img {
     height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+/* マスコット */
+.mascot img {
+    height: 55px;
+    object-fit: contain;
+    display: block;
 }
 
 /* タイトル */

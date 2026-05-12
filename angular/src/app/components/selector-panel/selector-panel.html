@@ -25,13 +25,23 @@
 
         <!-- 左：ロゴ＋タイトル -->
         <div class="header-left">
-          <div class="logo">
-            <img src="assets/boatrace-amagasaki.png">
+          <!-- ロゴ横並び -->
+          <div class="header-images">
+
+            <div class="logo">
+              <img [src]="logoPath">
+            </div>
+
+            <div class="mascot">
+              <img [src]="mascotPath">
+            </div>
           </div>
 
+          <!-- タイトル -->
           <div class="title">
             {{ selectedSeriesLabel }}
           </div>
+
         </div>
 
         <!-- 右: 日程 -->
@@ -65,7 +75,7 @@
 
       <!-- 表示内容切替 -->
       <div class="racer-area" *ngIf="useSeries">
-        <app-racer-series-list [startDate]="selectedDate" [jcd]="selectedJcd"></app-racer-series-list>
+        <app-racer-series-list #racerList [startDate]="selectedDate" [jcd]="selectedJcd"></app-racer-series-list>
       </div>
 
       <div class="racer-area" *ngIf="!useSeries">

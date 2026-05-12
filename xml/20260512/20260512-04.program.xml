@@ -39,7 +39,7 @@
           <syussinchi>茨　城</syussinchi>
           <kyu>B2</kyu>
           <nenrei>31</nenrei>
-          <taiju></taiju>
+          <taiju>44.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>4.29</zsyo>
@@ -89,7 +89,7 @@
           <syussinchi>東　京</syussinchi>
           <kyu>B1</kyu>
           <nenrei>53</nenrei>
-          <taiju></taiju>
+          <taiju>49.2</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>4.73</zsyo>
@@ -139,7 +139,7 @@
           <syussinchi>栃　木</syussinchi>
           <kyu>A2</kyu>
           <nenrei>38</nenrei>
-          <taiju></taiju>
+          <taiju>48.7</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.35</zsyo>
@@ -189,7 +189,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>B1</kyu>
           <nenrei>62</nenrei>
-          <taiju></taiju>
+          <taiju>45.5</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.20</p_st>
           <zsyo>3.44</zsyo>
@@ -239,7 +239,7 @@
           <syussinchi>徳　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>25</nenrei>
-          <taiju></taiju>
+          <taiju>44.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>4.68</zsyo>
@@ -289,7 +289,7 @@
           <syussinchi>東　京</syussinchi>
           <kyu>B2</kyu>
           <nenrei>32</nenrei>
-          <taiju></taiju>
+          <taiju>47.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st></p_st>
           <zsyo>0.00</zsyo>
@@ -354,7 +354,7 @@
           <syussinchi>京　都</syussinchi>
           <kyu>A1</kyu>
           <nenrei>33</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.47</zsyo>
@@ -404,7 +404,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>B1</kyu>
           <nenrei>27</nenrei>
-          <taiju></taiju>
+          <taiju>57.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.20</p_st>
           <zsyo>4.93</zsyo>
@@ -454,7 +454,7 @@
           <syussinchi>大　阪</syussinchi>
           <kyu>B1</kyu>
           <nenrei>40</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>5.63</zsyo>
@@ -504,7 +504,7 @@
           <syussinchi>静　岡</syussinchi>
           <kyu>B1</kyu>
           <nenrei>60</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.47</zsyo>
@@ -554,7 +554,7 @@
           <syussinchi>広　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>37</nenrei>
-          <taiju></taiju>
+          <taiju>54.7</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>3.93</zsyo>
@@ -604,7 +604,7 @@
           <syussinchi>福　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>29</nenrei>
-          <taiju></taiju>
+          <taiju>52.9</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>5.22</zsyo>
@@ -669,7 +669,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>B1</kyu>
           <nenrei>43</nenrei>
-          <taiju></taiju>
+          <taiju>54.7</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.19</p_st>
           <zsyo>5.24</zsyo>
@@ -719,7 +719,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>B1</kyu>
           <nenrei>50</nenrei>
-          <taiju></taiju>
+          <taiju>55.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>5.40</zsyo>
@@ -769,7 +769,7 @@
           <syussinchi>三　重</syussinchi>
           <kyu>B2</kyu>
           <nenrei>29</nenrei>
-          <taiju></taiju>
+          <taiju>46.5</taiju>
           <seibetsu>2</seibetsu>
           <p_st></p_st>
           <zsyo>3.86</zsyo>
@@ -819,7 +819,7 @@
           <syussinchi>埼　玉</syussinchi>
           <kyu>A2</kyu>
           <nenrei>44</nenrei>
-          <taiju></taiju>
+          <taiju>55.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.43</zsyo>
@@ -869,7 +869,7 @@
           <syussinchi>福　井</syussinchi>
           <kyu>A1</kyu>
           <nenrei>52</nenrei>
-          <taiju></taiju>
+          <taiju>51.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.54</zsyo>
@@ -919,7 +919,7 @@
           <syussinchi>大　阪</syussinchi>
           <kyu>A2</kyu>
           <nenrei>46</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.20</p_st>
           <zsyo>6.09</zsyo>
@@ -984,7 +984,7 @@
           <syussinchi>埼　玉</syussinchi>
           <kyu>B1</kyu>
           <nenrei>42</nenrei>
-          <taiju></taiju>
+          <taiju>53.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.94</zsyo>
@@ -1034,7 +1034,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A1</kyu>
           <nenrei>43</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.23</zsyo>
@@ -1084,7 +1084,7 @@
           <syussinchi>福　井</syussinchi>
           <kyu>B1</kyu>
           <nenrei>50</nenrei>
-          <taiju></taiju>
+          <taiju>52.2</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>4.69</zsyo>
@@ -1134,7 +1134,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>B1</kyu>
           <nenrei>29</nenrei>
-          <taiju></taiju>
+          <taiju>54.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.19</p_st>
           <zsyo>3.86</zsyo>
@@ -1184,7 +1184,7 @@
           <syussinchi>佐　賀</syussinchi>
           <kyu>A1</kyu>
           <nenrei>39</nenrei>
-          <taiju></taiju>
+          <taiju>56.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>6.27</zsyo>
@@ -1234,7 +1234,7 @@
           <syussinchi>滋　賀</syussinchi>
           <kyu>A2</kyu>
           <nenrei>53</nenrei>
-          <taiju></taiju>
+          <taiju>53.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.18</zsyo>
@@ -1299,7 +1299,7 @@
           <syussinchi>佐　賀</syussinchi>
           <kyu>B1</kyu>
           <nenrei>46</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>4.49</zsyo>
@@ -1349,7 +1349,7 @@
           <syussinchi>千　葉</syussinchi>
           <kyu>B1</kyu>
           <nenrei>44</nenrei>
-          <taiju></taiju>
+          <taiju>54.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.25</p_st>
           <zsyo>3.80</zsyo>
@@ -1399,7 +1399,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A2</kyu>
           <nenrei>23</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>5.62</zsyo>
@@ -1449,7 +1449,7 @@
           <syussinchi>大　分</syussinchi>
           <kyu>B1</kyu>
           <nenrei>38</nenrei>
-          <taiju></taiju>
+          <taiju>55.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.19</p_st>
           <zsyo>5.58</zsyo>
@@ -1499,7 +1499,7 @@
           <syussinchi>兵　庫</syussinchi>
           <kyu>A1</kyu>
           <nenrei>31</nenrei>
-          <taiju></taiju>
+          <taiju>54.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>6.38</zsyo>
@@ -1549,7 +1549,7 @@
           <syussinchi>広　島</syussinchi>
           <kyu>A2</kyu>
           <nenrei>25</nenrei>
-          <taiju></taiju>
+          <taiju>53.7</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.68</zsyo>
@@ -1614,7 +1614,7 @@
           <syussinchi>佐　賀</syussinchi>
           <kyu>B1</kyu>
           <nenrei>48</nenrei>
-          <taiju></taiju>
+          <taiju>50.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>5.27</zsyo>
@@ -1664,7 +1664,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A2</kyu>
           <nenrei>51</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>6.19</zsyo>
@@ -1714,7 +1714,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>A1</kyu>
           <nenrei>41</nenrei>
-          <taiju></taiju>
+          <taiju>56.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>5.67</zsyo>
@@ -1764,7 +1764,7 @@
           <syussinchi>神奈川</syussinchi>
           <kyu>B1</kyu>
           <nenrei>50</nenrei>
-          <taiju></taiju>
+          <taiju>50.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>4.41</zsyo>
@@ -1814,7 +1814,7 @@
           <syussinchi>福　井</syussinchi>
           <kyu>A1</kyu>
           <nenrei>40</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.41</zsyo>
@@ -1864,7 +1864,7 @@
           <syussinchi>神奈川</syussinchi>
           <kyu>B2</kyu>
           <nenrei>20</nenrei>
-          <taiju></taiju>
+          <taiju>47.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st></p_st>
           <zsyo>1.12</zsyo>
@@ -1929,7 +1929,7 @@
           <syussinchi>栃　木</syussinchi>
           <kyu>A2</kyu>
           <nenrei>38</nenrei>
-          <taiju></taiju>
+          <taiju>48.7</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.35</zsyo>
@@ -1951,12 +1951,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260512">１</chk>
+            <cs>3</cs>
+            <st>.09</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -1979,7 +1979,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>A1</kyu>
           <nenrei>44</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.12</p_st>
           <zsyo>6.79</zsyo>
@@ -2029,7 +2029,7 @@
           <syussinchi>東　京</syussinchi>
           <kyu>B1</kyu>
           <nenrei>52</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>4.77</zsyo>
@@ -2079,7 +2079,7 @@
           <syussinchi>広　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>37</nenrei>
-          <taiju></taiju>
+          <taiju>54.7</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>3.93</zsyo>
@@ -2129,7 +2129,7 @@
           <syussinchi>三　重</syussinchi>
           <kyu>B2</kyu>
           <nenrei>29</nenrei>
-          <taiju></taiju>
+          <taiju>46.5</taiju>
           <seibetsu>2</seibetsu>
           <p_st></p_st>
           <zsyo>3.86</zsyo>
@@ -2179,7 +2179,7 @@
           <syussinchi>岐　阜</syussinchi>
           <kyu>A2</kyu>
           <nenrei>43</nenrei>
-          <taiju></taiju>
+          <taiju>54.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>6.15</zsyo>
@@ -2244,7 +2244,7 @@
           <syussinchi>埼　玉</syussinchi>
           <kyu>A2</kyu>
           <nenrei>44</nenrei>
-          <taiju></taiju>
+          <taiju>55.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.43</zsyo>
@@ -2294,7 +2294,7 @@
           <syussinchi>茨　城</syussinchi>
           <kyu>B2</kyu>
           <nenrei>31</nenrei>
-          <taiju></taiju>
+          <taiju>44.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>4.29</zsyo>
@@ -2316,12 +2316,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260512">２</chk>
+            <cs>1</cs>
+            <st>.04</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -2344,7 +2344,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>B1</kyu>
           <nenrei>36</nenrei>
-          <taiju></taiju>
+          <taiju>52.2</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>5.74</zsyo>
@@ -2394,7 +2394,7 @@
           <syussinchi>群　馬</syussinchi>
           <kyu>A1</kyu>
           <nenrei>45</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.13</p_st>
           <zsyo>7.75</zsyo>
@@ -2444,7 +2444,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>B1</kyu>
           <nenrei>39</nenrei>
-          <taiju></taiju>
+          <taiju>54.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.19</zsyo>
@@ -2494,7 +2494,7 @@
           <syussinchi>静　岡</syussinchi>
           <kyu>B1</kyu>
           <nenrei>60</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.47</zsyo>
@@ -2559,7 +2559,7 @@
           <syussinchi>静　岡</syussinchi>
           <kyu>A2</kyu>
           <nenrei>47</nenrei>
-          <taiju></taiju>
+          <taiju>52.6</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.20</p_st>
           <zsyo>5.40</zsyo>
@@ -2609,7 +2609,7 @@
           <syussinchi>大　阪</syussinchi>
           <kyu>A2</kyu>
           <nenrei>46</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.20</p_st>
           <zsyo>6.09</zsyo>
@@ -2659,7 +2659,7 @@
           <syussinchi>福　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>29</nenrei>
-          <taiju></taiju>
+          <taiju>52.9</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>5.22</zsyo>
@@ -2709,7 +2709,7 @@
           <syussinchi>徳　島</syussinchi>
           <kyu>B1</kyu>
           <nenrei>25</nenrei>
-          <taiju></taiju>
+          <taiju>44.0</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>4.68</zsyo>
@@ -2731,12 +2731,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260512">３</chk>
+            <cs>5</cs>
+            <st>.12</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -2759,7 +2759,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>A2</kyu>
           <nenrei>34</nenrei>
-          <taiju></taiju>
+          <taiju>53.2</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>7.70</zsyo>
@@ -2809,7 +2809,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A1</kyu>
           <nenrei>43</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.23</zsyo>
@@ -2874,7 +2874,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A2</kyu>
           <nenrei>51</nenrei>
-          <taiju></taiju>
+          <taiju>52.4</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>6.19</zsyo>
@@ -2924,7 +2924,7 @@
           <syussinchi>滋　賀</syussinchi>
           <kyu>A2</kyu>
           <nenrei>53</nenrei>
-          <taiju></taiju>
+          <taiju>53.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.18</zsyo>
@@ -2974,7 +2974,7 @@
           <syussinchi>広　島</syussinchi>
           <kyu>A2</kyu>
           <nenrei>25</nenrei>
-          <taiju></taiju>
+          <taiju>53.7</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.68</zsyo>
@@ -3024,7 +3024,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>B1</kyu>
           <nenrei>50</nenrei>
-          <taiju></taiju>
+          <taiju>55.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>5.40</zsyo>
@@ -3074,7 +3074,7 @@
           <syussinchi>東　京</syussinchi>
           <kyu>B1</kyu>
           <nenrei>53</nenrei>
-          <taiju></taiju>
+          <taiju>49.2</taiju>
           <seibetsu>2</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>4.73</zsyo>
@@ -3096,12 +3096,12 @@
           <com1></com1>
           <kekka>
             <nj>11</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260512">４</chk>
+            <cs>2</cs>
+            <st>.07</st>
           </kekka>
           <kekka>
             <nj>12</nj>
@@ -3124,7 +3124,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>A1</kyu>
           <nenrei>38</nenrei>
-          <taiju></taiju>
+          <taiju>56.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>7.25</zsyo>
@@ -3189,7 +3189,7 @@
           <syussinchi>福　井</syussinchi>
           <kyu>A1</kyu>
           <nenrei>52</nenrei>
-          <taiju></taiju>
+          <taiju>51.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.54</zsyo>
@@ -3239,7 +3239,7 @@
           <syussinchi>群　馬</syussinchi>
           <kyu>A2</kyu>
           <nenrei>55</nenrei>
-          <taiju></taiju>
+          <taiju>59.8</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>5.09</zsyo>
@@ -3289,7 +3289,7 @@
           <syussinchi>埼　玉</syussinchi>
           <kyu>B1</kyu>
           <nenrei>42</nenrei>
-          <taiju></taiju>
+          <taiju>53.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>4.94</zsyo>
@@ -3339,7 +3339,7 @@
           <syussinchi>愛　知</syussinchi>
           <kyu>A2</kyu>
           <nenrei>23</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>5.62</zsyo>
@@ -3389,7 +3389,7 @@
           <syussinchi>福　岡</syussinchi>
           <kyu>A1</kyu>
           <nenrei>41</nenrei>
-          <taiju></taiju>
+          <taiju>56.1</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>5.67</zsyo>
@@ -3439,7 +3439,7 @@
           <syussinchi>大　阪</syussinchi>
           <kyu>B1</kyu>
           <nenrei>40</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.18</p_st>
           <zsyo>5.63</zsyo>
@@ -3504,7 +3504,7 @@
           <syussinchi>群　馬</syussinchi>
           <kyu>A1</kyu>
           <nenrei>45</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.13</p_st>
           <zsyo>7.75</zsyo>
@@ -3554,7 +3554,7 @@
           <syussinchi>福　井</syussinchi>
           <kyu>A1</kyu>
           <nenrei>40</nenrei>
-          <taiju></taiju>
+          <taiju>52.0</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.17</p_st>
           <zsyo>6.41</zsyo>
@@ -3604,7 +3604,7 @@
           <syussinchi>佐　賀</syussinchi>
           <kyu>A1</kyu>
           <nenrei>39</nenrei>
-          <taiju></taiju>
+          <taiju>56.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.14</p_st>
           <zsyo>6.27</zsyo>
@@ -3654,7 +3654,7 @@
           <syussinchi>京　都</syussinchi>
           <kyu>A1</kyu>
           <nenrei>33</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.15</p_st>
           <zsyo>6.47</zsyo>
@@ -3704,7 +3704,7 @@
           <syussinchi>岡　山</syussinchi>
           <kyu>A1</kyu>
           <nenrei>44</nenrei>
-          <taiju></taiju>
+          <taiju>52.5</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.12</p_st>
           <zsyo>6.79</zsyo>
@@ -3754,7 +3754,7 @@
           <syussinchi>兵　庫</syussinchi>
           <kyu>A1</kyu>
           <nenrei>31</nenrei>
-          <taiju></taiju>
+          <taiju>54.3</taiju>
           <seibetsu>1</seibetsu>
           <p_st>0.16</p_st>
           <zsyo>6.38</zsyo>

@@ -14,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class RacerSeriesList implements OnInit, OnChanges {
   @Input() startDate = '';
   @Input() jcd = '';
+  @Input() page = 1;
 
   // グリッドページング
   racers: Racer[] = [];
@@ -41,9 +42,16 @@ export class RacerSeriesList implements OnInit, OnChanges {
 
   // データ取得
   ngOnChanges(): void {
-    if (this.startDate && this.jcd) {
+    // 初回データ取得
+    if (this.startDate && this.jcd && this.racers.length === 0) {
       this.fetchRacersBySeries();
-    };
+    }
+    // page変更時
+    if (this.pages.length > 0) {
+      // page1 →index = 0
+      // page2 →index = 1
+      this.currentPage = Math.max(0, this.page - 1);
+    }
   }
 
   // ページング関連関数
@@ -73,6 +81,8 @@ export class RacerSeriesList implements OnInit, OnChanges {
       next: (data) => {
         console.log('節ごとの選手データ', data);
         this.racers = data;
+
+        // this.applyPaging();
 
         // this.currentPage = 0;
 
@@ -113,6 +123,14 @@ export class RacerSeriesList implements OnInit, OnChanges {
       }
     });
   }
+
+  // // ページ送りメソッド
+  // applyPaging(): void {
+  //   const start = (this.page - 1) * this.pageSize;
+  //   const end = start + this.pageSize;
+  //   this.pagedRacers = this.racers.slice(start, end);
+  // }
+
 
   getPhotoPath(toban: string): string {
     return `/assets/racerphoto/${toban}.jpg`;

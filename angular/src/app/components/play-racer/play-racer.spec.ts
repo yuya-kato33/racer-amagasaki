@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignagePlay } from './signage-play';
+import { PlayRacer } from './play-racer';
 
-describe('SignagePlay', () => {
-  let component: SignagePlay;
-  let fixture: ComponentFixture<SignagePlay>;
+describe('PlayRacer', () => {
+  let component: PlayRacer;
+  let fixture: ComponentFixture<PlayRacer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignagePlay]
+      imports: [PlayRacer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SignagePlay);
+    fixture = TestBed.createComponent(PlayRacer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

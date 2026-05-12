@@ -197,6 +197,9 @@ document.getElementById('signageStateBtn').addEventListener('click', async () =>
     const json = await res.json();
     document.getElementById('signageStatus').textContent =
         `signage: ${json.mode} ${json.currentRace}R jcd=${json.jcd}`;
+
+    // AUTO再計算後の currntRaceを反映
+    document.getElementById('currentRace').value = json.currentRace;
 });
 
 // 次レースボタン

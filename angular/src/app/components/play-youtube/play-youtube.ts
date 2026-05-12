@@ -4,13 +4,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-signage-play',
+  selector: 'app-play-youtube',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './signage-play.html',
-  styleUrl: './signage-play.css',
+  templateUrl: './play-youtube.html',
+  styleUrl: './play-youtube.css',
 })
-export class SignagePlay implements OnInit, OnDestroy {
+export class PlayYoutube implements OnInit, OnDestroy {
   imageUrl = '';
   youtubeLiveUrl: SafeResourceUrl | null = null;
 

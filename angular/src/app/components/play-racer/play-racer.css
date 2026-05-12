@@ -1,0 +1,8 @@
+.fade-container {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.fade-container.hidden {
+    opacity: 0;
+}

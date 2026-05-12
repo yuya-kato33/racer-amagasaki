@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -31,9 +31,14 @@ export class SelectorPanel implements OnInit {
   selectedSeriesLabel: string = '';
   selectedJcd: string = '';
   useSeries = true;
-
   // クエリ保持用関数追加
   queryStartDate = '';
+  logoPath = '';
+  mascotPath = '';
+
+  @Input() page = 1;
+  @ViewChild('racerList')
+  racerList!: RacerSeriesList;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
@@ -133,6 +138,15 @@ export class SelectorPanel implements OnInit {
       this.generateDates(selected, today);
 
       this.selectedJcd = jcd;
+
+      this.updateHeaderImages();
+    }
+  }
+
+  // 
+  nextPage(): void {
+    if (this.racerList) {
+      this.racerList.nextPage();
     }
   }
 
@@ -214,5 +228,13 @@ export class SelectorPanel implements OnInit {
 
     this.dateList = list;
   }
-}
 
+
+  // 写真
+  updateHeaderImages(): void {
+    const jcd = String(this.selectedJcd).padStart(2, '0');
+
+    this.logoPath = `assets/logos/${jcd}.png`;
+    this.mascotPath = `assets/mascots/${jcd}.png`;
+  }
+}

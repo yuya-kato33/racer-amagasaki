@@ -31,7 +31,7 @@ signage運用の場合フロー
 2. サーバ起動
 3. 出走表再読み込み
 4. capture-signage 実行
-5. signage-play を表示
+5. play-youtube を表示
 6. 基本AUTOで運用
 
 遅延時：
