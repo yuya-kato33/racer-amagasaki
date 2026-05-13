@@ -12,8 +12,8 @@ export const routes: Routes = [
 
     { path: 'auto', component: SelectorPanel },
     { path: 'manual', component: SelectorPanel2 },
-    { path: 'racer1', component: TateraceSignagePage },
+    { path: 'racer', component: TateraceSignagePage },
     { path: 'race-signage', component: TateraceSignageRace },
     { path: 'youtube', component: PlayYoutube },
-    { path: 'racer', component: PlayRacer }
+    { path: 'racer1', component: PlayRacer }
 ];

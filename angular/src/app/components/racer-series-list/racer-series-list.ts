@@ -20,9 +20,9 @@ export class RacerSeriesList implements OnInit, OnChanges {
   racers: Racer[] = [];
   pages: Racer[][] = [];
   currentPage = 0;
-  pageSize = 30;
+  pageSize = 36;
   cols = 6;
-  rows = 5;
+  rows = 6;
   requestedPage = 0;
 
   isLoading = false;
@@ -92,7 +92,7 @@ export class RacerSeriesList implements OnInit, OnChanges {
         const total = data.length;
 
         // 48人以内
-        if (total <= 48) {
+        if (total <= 42) {
           const firstPageSize = 24;
 
           // 1ページ目 (24人)
@@ -103,6 +103,16 @@ export class RacerSeriesList implements OnInit, OnChanges {
             this.pages.push(data.slice(firstPageSize));
           }
 
+          // } else if (total <= 60) {
+          //   const firstPageSize = 30;
+
+          //   // 1ページ目 (30人)
+          //   this.pages.push(data.slice(0, firstPageSize));
+
+          //   // 2ページ目（残り)
+          //   if (total > firstPageSize) {
+          //     this.pages.push(data.slice(firstPageSize));
+          //   }
         } else {
           // 従来通り (30人ずつ)
           for (let i = 0; i < data.length; i += this.pageSize) {
