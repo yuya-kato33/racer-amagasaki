@@ -36,7 +36,7 @@
       <tyoku3>1</tyoku3>
       <tyoku4>1</tyoku4>
       <tyoku5>1</tyoku5>
-      <tyoku6>0</tyoku6>
+      <tyoku6>1</tyoku6>
       <tyoku7>0</tyoku7>
       <tyoku8>0</tyoku8>
       <tyoku9>0</tyoku9>
@@ -48,7 +48,7 @@
       <start3>1</start3>
       <start4>1</start4>
       <start5>1</start5>
-      <start6>0</start6>
+      <start6>1</start6>
       <start7>0</start7>
       <start8>0</start8>
       <start9>0</start9>
@@ -59,27 +59,27 @@
       <kek_r2>1</kek_r2>
       <kek_r3>1</kek_r3>
       <kek_r4>1</kek_r4>
-      <kek_r5>0</kek_r5>
-      <kek_r6>0</kek_r6>
-      <kek_r7>0</kek_r7>
-      <kek_r8>0</kek_r8>
-      <kek_r9>0</kek_r9>
-      <kek_r10>0</kek_r10>
-      <kek_r11>0</kek_r11>
-      <kek_r12>0</kek_r12>
+      <kek_r5>1</kek_r5>
+      <kek_r6>1</kek_r6>
+      <kek_r7>1</kek_r7>
+      <kek_r8>1</kek_r8>
+      <kek_r9>1</kek_r9>
+      <kek_r10>1</kek_r10>
+      <kek_r11>1</kek_r11>
+      <kek_r12>1</kek_r12>
       <kek_t1>1</kek_t1>
       <kek_t2>1</kek_t2>
       <kek_t3>1</kek_t3>
       <kek_t4>1</kek_t4>
-      <kek_t5>0</kek_t5>
-      <kek_t6>0</kek_t6>
-      <kek_t7>0</kek_t7>
-      <kek_t8>0</kek_t8>
-      <kek_t9>0</kek_t9>
-      <kek_t10>0</kek_t10>
-      <kek_t11>0</kek_t11>
-      <kek_t12>0</kek_t12>
-      <sui>1</sui>
+      <kek_t5>1</kek_t5>
+      <kek_t6>1</kek_t6>
+      <kek_t7>1</kek_t7>
+      <kek_t8>1</kek_t8>
+      <kek_t9>1</kek_t9>
+      <kek_t10>1</kek_t10>
+      <kek_t11>1</kek_t11>
+      <kek_t12>1</kek_t12>
+      <sui>0</sui>
       <deme>1</deme>
       <pt>0</pt>
       <mot>1</mot>
