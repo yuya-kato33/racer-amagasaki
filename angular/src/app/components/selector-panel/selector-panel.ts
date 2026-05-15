@@ -42,6 +42,30 @@ export class SelectorPanel implements OnInit {
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
+  // 追加コード
+  reloadFromState(): void {
+    console.log('reloadFromState 開始');
+
+    this.http.get<any>('/api/signage-state')
+      .subscribe({
+        next: state => {
+          // jcd反映
+          if (state?.jcd) {
+            this.selectedJcd = String(state.jcd).padStart(2, '0');
+
+            console.log('reload signage-state jcd=', this.selectedJcd);
+          }
+
+
+          this.onDateChange();
+        },
+        error: err => {
+          console.error('reloadFromState error', err);
+        }
+      })
+  };
+
+
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
 
@@ -56,10 +80,13 @@ export class SelectorPanel implements OnInit {
       Promise.resolve(stateRequest).then(state => {
 
         // state優先適用
-        if (!this.selectedJcd && state?.jcd) {
-          this.selectedJcd = String(state.jcd).padStart(2, '0');
+        if (state?.jcd) {
+          // URL jcd優先
+          if (!this.selectedJcd) {
+            this.selectedJcd = String(state.jcd).padStart(2, '0');
 
-          console.log('signage-state jcd=', this.selectedJcd);
+            console.log('signage-state jcd=', this.selectedJcd);
+          }
         }
 
         this.http.get<string[]>('/api/series/dates').subscribe(data => {

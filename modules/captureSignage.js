@@ -42,7 +42,7 @@ async function runCaptureSignage(targetDate, jcd) {
             await sleep(200);
 
             const filename = path.join(
-                OUTPUT_DIR, `${targetDate}_${rno2}R_${teiban}.png`);
+                OUTPUT_DIR, `${targetDate}_${jcd}_${rno2}R_${teiban}.png`);
 
             await page.screenshot({
                 path: filename, type: 'png', omitBackground: false

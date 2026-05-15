@@ -42,10 +42,13 @@ export class RacerSeriesList implements OnInit, OnChanges {
 
   // データ取得
   ngOnChanges(): void {
-    // 初回データ取得
-    if (this.startDate && this.jcd && this.racers.length === 0) {
+
+    // startDate / jcd変更時は毎回再取得
+    if (this.startDate && this.jcd) {
+      console.log('RacerSeriesList reload:', this.startDate, this.jcd);
       this.fetchRacersBySeries();
     }
+
     // page変更時
     if (this.pages.length > 0) {
       // page1 →index = 0
@@ -77,6 +80,12 @@ export class RacerSeriesList implements OnInit, OnChanges {
   fetchRacersBySeries() {
     this.isLoading = true;
     this.error = null;
+
+    // 前回データクリア
+    this.racers = [];
+    this.pages = [];
+    this.currentPage = 0;
+
     this.seriesService.getRacersBySeries(this.startDate, this.jcd).subscribe({
       next: (data) => {
         console.log('節ごとの選手データ', data);
