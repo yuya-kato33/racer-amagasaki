@@ -2467,7 +2467,7 @@
           <bno>012</bno>
           <b2ren>25.0</b2ren>
           <haya race_id="13_20260504"></haya>
-          <kjo>0</kjo>
+          <kjo>1</kjo>
           <com1></com1>
           <kekka>
             <nj>11</nj>
@@ -3711,12 +3711,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">３</chk>
+            <cs>4</cs>
+            <st>.15</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -4566,12 +4566,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">４</chk>
+            <cs>5</cs>
+            <st>.15</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -5421,12 +5421,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>02</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">３</chk>
+            <cs>5</cs>
+            <st>.16</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -5701,12 +5701,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>03</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">３</chk>
+            <cs>3</cs>
+            <st>.10</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -5841,12 +5841,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>03</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">４</chk>
+            <cs>2</cs>
+            <st>.08</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -6136,12 +6136,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">Ｆ</chk>
+            <cs>5</cs>
+            <st>.04</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -7131,12 +7131,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>03</rno>
+            <waku>5</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">５</chk>
+            <cs>5</cs>
+            <st>.24</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -7271,12 +7271,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">３</chk>
+            <cs>2</cs>
+            <st>.03</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -7551,12 +7551,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>02</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">２</chk>
+            <cs>2</cs>
+            <st>.17</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -7691,12 +7691,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>2</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">５</chk>
+            <cs>2</cs>
+            <st>.12</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -7986,12 +7986,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>03</rno>
+            <waku>4</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">２</chk>
+            <cs>4</cs>
+            <st>.23</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -8126,12 +8126,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>02</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">１</chk>
+            <cs>1</cs>
+            <st>.15</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -8266,12 +8266,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">２</chk>
+            <cs>3</cs>
+            <st>.07</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -8406,12 +8406,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">１</chk>
+            <cs>1</cs>
+            <st>.07</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -8841,12 +8841,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>04</rno>
+            <waku>3</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">Ｆ</chk>
+            <cs>3</cs>
+            <st>.05</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -9121,12 +9121,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>01</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">１</chk>
+            <cs>1</cs>
+            <st>.11</st>
           </kekka>
           <kekka>
             <nj>62</nj>
@@ -9401,12 +9401,12 @@
           </kekka>
           <kekka>
             <nj>61</nj>
-            <rno></rno>
-            <waku></waku>
-            <rsflg></rsflg>
-            <chk></chk>
-            <cs></cs>
-            <st></st>
+            <rno>03</rno>
+            <waku>1</waku>
+            <rsflg>0</rsflg>
+            <chk hdate="20260509">１</chk>
+            <cs>1</cs>
+            <st>.11</st>
           </kekka>
           <kekka>
             <nj>62</nj>

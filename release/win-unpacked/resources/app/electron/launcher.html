@@ -12,8 +12,25 @@
 
     <h1>BoatRace Manager</h1>
 
-    <div id="serverStatus">
-        server: stopped
+    <div id="serverBanner" class="server-banner stopped">
+
+        <div class="server-title">SERVER STOPPED</div>
+
+        <div class="server-sub">
+            server03.jsが停止しています
+        </div>
+
+        <div class="server-actions">
+            <button id="serverBtn" class="server-start-btn">
+                サーバ起動
+            </button>
+
+            <button id="stopServerBtn" class="server-stop-btn">
+                サーバ停止
+            </button>
+
+        </div>
+
     </div>
 
     <div class="container">
@@ -40,14 +57,16 @@
 
                 <label>mode</label>
                 <select id="mode">
-                    <option value="both">both</option>
-                    <option value="download">download</option>
-                    <option value="database">database</option>
-                    <option value="capture">capture</option>
-                    <option value="capture-signage">capture-signage</option>
+                    <option value="both">すべて取得</option>
+                    <option value="reload">XMLダウンロード + データベース</option>
+                    <option value="download">XMLダウンロード</option>
+                    <option value="database">データベース</option>
+                    <option value="capture">出場選手一覧画像</option>
+                    <option value="capture-signage">出走表選手（個人）</option>
+                    <option value="capture-race-signage">出走表選手（レース）</option>
                 </select>
 
-                <label>jcd</label>
+                <label>場名</label>
                 <input id="jcd" list="placeList" placeholder="場名または番号">
 
                 <datalist id="placeList">
@@ -81,17 +100,11 @@
             <div class="buttons">
                 <button id="todayBtn">今日</button>
                 <button id="tomorrowBtn">明日</button>
-                <button id="serverBtn">
-                    サーバ起動
-                </button>
 
                 <button id="runBtn">
                     app3.js 実行
                 </button>
 
-                <button id="stopServerBtn">
-                    サーバ停止
-                </button>
             </div>
 
         </section>
@@ -118,6 +131,39 @@
                 顔写真取得開始
             </button>
 
+        </section>
+
+        <!-- サイネージ進行管理UI -->
+        <section class="card">
+            <h2>サイネージ進行管理</h2>
+
+            <div class="panel">
+                <label>モード</label>
+                <select id="signageMode">
+                    <option value="auto">AUTO</option>
+                    <option value="manual">MANUAL</option>
+                </select>
+
+                <label>現在R</label>
+                <input id="currentRace" type="number" min="1" max="12" placeholder="1">
+
+                <label>切替時刻(締切後)</label>
+                <input id="autoAdvanceMinutes" type="number" value="10">
+
+                <label>Youtube Live</label>
+                <input id="youtubeLiveUrl" type="text" placeholder="https://www.youtube.com/watch?v=xxxxx">
+            </div>
+
+            <div class="buttons">
+                <button id="signageStateBtn">状態反映</button>
+                <button id="prevRaceBtn">前レース</button>
+                <button id="nextRaceBtn">次レース</button>
+                <button id="reloadSignageBtn">出走表再読み込み</button>
+            </div>
+
+            <div id="signageStatus">
+                signage: -
+            </div>
         </section>
     </div>
 

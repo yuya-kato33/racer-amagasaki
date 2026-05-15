@@ -168,6 +168,7 @@ async function runImport(targetDate, jcdOnly = null) {
                     rno: rno,
                     rsname: rsname,
                     rmei: rmei,
+                    stime: stime,   // ←これ追加
                     teiban: rec.teiban?.[0],
 
                     // 既存

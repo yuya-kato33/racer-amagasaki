@@ -2,6 +2,7 @@
 npm install electron --save-dev
 npm install find-process tree-kill
 npm install --save-dev electron-builder
+npm install pdf-lib
 
 2 各種JS,html.cssを作成
 
@@ -23,3 +24,19 @@ netstat -ano | findstr :8083
 TCP         0.0.0.0:8083           0.0.0.0:0              LISTENING       18916→PID
 
 taskkill /PID xxxx /F
+
+
+signage運用の場合フロー
+1. jcdを選択
+2. サーバ起動
+3. 出走表再読み込み
+4. capture-signage 実行
+5. play-youtube を表示
+6. 基本AUTOで運用
+
+遅延時：
+
+1. MANUALへ切替
+2. 現在Rを固定
+3. 進行再開タイミングで次レースへ
+4. 必要に応じてAUTOへ戻す

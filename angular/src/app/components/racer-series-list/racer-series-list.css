@@ -16,7 +16,8 @@
 /* グリッド全体 */
 .racer-grid {
   display: grid;
-  /* ここが核心 */
+  /* ここが核心 (gridをx等分する→1枚のサイズ９を自動で分割調整） */
+  /* 1fr　→「余ってる空間を均等分配する」 */
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(6, minmax(0, 1fr));
 
@@ -122,3 +123,5 @@
   text-align: center;
   white-space: nowrap;
 }
+
+/* 基本的にpx指定が無いので自動調整される */

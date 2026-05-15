@@ -22,4 +22,9 @@ contextBridge.exposeInMainWorld('api', {
         ipcRenderer.on(
             'server-status', (_, status) => callback(status)
         ),
+
+    // サーバー自動起動用
+    onAutoStartServer: (callback) =>
+        ipcRenderer.on('auto-start-server', () => callback()
+        ),
 });

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const path = require('path');
 // const { spawn } = require('child_process');
 const { fork } = require('child_process');
@@ -11,6 +11,7 @@ const net = require('net');
 // main,js追加
 const { execSync } = require('child_process')
 const { resolve } = require('dns');
+const { menu } = require('electron');
 
 let mainWindow;
 let serverProcess = null;
@@ -90,8 +91,34 @@ app.whenReady().then(async () => {
             err.message
         );
     }
+    // electron window生成
     createWindow();
+
+    // --------------------------------------
+    // 自動サーバ起動
+    // --------------------------------------
+    setTimeout(() => {
+        mainWindow.webContents.send('auto-start-server');
+    }, 1500);
 });
+
+// dist版で：　Ctrl+V 右クリック Ctrl+C
+Menu.setApplicationMenu(
+    Menu.buildFromTemplate([
+        {
+            label: 'Edit',
+            submenu: [
+                { role: 'undo' },
+                { role: 'redo' },
+                { type: 'separator' },
+                { role: 'cut' },
+                { role: 'copy' },
+                { role: 'paste' },
+                { role: 'selectAll' }
+            ]
+        }
+    ])
+);
 
 ////////////////////////////////////////////
 // サーバ起動

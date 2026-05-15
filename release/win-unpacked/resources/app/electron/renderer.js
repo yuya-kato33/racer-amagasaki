@@ -19,6 +19,14 @@ document
         await window.api.startServer();
     });
 
+// ==========================================-
+// 自動サーバ起動
+//============================================
+window.api.onAutoStartServer(() => {
+    appendLog('\n 自動サーバ起動開始\n');
+    document.getElementById('serverBtn').click();
+});
+
 document
     .getElementById('runBtn')
     .addEventListener('click', async () => {
@@ -67,11 +75,56 @@ document.getElementById('stopServerBtn')
         await window.api.stopServer();
     });
 
-// サーバ状態
+// サーバ状態情報
 window.api.onServerStatus(status => {
-    document.getElementById('serverStatus')
-        .innerText = `server: ${status}`;
+    const banner = document.getElementById('serverBanner');
+    const title = banner.querySelector('.server-title');
+    const sub = banner.querySelector('.server-sub');
+    const serverBtn = document.getElementById('serverBtn');
+    banner.className = `server-banner ${status}`;
+
+    // ボタン制御
+    if (status === 'running') {
+        setControlsEnabled(true);
+        title.innerText = 'SERVER RUNNING';
+        sub.innerText = 'http://127.0.0.1:8083';
+        serverBtn.disabled = true;
+
+        // signage-state 読み込み
+        loadSignageStateToUI();
+
+    } else {
+        setControlsEnabled(false);
+    }
+
+    if (status === 'starting') {
+        title.innerText = 'SERVER STARTING...';
+        sub.innerText = 'server03.jsを起動しています';
+        serverBtn.disabled = true;
+    }
+
+    else if (status === 'stopped') {
+        title.innerText = 'SERVER STOPPED';
+        sub.innerText = 'server03.jsが停止しています';
+        serverBtn.disabled = false;
+    }
+
+    else if (status === 'port-used') {
+        title.innerText = 'PORT 8083 USED';
+        sub.innerText = '既に server03.js が起動しています';
+        serverBtn.disabled = false;
+    }
 });
+
+// ボタン無効化（サーバー起動前）
+function setControlsEnabled(enabled) {
+    document.getElementById('runBtn').disabled = !enabled;
+    document.getElementById('masterBtn').disabled = !enabled;
+    document.getElementById('reloadSignageBtn').disabled = !enabled;
+    document.getElementById('signageStateBtn').disabled = !enabled;
+    document.getElementById('nextRaceBtn').disabled = !enabled;
+    document.getElementById('prevRaceBtn').disabled = !enabled;
+}
 
 // 今日 - 明日 ボタン
 async function setDate(offset = 0) {
@@ -119,3 +172,101 @@ document.getElementById('tomorrowBtn')
     .addEventListener('click', () => {
         setDate(1);
     });
+
+// //////////////////////////////////////
+// サイネージ進行管理系 
+// //////////////////////////////////////
+document.getElementById('signageStateBtn').addEventListener('click', async () => {
+    const mode = document.getElementById('signageMode').value;
+    const currentRace = Number(document.getElementById('currentRace').value);
+    const autoAdvanceMinutes = Number(document.getElementById('autoAdvanceMinutes').value);
+    const jcdRaw = document.getElementById('jcd').value;
+    const jcd = jcdRaw.slice(0, 2)
+    const youtubeLiveUrl = document.getElementById('youtubeLiveUrl').value;
+
+    // AUTO / MANUALで分岐
+    const body = { mode, jcd, autoAdvanceMinutes, youtubeLiveUrl };
+    // MANUAL字だけ　currentraceを送る
+    if (mode === 'manual') { body.currentRace = currentRace };
+
+    const res = await fetch('http://127.0.0.1:8083/api/signage-control', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    });
+
+    const json = await res.json();
+    document.getElementById('signageStatus').textContent =
+        `signage: ${json.mode} ${json.currentRace}R jcd=${json.jcd}`;
+
+    // AUTO再計算後の currntRaceを反映
+    document.getElementById('currentRace').value = json.currentRace;
+});
+
+// 次レースボタン
+document.getElementById('nextRaceBtn').addEventListener('click', async () => {
+    const input = document.getElementById('currentRace');
+    input.value = Math.min(12, Number(input.value) + 1);
+
+    document.getElementById('signageMode').value = 'manual';
+    document.getElementById('signageStateBtn').click();
+})
+
+// 前レース
+document.getElementById('prevRaceBtn').addEventListener('click', async () => {
+    const input = document.getElementById('currentRace');
+    input.value = Math.max(1, Number(input.value) - 1);
+
+    document.getElementById('signageMode').value = 'manual';
+    document.getElementById('signageStateBtn').click();
+})
+
+// 再読み込みボタン
+document.getElementById('reloadSignageBtn').addEventListener('click', async () => {
+    const jcdRaw = document.getElementById('jcd').value;
+    const jcd = jcdRaw.slice(0, 2);
+
+    const res = await fetch('http://127.0.0.1:8083/api/signage-reload', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jcd })
+    });
+
+    const json = await res.json();
+
+    document.getElementById('signageStatus').textContent =
+        `再読み込み開始: jcd=${json.jcd}`;
+})
+
+
+// サイネージ状態function
+async function loadSignageStateToUI() {
+    try {
+        const res = await fetch('http://127.0.0.1:8083/api/signage-state');
+        const json = await res.json();
+        appendLog(`\n signage-state loaded:\n`);
+        appendLog(JSON.stringify(json, null, 2) + '\n');
+
+        // UIへ反映
+        document.getElementById('signageMode').value = json.mode || 'auto';
+        document.getElementById('currentRace').value = json.currentRace || '1';
+        document.getElementById('autoAdvanceMinutes').value = json.autoAdvanceMinutes || 10;
+        // jcd
+        if (json.jcd) {
+            document.getElementById('jcd').value = json.jcd;
+        }
+        // Youtube URL
+        if (json.youtubeLiveUrl) {
+            const watchUrl = embedToWatchUrl(json.youtubeLiveUrl);
+            document.getElementById('youtubeLiveUrl').value = watchUrl;
+        }
+    } catch (err) {
+        appendLog(`\n signage-state load error: ${err.message}\n`);
+    }
+}
+
+function embedToWatchUrl(embedUrl) {
+    if (!embedUrl) return '';
+    const match = embedUrl.match(/embed\/([^?]+)/);
+
+    if (!match) return embedUrl;
+    return `https://www.youtube.com/watch?v=${match[1]}`;
+}
